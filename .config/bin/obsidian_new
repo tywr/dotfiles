@@ -1,0 +1,68 @@
+#!/usr/local/bin/python3.11
+"""
+Parses notes from folder and copy them to the corresponding folder
+"""
+
+import os
+import subprocess
+import shutil
+import textwrap
+import argparse
+from io import TextIOWrapper
+import datetime
+
+INBOX_DIR = "/Users/tywr/Notes/inbox"
+
+
+def create_note(inbox_dir: str, name: str, tags: list[str]) -> str:
+    curr_date = f"{datetime.datetime.now():%Y-%m-%d}"
+    if name != "":
+        fname = curr_date + "_" + name + ".md"
+    else:
+        fname = curr_date + ".md"
+    tags = "\n        ".join(f" - {tag}" for tag in tags)
+    raw_header = textwrap.dedent(
+        f"""\
+        ---
+        id: {fname}
+        aliases: []
+        tags:
+        {tags}
+        date: "{curr_date}"
+        ---\
+        """
+    )
+    header = "\n".join(l.rstrip() for l in raw_header.splitlines())
+    note_path = os.path.join(inbox_dir, fname)
+    if os.path.exists(note_path):
+        print(f"Note with same metadata already exists at {note_path}. Opening...")
+    else:
+        with open(note_path, "w") as f:
+            print(f"Creating new note at {note_path}. Opening...")
+            f.write(header)
+    return fname
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Tags and filename")
+    parser.add_argument("--no-name", action="store_true")
+    parser.add_argument("strings", metavar="S", type=str, nargs="+")
+    args = parser.parse_args()
+
+    if not args.no_name:
+        inputs = list(args.strings)
+        if len(inputs) < 2:
+            print("Please make sure to add at least one tag and the filename!")
+            exit(1)
+        name = inputs[-1]
+        tags = inputs[:-1]
+    if args.no_name:
+        inputs = list(args.strings)
+        if len(inputs) == 0:
+            print("Please make sure to add at least one tag!")
+            exit(1)
+        name = ""
+        tags = inputs
+    note_name = create_note(INBOX_DIR, name, tags)
+    os.chdir(INBOX_DIR)
+    subprocess.run(["nvim", note_name])

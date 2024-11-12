@@ -1,0 +1,73 @@
+#!/usr/local/bin/python3.11
+"""
+Parses notes from folder and copy them to the corresponding folder
+"""
+
+import os
+import shutil
+from collections import defaultdict
+from io import TextIOWrapper
+
+SOURCE_DIR = "/Users/tywr/Notes/inbox"
+TARGET_DIR = "/Users/tywr/Notes/notes"
+
+
+def _get_raw_header(f: TextIOWrapper):
+    raw_header = ""
+    for line in f:
+        if line.startswith("---") and not len(raw_header):
+            pass
+        elif line.startswith("---") and len(raw_header):
+            break
+        else:
+            raw_header += line
+    return raw_header
+
+
+def parse_header(f: TextIOWrapper):
+    """
+    Parses obsidian headers and return a dictionary with the header
+    informations
+
+
+    Parameters
+    ----------
+    f : TextIOWrapper
+        TextIOWrapper of the note content
+
+    Returns
+    ----------
+    header : defaultdict(list)
+    >>> get_header(f)
+    >>> defaultdict(<class 'list'>, {'id': ['2024-07-06_sync'], 'aliases': ['[]'], 'tags': ['sync']})
+    """
+    header = defaultdict(list)
+    raw_header = _get_raw_header(f)
+    current_parameter = ""
+    for line in raw_header.replace(" ", "").split("\n"):
+        terms = [term for term in line.split(":") if term != ""]
+        # If we find a primary key, we add the second term to the dictionary
+        if len(terms) and terms[0] in {"id", "aliases", "tags", "date"}:
+            current_parameter = terms[0]
+            if len(terms) == 2:
+                header[current_parameter].append(terms[1].strip("'\""))
+        # Otherwise, that means we found list parameters
+        elif len(terms) and terms[0].startswith("-"):
+            header[current_parameter].append(terms[0].lstrip("-"))
+    return header
+
+
+if __name__ == "__main__":
+    for dir, _, files in os.walk(SOURCE_DIR):
+        for file in files:
+            if file.endswith(".md"):
+                source_path = os.path.join(dir, file)
+                with open(source_path, "r") as f:
+                    header = parse_header(f)
+                    tags = header.get("tags")
+                    target_dir = os.path.join(TARGET_DIR, *tags)
+                    os.makedirs(target_dir, exist_ok=True)
+                    target_path = os.path.join(target_dir, file)
+                    print(f"Moving {source_path} to {target_path}")
+                    shutil.move(source_path, target_path)
+    print("All done !")

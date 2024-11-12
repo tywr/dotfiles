@@ -1,0 +1,63 @@
+" Remove tmux bindings from neovim
+unmap <C-B>
+
+" Change panel shortcuts
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Map Y to clipboard
+vmap Y "+y
+
+nmap <silent> ++ :vsp<CR>
+nnoremap M q
+nnoremap à @a
+nnoremap q <Nop>
+nnoremap Q <Nop>
+nmap <silent> mm :w<CR>
+nmap <silent> qq :wq<CR>
+nmap QQ :bd<CR>
+nmap U :redo<CR>
+nmap <silent> <S-Tab> :bp<CR>
+nmap <silent> <Tab> :bn<CR>
+
+nmap gs <plug>(SubversiveSubstitute)
+
+nnoremap J mzJ`z
+xmap J :m '>+1<CR>gv=gv
+xmap K :m '<-2<CR>gv=gv
+
+
+" smoothie shortcuts
+nmap <silent> <Down> :call  smoothie#downwards()<CR>
+nmap <silent> <Up> :call  smoothie#upwards()<CR>
+
+" Vim Surround
+let g:surround_no_mappings=1
+nmap ds  <Plug>Dsurround
+nmap cs  <Plug>Csurround
+nmap cS  <Plug>CSurround
+nmap ys  <Plug>Ysurround
+nmap yS  <Plug>YSurround
+nmap yss <Plug>Yssurround
+nmap ySs <Plug>YSsurround
+nmap ySS <Plug>YSsurround
+xmap S   <Plug>VSurround
+xmap gS  <Plug>VgSurround
+
+nnoremap <leader>zz <cmd>lua require('zen-mode').toggle({})<cr>
+nnoremap <leader>ss <cmd>LspZeroFormat<cr>
+nnoremap <C-s> <cmd>LspZeroFormat<cr>
+nnoremap μ %
+nnoremap ù %
+
+" Telescope
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fp <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>ft <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>fs <cmd>Telescope tmux sessions<cr>
+nnoremap <leader>gg <cmd>lua require('telescope.builtin').grep_string()<cr>
+nnoremap <leader>no <cmd>:noh<cr>

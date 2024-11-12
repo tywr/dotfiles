@@ -1,0 +1,34 @@
+{
+    "python.pythonPath": "/Users/tywr/.local/venv/nvim/bin/python",
+    "python.formatting.provider": "none",
+    "diagnostic.checkCurrentLine": true,
+    "suggest.enablePreselect": false,
+    "suggest.noselect": true,
+    "ruff.enable": true,
+    "ruff.lint.enable": false,
+    "ruff.useDetectRuffCommand": true,
+    "ruff.builtin.pythonPath": "/Users/tywr/.local/venv/nvim/bin/python",
+    "ruff.enableExperimentalFormatter": true,
+	"pyright.disableDiagnostics": true,
+	"pyright.inlayHints.functionReturnTypes": false,
+	"pyright.inlayHints.variableTypes": false,
+	"pyright.inlayHints.parameterTypes": false,
+    "languageserver": {
+		"terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
+		},
+	    "ruff-lsp": {
+            "command": "ruff-lsp",
+            "filetypes": [
+                "python"
+            ]
+        }
+    }
+}
