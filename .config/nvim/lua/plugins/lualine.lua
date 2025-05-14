@@ -6,10 +6,16 @@ return {
     config = function()
         local theme = require 'lualine.themes.16color'
 
-        theme.normal.a.bg = 1
-        theme.normal.b.bg = 15
-        theme.normal.c.bg = 15
-        theme.normal.b.fg = 7
+        theme.normal.a.bg = 3
+        theme.normal.a.fg = 0
+        theme.visual.a.bg = 2
+        theme.visual.a.fg = 0
+        theme.insert.a.bg = 2
+        theme.insert.a.fg = 0
+        theme.normal.b.bg = 0
+        theme.normal.b.fg = 15
+        theme.normal.c.bg = 0
+        theme.normal.c.fg = 15
 
         require("lualine").setup({
             options = {

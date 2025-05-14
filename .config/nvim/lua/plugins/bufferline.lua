@@ -18,77 +18,77 @@ return {
             },
             highlights = {
                 duplicate = {
-                    ctermbg = 15,
+                    ctermbg = 0,
                     ctermfg = 7,
                 },
                 fill = {
-                    ctermbg = 15,
+                    ctermbg = 0,
                 },
                 background = {
-                    ctermfg = 8,
-                    ctermbg = 15,
+                    ctermfg = 7,
+                    ctermbg = 0,
                 },
                 numbers = {
                     ctermfg = 8,
-                    ctermbg = 15,
+                    ctermbg = 0,
                 },
                 modified = {
-                    ctermfg = 8,
-                    ctermbg = 15,
+                    ctermfg = 7,
+                    ctermbg = 0,
                 },
                 separator = {
-                    ctermfg = 15,
-                    ctermbg = 15,
+                    ctermfg = 0,
+                    ctermbg = 0,
                 },
                 buffer_selected = {
-                    ctermbg = 1,
-                    ctermfg = 15,
+                    ctermbg = 5,
+                    ctermfg = 0,
                     bold = true,
                 },
                 numbers_selected = {
-                    ctermbg = 1,
-                    ctermfg = 15,
+                    ctermbg = 5,
+                    ctermfg = 0,
                     bold = true,
                 },
                 modified_selected = {
-                    ctermbg = 1,
-                    ctermfg = 15,
+                    ctermbg = 5,
+                    ctermfg = 0,
                     bold = true,
                 },
                 indicator_selected = {
-                    ctermfg = 15,
-                    ctermbg = 15,
+                    ctermfg = 0,
+                    ctermbg = 0,
                 },
                 separator_selected = {
-                    ctermbg = 15,
-                    ctermfg = 15,
+                    ctermbg = 0,
+                    ctermfg = 0,
                 },
                 duplicate_selected = {
-                    ctermbg = 1,
-                    ctermfg = 15,
+                    ctermbg = 2,
+                    ctermfg = 0,
                 },
                 buffer_visible = {
-                    ctermfg = 7,
-                    ctermbg = 15,
+                    ctermfg = 15,
+                    ctermbg = 0,
                     bold = true,
                 },
                 numbers_visible = {
-                    ctermfg = 7,
-                    ctermbg = 15,
+                    ctermfg = 15,
+                    ctermbg = 0,
                     bold = true,
                 },
                 modified_visible = {
-                    ctermfg = 7,
+                    ctermfg = 15,
                     bold = true,
-                    ctermbg = 15,
+                    ctermbg = 0,
                 },
                 separator_visible = {
-                    ctermfg = 15,
-                    ctermbg = 15,
+                    ctermfg = 0,
+                    ctermbg = 0,
                 },
                 indicator_visible = {
-                    ctermfg = 15,
-                    ctermbg = 15,
+                    ctermfg = 0,
+                    ctermbg = 0,
                 }
             }
         })

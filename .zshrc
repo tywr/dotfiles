@@ -64,9 +64,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':prompt:pure:prompt:*' color red
-zstyle ':prompt:pure:git:branch' color green
-zstyle ':prompt:pure:git:dirty' color magenta
+zstyle ':prompt:pure:prompt:*' color green
+zstyle ':prompt:pure:git:branch' color cyan
+zstyle ':prompt:pure:git:dirty' color red
 
 eval "$(fzf --zsh)"
 export PATH=/opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin

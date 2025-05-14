@@ -53,7 +53,7 @@ lua require('init')
 lua require('telescope-conf')
 lua require("lsp-conf")
 lua require("mappings")
-source ~/.config/nvim/vim/colorthemes/orbitals-jupiter.vim
+source ~/.config/nvim/vim/colorthemes/base16.vim
 
 " -----------------------------------------------------------------------------
 "  						             CURSOR
