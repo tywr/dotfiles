@@ -25,6 +25,9 @@ zinit snippet OMZP::aws
 zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
 zinit light sindresorhus/pure
 
+# zsh-fzf-history-search
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
 
 zinit cdreplay -q
 
@@ -66,3 +69,4 @@ zstyle ':prompt:pure:git:branch' color green
 zstyle ':prompt:pure:git:dirty' color magenta
 
 eval "$(fzf --zsh)"
+export PATH=/opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
