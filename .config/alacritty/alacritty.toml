@@ -13,8 +13,8 @@ hide_when_typing = false
 program = "/bin/zsh"
 
 [window.padding]
-x = 10
-y = 10
+x = 5
+y = 10 
 
 [cursor]
 unfocused_hollow = true

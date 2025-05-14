@@ -50,7 +50,6 @@ autocmd filetype markdown setlocal conceallevel=2
 set updatetime=50
 
 lua require('init')
-lua require('telescope-conf')
 lua require("lsp-conf")
 lua require("mappings")
 source ~/.config/nvim/vim/colorthemes/base16.vim

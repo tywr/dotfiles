@@ -66,7 +66,7 @@ gui:
         # Background color of selected line.
         # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#highlighting-the-selected-line
         selectedLineBgColor:
-            - white
+            - black
         # Foreground color of copied commit
         cherryPickedCommitFgColor:
             - blue
@@ -81,7 +81,7 @@ gui:
             - yellow
         # Color for file with unstaged changes
         unstagedChangesColor:
-            - cyan
+            - white
         # Default text color
         defaultFgColor:
             - default
@@ -128,7 +128,7 @@ gui:
     screenMode: normal
     # Window border style.
     # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
-    border: rounded
+    border: single
     # If true, show a seriously epic explosion animation when nuking the working tree.
     animateExplosion: true
     # Whether to stack UI components on top of each other.

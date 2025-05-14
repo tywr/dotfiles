@@ -19,13 +19,13 @@ return {
             highlights = {
                 duplicate = {
                     ctermbg = 0,
-                    ctermfg = 7,
+                    ctermfg = 8,
                 },
                 fill = {
                     ctermbg = 0,
                 },
                 background = {
-                    ctermfg = 7,
+                    ctermfg = 8,
                     ctermbg = 0,
                 },
                 numbers = {
@@ -33,7 +33,7 @@ return {
                     ctermbg = 0,
                 },
                 modified = {
-                    ctermfg = 7,
+                    ctermfg = 8,
                     ctermbg = 0,
                 },
                 separator = {

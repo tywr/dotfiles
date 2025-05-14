@@ -22,12 +22,9 @@ hi Identifier ctermbg=NONE ctermfg=4 cterm=BOLD
 hi Ignore ctermbg=8 ctermfg=0
 hi PreProc ctermbg=NONE ctermfg=3
 hi Statement ctermbg=NONE ctermfg=2
-hi String ctermbg=NONE ctermfg=3
 hi Todo ctermbg=2 ctermfg=0
 hi Type ctermbg=NONE ctermfg=3
 hi Underlined ctermbg=NONE ctermfg=2 cterm=underline
-hi StatusLine ctermbg=7 ctermfg=0
-hi StatusLineNC ctermbg=8 ctermfg=0
 hi TabLine ctermbg=NONE ctermfg=8
 hi TabLineFill ctermbg=NONE ctermfg=8
 hi TabLineSel ctermbg=4 ctermfg=0
@@ -55,7 +52,6 @@ hi DiffText ctermbg=NONE ctermfg=4
 hi IncSearch ctermbg=3 ctermfg=0
 hi Search ctermbg=3 ctermfg=0
 hi Directory ctermbg=NONE ctermfg=4
-hi MatchParen ctermbg=2 ctermfg=8
 hi ColorColumn ctermbg=4 ctermfg=0
 hi signColumn ctermbg=NONE ctermfg=4
 hi ErrorMsg ctermbg=NONE ctermfg=8
@@ -141,7 +137,7 @@ hi LineNr ctermfg=8 cterm=none
 
 hi Visual cterm=none ctermbg=15 ctermfg=0
 hi ExtraWhitespace cterm=none ctermbg=grey ctermfg=black
-hi MatchParen cterm=none ctermbg=1 ctermfg=black
+hi MatchParen cterm=none ctermbg=2 ctermfg=black
 
 highlight NonText cterm=none ctermfg=8 ctermbg=none
 
@@ -178,18 +174,19 @@ hi DevIconDockerfile ctermfg=3
 
 " Code Hightlighting + Treesitter
 hi Comment cterm=italic gui=italic ctermfg=8 ctermbg=none
-hi Operator ctermfg=2
-hi Special ctermfg=12
-hi Keyword ctermfg=4
 hi Float ctermfg=1
 hi Number ctermfg=1
+hi String ctermbg=NONE ctermfg=3
+hi @boolean.python ctermfg=3
+hi Operator ctermfg=2
+hi Special ctermfg=6
+hi Keyword ctermfg=4
 hi Delimiter ctermfg=2
 hi Function ctermfg=6
 hi @string.documentation.python cterm=italic gui=italic ctermfg=7 ctermbg=none
 hi @variable.python ctermfg=15
 hi @type.python ctermfg=6
-hi @keyword.import.python ctermfg=4
 hi @variable.parameter.python ctermfg=5
-hi @constructor.python ctermfg=3
-hi @function.method.call.python ctermfg=3
-hi @function.call.python ctermfg=3
+hi @constructor.python ctermfg=5
+hi @function.method.call.python ctermfg=5
+hi @function.call.python ctermfg=6
