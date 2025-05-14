@@ -1,50 +1,50 @@
-shell touch docker
-shell touch dockerfile
-shell touch
-shell mkdir docker
-rename
-shell mkdir pyspark
-rename airflow
-shell touch version.py
-rename dag_mongo_daily.py
-rename generate_dag_daily.py
-rename dag_common.py
-shell 
-shell mkdir mongo
-rename mongo
-open_with open
-rename bg3
-open_with 
-rename docker-compose.yml
-shell touch Dockerfile
-open_with nim
-shell touch not_deph
-shell touc
-shell mkdir temp
-rename launch_pipeline.py
-shell touch __init__.
-shell mkdi
-shell touch __init__.py
-rename scripts
-rename test_reviews_analysis_itunes.py
-rename reviews_analysis_table.py
-find raw-
-find raw-p
-shell touch launch_manual_computation.md
+shell touch git.py
+shell mkdir workflows
+shell touch run-dockerized-tests.yml
 open_with nvim
-shell touch copy.py
-rename launch_pipeline_history_reviews_itunes.py
-shell touch lists_config.py
-rename reviews_analysis_itunes.py
-rename reviews_analysis_playstore.py
-open_with%space
-rename reviews_analysis.py
-rename emr_config_16xlarge.json
-rename emr_config_8xlarge.json
-rename emr_config.json
-find fonts
-find Proj
-find fon
-find dot
-shell h
-rename _dotfiles
+shell mkdir .github
+shell touch raw-parquet-source-buildspec.yml
+find codebuil
+find code
+shell touch databricks-token.csv
+rename codebuild
+find co
+find review
+find fo
+
+rename qc.py
+find stats
+find raw-p
+shell touch entry
+shell mkdir entrypoints
+rename stats.py
+rename main.py
+find etl
+rename stats
+rename __main__.py
+rename qc
+rename base_stats.py
+rename base_qc.py
+rename raw-parquet-stats
+shell touch comparison.py
+shell tou
+shell touch doc.py
+shell touch aggregation.py
+shell touch base_readme.md
+rename launch_manual_computation.md
+rename setup.md
+rename setup.md_
+rename Setup.md
+rename Manual Computation.md
+rename wiki
+shell 
+shell touch __init__.py
+rename languages.py
+rename mongo_itunes
+find das
+find ra
+shell touch base16
+shell mkdir base16
+shell touch ice.json
+rename ice.yaml
+shell touch convert.py

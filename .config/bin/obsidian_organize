@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.11
+#!/opt/homebrew/bin/python3.11
 """
 Parses notes from folder and copy them to the corresponding folder
 """
@@ -67,7 +67,10 @@ if __name__ == "__main__":
                     tags = header.get("tags")
                     target_dir = os.path.join(TARGET_DIR, *tags)
                     os.makedirs(target_dir, exist_ok=True)
-                    target_path = os.path.join(target_dir, file)
+                    id = header.get("id")[0]
+                    date = header.get("date")[0]
+                    new_filename = f"{date}-{id}.md"
+                    target_path = os.path.join(target_dir, new_filename)
                     print(f"Moving {source_path} to {target_path}")
                     shutil.move(source_path, target_path)
     print("All done !")

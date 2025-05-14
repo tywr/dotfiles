@@ -12,7 +12,7 @@ set background=dark
 if exists('syntax_on')
     syntax reset
 endif
-
+"
 hi Normal ctermbg=NONE ctermfg=7
 hi NonText ctermbg=NONE ctermfg=0
 hi Conceal ctermbg=NONE

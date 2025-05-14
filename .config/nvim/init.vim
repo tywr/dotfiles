@@ -1,3 +1,11 @@
+" Add custom python endpoint dedicated to neovim experience
+let g:python3_host_prog = $HOME . '/.python/nvim/bin/python'
+let g:loaded_python3_provider = 1
+let g:loaded_python_provider = 1
+let g:coc_data_home = $HOME . '/.local/share/coc/data'
+let g:gitgutter_git_executable = '/opt/homebrew/bin/git' 
+
+
 syntax on
 set relativenumber
 set number
@@ -17,9 +25,6 @@ set noswapfile
 packadd cfilter
 filetype plugin on
 
-autocmd filetype python setlocal colorcolumn=88
-autocmd filetype markdown setlocal conceallevel=2
-
 " Tab settings
 set expandtab
 set tabstop=4
@@ -38,9 +43,8 @@ filetype plugin indent on
 nnoremap <SPACE> <Nop>
 map <Space> <Leader>
 
-" Add custom python endpoint dedicated to neovim experience
-let g:python3_host_prog= $HOME . '/.local/venv/nvim/bin/python'
-let g:coc_data_home = $HOME . '/.local/share/coc/data'
+autocmd filetype python setlocal colorcolumn=88
+autocmd filetype markdown setlocal conceallevel=2
 
 " Shorter update time
 set updatetime=50
@@ -67,3 +71,5 @@ let g:gitgutter_signs = 1
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '-'
+
+let g:copilot_no_tab_map = v:true

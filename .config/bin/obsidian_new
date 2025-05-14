@@ -1,30 +1,29 @@
-#!/usr/local/bin/python3.11
+#!/opt/homebrew/bin/python3.11
 """
 Parses notes from folder and copy them to the corresponding folder
 """
 
 import os
 import subprocess
-import shutil
 import textwrap
 import argparse
-from io import TextIOWrapper
 import datetime
+import hashlib
 
 INBOX_DIR = "/Users/tywr/Notes/inbox"
 
 
 def create_note(inbox_dir: str, name: str, tags: list[str]) -> str:
+    now = datetime.datetime.now()
     curr_date = f"{datetime.datetime.now():%Y-%m-%d}"
-    if name != "":
-        fname = curr_date + "_" + name + ".md"
-    else:
-        fname = curr_date + ".md"
+    fname = "current.md"
     tags = "\n        ".join(f" - {tag}" for tag in tags)
+    # compute hash of current timestamp
+    hash_object = hashlib.md5(str(now.timestamp()).encode()).hexdigest()
     raw_header = textwrap.dedent(
         f"""\
         ---
-        id: {fname}
+        id: {hash_object}
         aliases: []
         tags:
         {tags}
@@ -35,7 +34,7 @@ def create_note(inbox_dir: str, name: str, tags: list[str]) -> str:
     header = "\n".join(l.rstrip() for l in raw_header.splitlines())
     note_path = os.path.join(inbox_dir, fname)
     if os.path.exists(note_path):
-        print(f"Note with same metadata already exists at {note_path}. Opening...")
+        print("Current note already exists. Opening...")
     else:
         with open(note_path, "w") as f:
             print(f"Creating new note at {note_path}. Opening...")

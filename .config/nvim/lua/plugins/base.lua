@@ -15,5 +15,8 @@ return {
         config = function()
             require("nvim-surround").setup({})
         end
+    },
+    {
+        "chriskempson/base16-vim",
     }
 }

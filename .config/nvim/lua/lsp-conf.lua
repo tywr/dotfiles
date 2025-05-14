@@ -54,14 +54,14 @@ require('mason-lspconfig').setup({
 
 
 local on_attach = function(client, bufnr)
-    if client.name == 'ruff_lsp' then
+    if client.name == 'ruff' then
         -- Disable hover in favor of Pyright
         client.server_capabilities.hoverProvider = false
     end
 end
 
-require('lspconfig').ruff_lsp.setup {
-    interpreter = "~/.local/venv/nvim/bin/python",
+require('lspconfig').ruff.setup {
+    interpreter = "~/.python/nvim/bin/python",
     on_attach = on_attach,
 }
 
@@ -75,7 +75,7 @@ require('lspconfig').pyright.setup {
             reportUndefinedVariable = "none",
         },
         python = {
-            pythonPath = "~/.local/venv/nvim/bin/python",
+            pythonPath = "~/.python/nvim/bin/python",
             analysis = {
                 diagnosticSeverityOverrides = {
                     reportUnusedVariable = "warning",

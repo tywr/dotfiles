@@ -16,11 +16,13 @@ shift + ctrl - j : yabai -m window --swap south
 shift + ctrl - l : yabai -m window --swap east
 shift + ctrl - h : yabai -m window --swap west
 
+
 ctrl + cmd + alt - c : yabai -m window --toggle float;\
                 yabai -m window --grid 4:4:1:1:2:2
 
 cmd + alt - j: yabai -m window --resize left:-20:0 ; yabai -m window --resize right:-20:0
 cmd + alt - k : yabai -m window --resize left:20:0 ; yabai -m window --resize right:20:0
+
 
 # Map alt + h,j,k,l to arrows
 alt - l: skhd -k "right"
@@ -63,14 +65,14 @@ ctrl + cmd + alt - 0x17: skhd -k "0x60"
 ctrl - return: skhd -k "0x60"
 
 # Add shortcuts for brackets
-cmd - i: skhd -k "0x17"
-cmd - o: skhd -k "0x1B"
-cmd - u: skhd -k "alt - 0x15"
-cmd - p: skhd -k "alt - 0x18"
-cmd + shift - i: skhd -k "alt - 0x17"
-cmd + shift - o: skhd -k "alt - 0x1B"
-cmd + shift - u: skhd -k "0x32"
-cmd + shift - p: skhd -k "shift - 0x32"
+cmd - i: skhd -t "("
+cmd - o: skhd -t ")"
+cmd - u: skhd -t "{"
+cmd - p: skhd -t "}"
+cmd + shift - i: skhd -t "["
+cmd + shift - o: skhd -t "]"
+cmd + shift - u: skhd -t "<"
+cmd + shift - p: skhd -t ">"
 cmd + shift - c: skhd -t "#"
 
 
@@ -83,6 +85,3 @@ cmd - 0x1E: skhd -t "$"
 
 # Custom shortcuts for german and norwegian
 cmd - b: skhd -k "alt - 0x0B"
-# cmd - 0x1D: skhd -t "å"
-# cmd - e: skhd -t "ø"
-# cmd - a: skhd -t "æ"
