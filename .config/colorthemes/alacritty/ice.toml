@@ -7,29 +7,29 @@ opacity = 0.85
 transparent_background_colors = true
 
 [colors.primary]
-background = "0x08090c"
-foreground = "0xeceff4"
+background = "0x0a0b0e"
+foreground = "0xe5e9f0"
 
 [colors.cursor]
-cursor = "0xeceff4"
-text = "0x08090c"
+cursor = "0xe5e9f0"
+text = "0x0a0b0e"
 
 [colors.normal]
-black = "0x13161d"
-red = "0xb28cab"
-green = "0x88c0d0"
-yellow = "0x81a1c1"
-blue = "0x7192B7"
-cyan = "0xafd5df"
+black = "0x121319"
+red = "0xb48ead"
+green = "0xafd5df"
+yellow = "0x7192b7"
+blue = "0x88c0d0"
+cyan = "0x8fbcbb"
 magenta = "0x9ccad8"
-white = "0x7a7c7f"
+white = "0xe5e9f0"
 
 [colors.bright]
-black = "0x56575a"
-red = "0x8c6e87"
-green = "0x709eab"
-yellow = "0x67819b"
-blue = "0x5b7593"
-cyan = "0x90afb7"
-magenta = "0x80a6b2"
+black = "0x414459"
+red = "0xb48ead"
+green = "0xafd5df"
+yellow = "0x7192b7"
+blue = "0x88c0d0"
+cyan = "0x8fbcbb"
+magenta = "0x9ccad8"
 white = "0xeceff4"

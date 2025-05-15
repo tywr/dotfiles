@@ -1,4 +1,3 @@
-open_with nvim
 shell mkdir .github
 shell touch raw-parquet-source-buildspec.yml
 find codebuil
@@ -43,8 +42,9 @@ find ra
 shell touch base16
 shell mkdir base16
 shell touch ice.json
-rename ice.yaml
 shell touch convert.py
 open_with%space
 find coc
 rename orbitals.toml
+rename ice16.yaml
+rename ice.yaml
