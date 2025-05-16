@@ -1,3 +1,6 @@
+find co
+find review
+find fo
 
 rename qc.py
 find stats
@@ -44,7 +47,4 @@ shell mkdir borders
 shell touch 
 shell touch borders.sh.j2
 open_with nvim
-find copilot
-find copi
-find copilo
-find git
+mm

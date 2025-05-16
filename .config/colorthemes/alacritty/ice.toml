@@ -1,21 +1,21 @@
 [window]
 blur = true
 decorations = "none"
-opacity = 0.85
+opacity = 0.75
 
 [colors]
 transparent_background_colors = true
 
 [colors.primary]
-background = "0x0a0b0e"
+background = "0x020202"
 foreground = "0xe5e9f0"
 
 [colors.cursor]
 cursor = "0xe5e9f0"
-text = "0x0a0b0e"
+text = "0x020202"
 
 [colors.normal]
-black = "0x1b1c25"
+black = "0x13141a"
 red = "0xb48ead"
 green = "0xafd5df"
 yellow = "0x7192b7"
@@ -25,7 +25,7 @@ magenta = "0x9ccad8"
 white = "0xe5e9f0"
 
 [colors.bright]
-black = "0x414459"
+black = "0x4c5065"
 red = "0xb48ead"
 green = "0xafd5df"
 yellow = "0x7192b7"
@@ -36,11 +36,11 @@ white = "0xeceff4"
 
 [[colors.indexed_colors]]
 index = 16
-color = "0x393b4d"
+color = "0x262833"
 
 [[colors.indexed_colors]]
 index = 17
-color = "0x4b4f67"
+color = "0x5f647e"
 
 [[colors.indexed_colors]]
 index = 18

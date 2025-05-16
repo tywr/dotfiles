@@ -42,13 +42,10 @@ vim.keymap.set("n", "ù", "%")
 -- Obsidian paste image
 vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
 
+
 vim.keymap.set("n", "<leader>no", "<cmd>:noh<cr>")
 
 -- Vim Doge
 vim.keymap.set("n", "<leader>dg", "<cmd>:DogeGenerate numpy<cr>")
 vim.keymap.set({ 'n', 'x' }, '<leader>dn', '<Plug>(doge-comment-jump-forward)')
 vim.keymap.set({ 'n', 'x' }, '<leader>dp', '<Plug>(doge-comment-jump-backward)')
-
--- Copilot
-vim.api.nvim_set_keymap("i", "<Right>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
-vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChatOpen<cr>")

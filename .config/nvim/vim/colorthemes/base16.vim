@@ -16,7 +16,6 @@ endif
 hi Normal ctermbg=NONE ctermfg=15
 hi NonText ctermbg=NONE ctermfg=0
 hi Conceal ctermbg=NONE
-hi Constant ctermbg=NONE ctermfg=3
 hi Error ctermbg=1 ctermfg=7
 hi Identifier ctermbg=NONE ctermfg=4 cterm=BOLD
 hi Ignore ctermbg=8 ctermfg=0
@@ -157,7 +156,7 @@ hi HopNextKey2 cterm=bold ctermfg=7
 
 hi IncSearch ctermbg=7 ctermfg=0
 hi CurSearch ctermbg=2 ctermfg=0
-hi Search ctermbg=11 ctermfg=none
+hi Search ctermbg=16 ctermfg=none cterm=bold
 
 hi NormalFloat cterm=bold ctermbg=0 ctermfg=15
 hi PmenuSel cterm=bold ctermbg=2 ctermfg=0
@@ -175,8 +174,12 @@ hi DevIconDockerfile ctermfg=3
 hi DiagnosticHint ctermfg=1
 hi DiagnosticWarn ctermfg=1
 
+hi CopilotSuggestion ctermfg=17
+
+
 " Code Hightlighting + Treesitter
 hi Comment cterm=italic gui=italic ctermfg=8 ctermbg=none
+hi Constant ctermbg=NONE ctermfg=6
 hi Float ctermfg=1
 hi Number ctermfg=1
 hi String ctermbg=NONE ctermfg=3
