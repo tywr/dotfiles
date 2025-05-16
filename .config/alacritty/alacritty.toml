@@ -1,6 +1,3 @@
-# import = ["~/.config/colorthemes/alacritty/orbitals-jupiter.toml"]
-# import = ["~/.config/colorthemes/alacritty/nord.toml"]
-# import = ["~/.config/colorthemes/alacritty/amber.toml"]
 import = ["~/.config/colorthemes/alacritty/ice.toml"]
 
 [env]

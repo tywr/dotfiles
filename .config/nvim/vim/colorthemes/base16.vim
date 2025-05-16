@@ -49,8 +49,6 @@ hi DiffAdd ctermbg=NONE ctermfg=2
 hi DiffChange ctermbg=NONE ctermfg=8
 hi DiffDelete ctermbg=NONE ctermfg=2
 hi DiffText ctermbg=NONE ctermfg=4
-hi IncSearch ctermbg=3 ctermfg=0
-hi Search ctermbg=3 ctermfg=0
 hi Directory ctermbg=NONE ctermfg=4
 hi ColorColumn ctermbg=4 ctermfg=0
 hi signColumn ctermbg=NONE ctermfg=4
@@ -157,8 +155,9 @@ hi HopNextKey cterm=bold ctermfg=1
 hi HopNextKey1 cterm=bold ctermfg=4
 hi HopNextKey2 cterm=bold ctermfg=7
 
-hi IncSearch ctermbg=10 ctermfg=0
-hi CurSearch ctermbg=1 ctermfg=0
+hi IncSearch ctermbg=7 ctermfg=0
+hi CurSearch ctermbg=2 ctermfg=0
+hi Search ctermbg=11 ctermfg=none
 
 hi NormalFloat cterm=bold ctermbg=0 ctermfg=15
 hi PmenuSel cterm=bold ctermbg=2 ctermfg=0
@@ -172,6 +171,10 @@ hi DevIconPyo ctermfg=4
 hi DevIconPyx ctermfg=4
 hi DevIconDockerfile ctermfg=3
 
+" Diagnostic
+hi DiagnosticHint ctermfg=1
+hi DiagnosticWarn ctermfg=1
+
 " Code Hightlighting + Treesitter
 hi Comment cterm=italic gui=italic ctermfg=8 ctermbg=none
 hi Float ctermfg=1
@@ -179,11 +182,11 @@ hi Number ctermfg=1
 hi String ctermbg=NONE ctermfg=3
 hi @boolean.python ctermfg=3
 hi Operator ctermfg=2
-hi Special ctermfg=6
+hi Special ctermfg=5
 hi Keyword ctermfg=4
 hi Delimiter ctermfg=2
-hi Function ctermfg=6
-hi @string.documentation.python cterm=italic gui=italic ctermfg=7 ctermbg=none
+hi Function ctermfg=2
+hi @string.documentation.python cterm=italic gui=italic ctermfg=19 ctermbg=none
 hi @variable.python ctermfg=15
 hi @type.python ctermfg=6
 hi @variable.parameter.python ctermfg=5

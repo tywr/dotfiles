@@ -85,3 +85,8 @@ fuzzy_tmux_sessions() {
         tmux $change -t "$session" || echo "No sessions found."
     fi
 }
+
+
+function bo {
+    bash ~/.config/colorthemes/borders/$1.sh
+}

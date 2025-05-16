@@ -62,9 +62,9 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     name = args.name
-    template_file = "templates/alacritty.toml.j2"  #  Jinja2 template file.
-    config_file = f"base16/{name}.yaml"
-    output_file = f"alacritty/{name}.toml"
+    for system, filetype in [("alacritty", "toml"), ("borders", "rc")]:
+        template_file = f"templates/{system}.j2"  #  Jinja2 template file.
+        config_file = f"base16/{name}.yaml"
+        output_file = f"{system}/{name}.{filetype}"
 
-    render_jinja2_template(template_file, config_file, output_file)
-
+        render_jinja2_template(template_file, config_file, output_file)
