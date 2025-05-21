@@ -1,3 +1,9 @@
+shell mkdir .github
+shell touch raw-parquet-source-buildspec.yml
+find codebuil
+find code
+shell touch databricks-token.csv
+rename codebuild
 find co
 find review
 find fo
@@ -36,15 +42,9 @@ find ra
 shell touch base16
 shell mkdir base16
 shell touch ice.json
+rename ice.yaml
 shell touch convert.py
 open_with%space
 find coc
 rename orbitals.toml
-rename ice16.yaml
-rename ice.yaml
-shell touch
-shell mkdir borders
-shell touch 
-shell touch borders.sh.j2
-open_with nvim
-mm
+q
