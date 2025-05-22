@@ -1,3 +1,4 @@
+find fo
 
 rename qc.py
 find stats
@@ -47,4 +48,3 @@ rename convert_base.py
 rename ice.yaml
 rename base3
 rename convert_base3.py
-rename alacritty_base3.j2

@@ -17,12 +17,12 @@ hi Normal ctermbg=NONE ctermfg=15
 hi NonText ctermbg=NONE ctermfg=0
 hi Conceal ctermbg=NONE
 hi Error ctermbg=1 ctermfg=7
-hi Identifier ctermbg=NONE ctermfg=4 cterm=BOLD
+hi Identifier ctermbg=NONE ctermfg=3 cterm=BOLD
 hi Ignore ctermbg=8 ctermfg=0
 hi PreProc ctermbg=NONE ctermfg=3
 hi Statement ctermbg=NONE ctermfg=2
 hi Todo ctermbg=2 ctermfg=0
-hi Type ctermbg=NONE ctermfg=3
+hi Type ctermbg=NONE ctermfg=4
 hi Underlined ctermbg=NONE ctermfg=2 cterm=underline
 hi TabLine ctermbg=NONE ctermfg=8
 hi TabLineFill ctermbg=NONE ctermfg=8
@@ -57,7 +57,7 @@ hi MoreMsg ctermbg=NONE ctermfg=2
 hi Question ctermbg=NONE ctermfg=4
 hi WarningMsg ctermbg=2 ctermfg=0
 hi Cursor ctermbg=NONE ctermfg=8
-hi Structure ctermbg=NONE ctermfg=5
+hi Structure ctermbg=NONE ctermfg=4
 hi CursorColumn ctermbg=8 ctermfg=7
 hi ModeMsg ctermbg=NONE ctermfg=7
 hi SpellBad ctermbg=NONE ctermfg=1 cterm=underline
@@ -182,17 +182,17 @@ hi Comment cterm=italic gui=italic ctermfg=8 ctermbg=none
 hi Constant ctermbg=NONE ctermfg=6
 hi Float ctermfg=1
 hi Number ctermfg=1
-hi String ctermbg=NONE ctermfg=3
-hi @boolean.python ctermfg=3
+hi String ctermbg=NONE ctermfg=5
+hi @boolean.python ctermfg=5
 hi Operator ctermfg=2
-hi Special ctermfg=5
-hi Keyword ctermfg=4
+hi Special ctermfg=6
+hi Keyword ctermfg=3
 hi Delimiter ctermfg=2
 hi Function ctermfg=2
 hi @string.documentation.python cterm=italic gui=italic ctermfg=19 ctermbg=none
 hi @variable.python ctermfg=15
 hi @type.python ctermfg=6
-hi @variable.parameter.python ctermfg=5
-hi @constructor.python ctermfg=5
-hi @function.method.call.python ctermfg=5
+hi @variable.parameter.python ctermfg=6
+hi @constructor.python ctermfg=6
+hi @function.method.call.python ctermfg=6
 hi @function.call.python ctermfg=6

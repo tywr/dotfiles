@@ -1,7 +1,11 @@
 name: "ice"
 author: "tywr"
-background: "020202" 
+background: "000000" 
 foreground: "eceff4"
 accent: "b48ead"
-main: "9ccad8"
+main: "b0e3f3"
 secondary: "81a1c1"
+bright_hue: 10
+main_hues: [3,7]
+secondary_hues: [7]
+black_hues: [6,30,40,45,55,65,75,85]

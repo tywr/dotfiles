@@ -2,6 +2,105 @@ import argparse
 import yaml
 from jinja2 import Environment, FileSystemLoader
 import os
+import colorsys
+import webcolors
+from PIL import Image, ImageDraw, ImageFont
+
+
+def display_colors(
+    color_dict: dict, image_width: int = 400, color_strip_height: int = 60
+):
+    """
+    Creates a single image displaying all colors from a dictionary as strips,
+    along with their names and hex codes.
+
+    Args:
+        color_dict (dict): A dictionary where keys are color names (str)
+                           and values are hexadecimal color codes (str, e.g., 'RRGGBB').
+        image_width (int): The width of the entire generated image in pixels.
+        color_strip_height (int): The height of each individual color strip in pixels.
+    """
+    if not color_dict:
+        print("The color dictionary is empty. No image to create.")
+        return
+
+    num_colors = len(color_dict)
+    total_image_height = num_colors * color_strip_height
+
+    # Create a new blank RGB image
+    img = Image.new("RGB", (image_width, total_image_height), color="white")
+    draw = ImageDraw.Draw(img)
+
+    # Try to load a default font for better text rendering
+    try:
+        # Common font names for various OS. Adjust path if needed.
+        font = ImageFont.truetype("arial.ttf", 16)  # Windows
+    except IOError:
+        try:
+            font = ImageFont.truetype("LiberationSans-Regular.ttf", 16)  # Linux
+        except IOError:
+            try:
+                font = ImageFont.truetype("Arial.ttf", 16)  # macOS / another common one
+            except IOError:
+                font = ImageFont.load_default()  # Fallback to default PIL font
+
+    y_offset = 0
+    for color_name, hex_code in color_dict.items():
+        try:
+            clean_hex = hex_code.lstrip("#").strip()
+            if len(clean_hex) != 6:
+                print(
+                    f"Warning: Invalid hex code length for '{color_name}': '{hex_code}'. Skipping this color."
+                )
+                continue
+
+            # Convert hex to RGB tuple
+            rgb_color = webcolors.hex_to_rgb(f"#{clean_hex}")
+
+            # Draw the color strip
+            draw.rectangle(
+                [0, y_offset, image_width, y_offset + color_strip_height],
+                fill=rgb_color,
+            )
+
+            # Determine text color for readability (black or white)
+            # A common luminance formula for perceived brightness
+            r, g, b = rgb_color
+            luminance = 0.299 * r + 0.587 * g + 0.114 * b
+            text_fill_color = (
+                (0, 0, 0) if luminance > 186 else (255, 255, 255)
+            )  # Black or White
+
+            # Prepare text string
+            display_text = f"{color_name}: #{clean_hex}"
+
+            # Get text bounding box to center it vertically
+            # Pillow 9.2.0+ uses textbbox, older versions use textsize (deprecated)
+            try:
+                text_bbox = draw.textbbox((0, 0), display_text, font=font)
+                text_width = text_bbox[2] - text_bbox[0]
+                text_height = text_bbox[3] - text_bbox[1]
+            except AttributeError:  # Fallback for older Pillow versions
+                text_width, text_height = draw.textsize(display_text, font=font)
+
+            # Center text horizontally and vertically within the strip
+            text_x = (image_width - text_width) // 2
+            text_y = y_offset + (color_strip_height - text_height) // 2
+
+            # Draw the text on the color strip
+            draw.text((text_x, text_y), display_text, fill=text_fill_color, font=font)
+
+            y_offset += color_strip_height
+
+        except webcolors.InvalidHexError:
+            print(
+                f"Warning: Invalid hex color format for '{color_name}': '{hex_code}'. Skipping this color."
+            )
+        except Exception as e:
+            print(f"An unexpected error occurred for '{color_name}' ({hex_code}): {e}")
+
+    # Display the final image
+    img.show(title="Color Palette")
 
 
 def hex_to_rgb(hex_str: str) -> tuple[int, int, int]:
@@ -24,12 +123,15 @@ def increase_brightness(hex: str, n_points: int) -> str:
     Increases the brightness of a given hex color string by N points.
     """
     rgb = hex_to_rgb(hex)
+    r_norm, g_norm, b_norm = rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0
+    h, l, s = colorsys.rgb_to_hls(r_norm, g_norm, b_norm)
+    new_l = max(0.0, min(1.0, l * (1 + n_points / 100.0)))
+    new_r_norm, new_g_norm, new_b_norm = colorsys.hls_to_rgb(h, new_l, s)
 
     # Increase each RGB component by n_points, capping at 255 and flooring at 0
-    new_r = rgb[0] + n_points
-    new_g = rgb[1] + n_points
-    new_b = rgb[2] + n_points
-
+    new_r = max(0, min(255, new_r_norm * 255))
+    new_g = max(0, min(255, new_g_norm * 255))
+    new_b = max(0, min(255, new_b_norm * 255))
     return rgb_to_hex((new_r, new_g, new_b))
 
 
@@ -84,25 +186,24 @@ def load_base3(name, base_folder="base3"):
 def generate_theme(
     name,
     base_folder="base3",
-    bright_hue=5,
-    main_hues=[10, 20],
-    secondary_hues=[10],
-    black_hues=[10, 20, 30, 40, 50],
-    white_hues=[99, 90, 80, 70, 60],
 ):
     base3 = load_base3(name, base_folder=base_folder)
+    bright_hue = base3["bright_hue"]
+    main_hues = base3["main_hues"]
+    secondary_hues = base3["secondary_hues"]
+    black_hues = base3["black_hues"]
     base_colors = generate_color_palette(
         base3["background"], base3["foreground"], n=100
     )
-    main_dark_colors = generate_color_palette(base3["main"], base3["background"], n=100)
+    main_colors = generate_color_palette(base3["main"], base3["background"], n=100)
 
-    secondary_dark_colors = generate_color_palette(
+    secondary_colors = generate_color_palette(
         base3["secondary"], base3["background"], n=100
     )
 
-    main2 = main_dark_colors[main_hues[0]]
-    main3 = main_dark_colors[main_hues[1]]
-    secondary2 = secondary_dark_colors[secondary_hues[0]]
+    main2 = main_colors[main_hues[0]]
+    main3 = main_colors[main_hues[1]]
+    secondary2 = secondary_colors[secondary_hues[0]]
 
     # Create a dictionary to hold the generated colors
     generated_colors = {
@@ -118,7 +219,7 @@ def generate_theme(
         "secondary_bright": increase_brightness(
             base3["secondary"], n_points=bright_hue
         ),
-        "secondary2": base3["secondary"],
+        "secondary2": secondary2,
         "secondary2_bright": increase_brightness(secondary2, n_points=bright_hue),
         "accent": base3["accent"],
         "accent_bright": increase_brightness(base3["accent"], n_points=bright_hue),
@@ -127,11 +228,11 @@ def generate_theme(
         "black3": base_colors[black_hues[2]],
         "black4": base_colors[black_hues[3]],
         "black5": base_colors[black_hues[4]],
-        "white": base_colors[white_hues[0]],
-        "white2": base_colors[white_hues[1]],
-        "white3": base_colors[white_hues[2]],
-        "white4": base_colors[white_hues[3]],
-        "white5": base_colors[white_hues[4]],
+        "black6": base_colors[black_hues[5]],
+        "black7": base_colors[black_hues[6]],
+        "black8": base_colors[black_hues[7]],
+        "white": base3["foreground"],
+        "white_bright": increase_brightness(base3["foreground"], n_points=bright_hue),
     }
     return generated_colors
 
@@ -170,6 +271,8 @@ def render_jinja2_template(template_file, name, output_file=None):
     except Exception as e:
         print(f"Error during template rendering: {e}")
 
+    return config_data
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -181,6 +284,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     name = args.name
     for system, filetype in [("alacritty", "toml"), ("borders", "rc")]:
-        template_file = f"templates/{system}_base3.j2"  #  Jinja2 template file.
+        template_file = f"templates/{system}_base3.j2"
         output_file = f"{system}/{name}.{filetype}"
-        render_jinja2_template(template_file, name, output_file)
+        config_data = render_jinja2_template(template_file, name, output_file)
+    display_colors(config_data)
