@@ -1,3 +1,4 @@
+# import = ["~/.config/colorthemes/alacritty/orbital.toml"]
 import = ["~/.config/colorthemes/alacritty/ice.toml"]
 
 [env]

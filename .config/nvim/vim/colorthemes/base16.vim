@@ -22,7 +22,7 @@ hi Ignore ctermbg=8 ctermfg=0
 hi PreProc ctermbg=NONE ctermfg=3
 hi Statement ctermbg=NONE ctermfg=2
 hi Todo ctermbg=2 ctermfg=0
-hi Type ctermbg=NONE ctermfg=4
+hi Type ctermbg=NONE ctermfg=5
 hi Underlined ctermbg=NONE ctermfg=2 cterm=underline
 hi TabLine ctermbg=NONE ctermfg=8
 hi TabLineFill ctermbg=NONE ctermfg=8
@@ -57,7 +57,7 @@ hi MoreMsg ctermbg=NONE ctermfg=2
 hi Question ctermbg=NONE ctermfg=4
 hi WarningMsg ctermbg=2 ctermfg=0
 hi Cursor ctermbg=NONE ctermfg=8
-hi Structure ctermbg=NONE ctermfg=4
+hi Structure ctermbg=NONE ctermfg=5
 hi CursorColumn ctermbg=8 ctermfg=7
 hi ModeMsg ctermbg=NONE ctermfg=7
 hi SpellBad ctermbg=NONE ctermfg=1 cterm=underline
@@ -112,7 +112,7 @@ hi markdownCodeDelimiter ctermbg=NONE ctermfg=5
 hi markdownItalic cterm=Italic
 hi markdownBold cterm=Bold
 hi xdefaultsValue ctermbg=NONE ctermfg=7
-hi pythonOperator ctermbg=NONE ctermfg=5
+hi pythonOperator ctermbg=NONE ctermfg=2
 hi pythonFunction ctermbg=NONE ctermfg=4
 hi pythonRepeat ctermbg=NONE ctermfg=5
 hi pythonStatement ctermbg=NONE ctermfg=3 cterm=Bold
@@ -120,7 +120,7 @@ hi pythonBuiltIn ctermbg=NONE ctermfg=4
 hi phpMemberSelector ctermbg=NONE ctermfg=7
 hi phpComparison ctermbg=NONE ctermfg=7
 hi phpParent ctermbg=NONE ctermfg=7
-hi cOperator ctermbg=NONE ctermfg=6
+hi cOperator ctermbg=NONE ctermfg=2
 hi cPreCondit ctermbg=NONE ctermfg=5
 hi SignifySignAdd ctermbg=NONE ctermfg=2
 hi SignifySignChange ctermbg=NONE ctermfg=4
@@ -182,17 +182,17 @@ hi Comment cterm=italic gui=italic ctermfg=8 ctermbg=none
 hi Constant ctermbg=NONE ctermfg=6
 hi Float ctermfg=1
 hi Number ctermfg=1
-hi String ctermbg=NONE ctermfg=5
-hi @boolean.python ctermfg=5
+hi String ctermbg=NONE ctermfg=4
+hi @boolean.python ctermfg=4
 hi Operator ctermfg=2
 hi Special ctermfg=6
 hi Keyword ctermfg=3
 hi Delimiter ctermfg=2
 hi Function ctermfg=2
-hi @string.documentation.python cterm=italic gui=italic ctermfg=19 ctermbg=none
+hi @string.documentation.python cterm=italic gui=italic ctermfg=17 ctermbg=none
 hi @variable.python ctermfg=15
 hi @type.python ctermfg=6
 hi @variable.parameter.python ctermfg=6
 hi @constructor.python ctermfg=6
-hi @function.method.call.python ctermfg=6
-hi @function.call.python ctermfg=6
+hi @function.method.call.python ctermfg=5
+hi @function.call.python ctermfg=5

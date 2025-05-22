@@ -1,0 +1,14 @@
+name: "orbital"
+author: "tywr"
+background: "000000" 
+foreground: "e4e4e4"
+accent: "af875f"
+main: "ffd7af"
+main2: "d7af87"
+main3: "87afd7"
+secondary: "5fafff"
+secondary2: "0087d7"
+bright_hue: 15
+main_hues: [7,14]
+secondary_hues: [7]
+black_hues: [6,30,40,45,55,65,75,85]
