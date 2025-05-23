@@ -13,12 +13,6 @@ def display_colors(
     """
     Creates a single image displaying all colors from a dictionary as strips,
     along with their names and hex codes.
-
-    Args:
-        color_dict (dict): A dictionary where keys are color names (str)
-                           and values are hexadecimal color codes (str, e.g., 'RRGGBB').
-        image_width (int): The width of the entire generated image in pixels.
-        color_strip_height (int): The height of each individual color strip in pixels.
     """
     if not color_dict:
         print("The color dictionary is empty. No image to create.")
@@ -46,58 +40,50 @@ def display_colors(
 
     y_offset = 0
     for color_name, hex_code in color_dict.items():
-        try:
-            clean_hex = hex_code.lstrip("#").strip()
-            if len(clean_hex) != 6:
-                print(
-                    f"Warning: Invalid hex code length for '{color_name}': '{hex_code}'. Skipping this color."
-                )
-                continue
-
-            # Convert hex to RGB tuple
-            rgb_color = webcolors.hex_to_rgb(f"#{clean_hex}")
-
-            # Draw the color strip
-            draw.rectangle(
-                [0, y_offset, image_width, y_offset + color_strip_height],
-                fill=rgb_color,
-            )
-
-            # Determine text color for readability (black or white)
-            # A common luminance formula for perceived brightness
-            r, g, b = rgb_color
-            luminance = 0.299 * r + 0.587 * g + 0.114 * b
-            text_fill_color = (
-                (0, 0, 0) if luminance > 186 else (255, 255, 255)
-            )  # Black or White
-
-            # Prepare text string
-            display_text = f"{color_name}: #{clean_hex}"
-
-            # Get text bounding box to center it vertically
-            # Pillow 9.2.0+ uses textbbox, older versions use textsize (deprecated)
-            try:
-                text_bbox = draw.textbbox((0, 0), display_text, font=font)
-                text_width = text_bbox[2] - text_bbox[0]
-                text_height = text_bbox[3] - text_bbox[1]
-            except AttributeError:  # Fallback for older Pillow versions
-                text_width, text_height = draw.textsize(display_text, font=font)
-
-            # Center text horizontally and vertically within the strip
-            text_x = (image_width - text_width) // 2
-            text_y = y_offset + (color_strip_height - text_height) // 2
-
-            # Draw the text on the color strip
-            draw.text((text_x, text_y), display_text, fill=text_fill_color, font=font)
-
-            y_offset += color_strip_height
-
-        except webcolors.InvalidHexError:
+        clean_hex = hex_code.lstrip("#").strip()
+        if len(clean_hex) != 6:
             print(
-                f"Warning: Invalid hex color format for '{color_name}': '{hex_code}'. Skipping this color."
+                f"Warning: Invalid hex code length for '{color_name}': '{hex_code}'. Skipping this color."
             )
-        except Exception as e:
-            print(f"An unexpected error occurred for '{color_name}' ({hex_code}): {e}")
+            continue
+
+        # Convert hex to RGB tuple
+        rgb_color = webcolors.hex_to_rgb(f"#{clean_hex}")
+
+        # Draw the color strip
+        draw.rectangle(
+            [0, y_offset, image_width, y_offset + color_strip_height],
+            fill=rgb_color,
+        )
+
+        # Determine text color for readability (black or white)
+        # A common luminance formula for perceived brightness
+        r, g, b = rgb_color
+        luminance = 0.299 * r + 0.587 * g + 0.114 * b
+        text_fill_color = (
+            (0, 0, 0) if luminance > 186 else (255, 255, 255)
+        )  # Black or White
+
+        # Prepare text string
+        display_text = f"{color_name}: #{clean_hex}"
+
+        # Get text bounding box to center it vertically
+        # Pillow 9.2.0+ uses textbbox, older versions use textsize (deprecated)
+        try:
+            text_bbox = draw.textbbox((0, 0), display_text, font=font)
+            text_width = text_bbox[2] - text_bbox[0]
+            text_height = text_bbox[3] - text_bbox[1]
+        except AttributeError:  # Fallback for older Pillow versions
+            text_width, text_height = draw.textsize(display_text, font=font)
+
+        # Center text horizontally and vertically within the strip
+        text_x = (image_width - text_width) // 2
+        text_y = y_offset + (color_strip_height - text_height) // 2
+
+        # Draw the text on the color strip
+        draw.text((text_x, text_y), display_text, fill=text_fill_color, font=font)
+
+        y_offset += color_strip_height
 
     # Display the final image
     img.show(title="Color Palette")
@@ -189,8 +175,9 @@ def generate_theme(
 ):
     base3 = load_base3(name, base_folder=base_folder)
     bright_hue = base3["bright_hue"]
-    main_hues = base3["main_hues"]
-    secondary_hues = base3["secondary_hues"]
+    main_hues = base3.get("main_hues")
+    secondary_hues = base3.get("secondary_hues")
+    comment_hue = base3.get("comment_hue")
     black_hues = base3["black_hues"]
     base_colors = generate_color_palette(
         base3["background"], base3["foreground"], n=100
@@ -232,6 +219,7 @@ def generate_theme(
         ),
         "secondary2_bright": increase_brightness(secondary2, n_points=bright_hue),
         "accent_bright": increase_brightness(base3["accent"], n_points=bright_hue),
+        "black_comment": base_colors[comment_hue],
         "black": base_colors[black_hues[0]],
         "black2": base_colors[black_hues[1]],
         "black3": base_colors[black_hues[2]],

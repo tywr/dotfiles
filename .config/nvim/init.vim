@@ -2,12 +2,10 @@
 let g:python3_host_prog = $HOME . '/.python/nvim/bin/python'
 let g:loaded_python3_provider = 1
 let g:loaded_python_provider = 1
-let g:coc_data_home = $HOME . '/.local/share/coc/data'
 let g:gitgutter_git_executable = '/opt/homebrew/bin/git' 
 
 
 syntax on
-set relativenumber
 set number
 set mouse=a
 set splitright
@@ -52,7 +50,7 @@ set updatetime=50
 lua require('init')
 lua require("lsp-conf")
 lua require("mappings")
-source ~/.config/nvim/vim/colorthemes/base16.vim
+lua require("colors")
 
 " -----------------------------------------------------------------------------
 "  						             CURSOR

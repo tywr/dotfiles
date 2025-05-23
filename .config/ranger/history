@@ -1,6 +1,3 @@
-find fo
-
-rename qc.py
 find stats
 find raw-p
 shell touch entry
@@ -25,7 +22,6 @@ rename setup.md_
 rename Setup.md
 rename Manual Computation.md
 rename wiki
-shell 
 shell touch __init__.py
 rename languages.py
 rename mongo_itunes
@@ -48,3 +44,7 @@ rename convert_base.py
 rename ice.yaml
 rename base3
 rename convert_base3.py
+shell touch
+shell touch colorthemes
+shell 
+shell touch colors.lua

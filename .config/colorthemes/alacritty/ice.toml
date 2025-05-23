@@ -8,52 +8,56 @@ transparent_background_colors = true
 
 [colors.primary]
 background = "0x000000"
-foreground = "0xeceff4"
+foreground = "0xe5e9f0"
 
 [colors.cursor]
-cursor = "0xeceff4"
+cursor = "0xe5e9f0"
 text = "0x000000"
 
 [colors.normal]
-black = "0x0e0e0e"
-red = "0xb48ead"
+black = "0x0d0e0e"
+red = "0xa093c7"
 green = "0xb0e3f3"
 yellow = "0x81a1c1"
-blue = "0x7390ad"
-magenta = "0xa3d2e1"
-cyan = "0x97c2d0"
-white = "0xeceff4"
+blue = "0x5e81ac"
+magenta = "0x9dc4d7"
+cyan = "0x80b2cb"
+white = "0xe5e9f0"
 
 [colors.bright]
-black = "0x474849"
-red = "0xc0a1bb"
+black = "0x505254"
+red = "0xb4a9d2"
 green = "0xd4eff8"
 yellow = "0x96b1cb"
-blue = "0x859eb7"
-magenta = "0xc0e0ea"
-cyan = "0xafd0db"
+blue = "0x6f8eb5"
+magenta = "0xb7d3e1"
+cyan = "0x97c0d4"
 white = "0xffffff"
 
 [[colors.indexed_colors]]
 index = 16
-color = "0x5f6062"
+color = "0x222324"
 
 [[colors.indexed_colors]]
 index = 17
-color = "0x6b6c6e"
+color = "0x292a2b"
 
 [[colors.indexed_colors]]
 index = 18
-color = "0x838487"
+color = "0x37383a"
 
 [[colors.indexed_colors]]
 index = 19
-color = "0x9a9ca0"
+color = "0x454648"
 
 [[colors.indexed_colors]]
 index = 20
-color = "0xb2b5b8"
+color = "0x5c5e60"
 
 [[colors.indexed_colors]]
 index = 21
-color = "0xcacdd1"
+color = "0x737579"
+
+[[colors.indexed_colors]]
+index = 21
+color = "0x8a8d91"
