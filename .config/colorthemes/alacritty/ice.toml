@@ -1,14 +1,8 @@
-[window]
-blur = true
-decorations = "none"
-opacity = 0.75
-
-[colors]
-transparent_background_colors = true
-
 [colors.primary]
 background = "0x000000"
 foreground = "0xe5e9f0"
+dim_foreground = "0x8a8d91"
+bright_foreground = "0xffffff"
 
 [colors.cursor]
 cursor = "0xe5e9f0"

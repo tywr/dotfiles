@@ -1,5 +1,16 @@
-# import = ["~/.config/colorthemes/alacritty/orbital.toml"]
+[general]
 import = ["~/.config/colorthemes/alacritty/ice.toml"]
+live_config_reload = true
+
+[window]
+blur = true
+decorations = "none"
+opacity = 0.75
+padding = { x = 5, y = 10 }
+dynamic_padding = false
+
+[colors]
+transparent_background_colors = true
 
 [env]
 term = "xterm-256color"
@@ -7,12 +18,8 @@ term = "xterm-256color"
 [mouse]
 hide_when_typing = false
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
-
-[window.padding]
-x = 5
-y = 10 
 
 [cursor]
 unfocused_hollow = true
