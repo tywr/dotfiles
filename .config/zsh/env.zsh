@@ -9,4 +9,4 @@ export FZF_DEFAULT_OPTS="-e \
     --color fg+:15:regular,hl+:5:bold,bg+:0 \
     --color prompt:15,pointer:6,marker:6,spinner:5,info:2,header:2,border:8 \
     --bind 'tab:toggle-down,btab:toggle-up' \
-    --border='bold'"
+    --border rounded"

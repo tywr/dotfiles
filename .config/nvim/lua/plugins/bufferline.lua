@@ -61,7 +61,7 @@ return {
                 },
                 separator_selected = {
                     ctermbg = 0,
-                    ctermfg = 0,
+                    ctermfg = 2,
                 },
                 duplicate_selected = {
                     ctermbg = 2,
@@ -83,7 +83,7 @@ return {
                     ctermbg = 0,
                 },
                 separator_visible = {
-                    ctermfg = 0,
+                    ctermfg = 2,
                     ctermbg = 0,
                 },
                 indicator_visible = {

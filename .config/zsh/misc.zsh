@@ -59,7 +59,7 @@ function emr-ssh {
 }
 
 __tmux_fzf_get_session__() {
-    session=$(tmux list-sessions -F "#{session_name}" | fzf --exit-0 --reverse --bind 'tab:toggle-down,btab:toggle-up' --border='bold' --margin='20%' --tmux )
+    session=$(tmux list-sessions -F "#{session_name}" | fzf --exit-0 --reverse --bind 'tab:toggle-down,btab:toggle-up' --border='rounded' --margin='20%' --tmux )
     echo "$session"
 }
 

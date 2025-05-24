@@ -1,6 +1,3 @@
-rename qc.py
-find stats
-find raw-p
 shell touch entry
 shell mkdir entrypoints
 rename stats.py
@@ -48,3 +45,6 @@ rename base3
 rename convert_base3.py
 shell touch src
 shell mkdir src
+shell bor
+search border
+search bordl
