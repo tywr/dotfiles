@@ -14,8 +14,8 @@ red = "0xa093c7"
 green = "0xb0e3f3"
 yellow = "0x81a1c1"
 blue = "0x5e81ac"
-magenta = "0x9dc4d7"
-cyan = "0x80b2cb"
+magenta = "0x88c0d0"
+cyan = "0x99b3cc"
 white = "0xe5e9f0"
 
 [colors.bright]
@@ -24,8 +24,8 @@ red = "0xb4a9d2"
 green = "0xd4eff8"
 yellow = "0x96b1cb"
 blue = "0x6f8eb5"
-magenta = "0xb7d3e1"
-cyan = "0x97c0d4"
+magenta = "0xa0cdd9"
+cyan = "0xb0c4d7"
 white = "0xffffff"
 
 [[colors.indexed_colors]]
