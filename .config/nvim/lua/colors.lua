@@ -102,8 +102,8 @@ hl("@string.documentation.python", {
     cterm = { italic = true },
 })
 hl("@variable.python", { ctermfg = colors.white })
-hl("@type.python", { ctermfg = colors.main3 })
 hl("@variable.parameter.python", { ctermfg = colors.main3 })
-hl("@constructor.python", { ctermfg = colors.main3 })
+hl("@type.python", { ctermfg = colors.main3 })
+hl("@constructor.python", { ctermfg = colors.main2 })
 hl("@function.method.call.python", { ctermfg = colors.main2 })
 hl("@function.call.python", { ctermfg = colors.main2 })

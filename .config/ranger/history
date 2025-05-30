@@ -1,12 +1,3 @@
-shell mkdir entrypoints
-rename stats.py
-rename main.py
-find etl
-rename stats
-rename __main__.py
-rename qc
-rename base_stats.py
-rename base_qc.py
 rename raw-parquet-stats
 shell touch comparison.py
 shell tou
@@ -48,3 +39,12 @@ shell bor
 search border
 search bordl
 rename dag_monthly_common.py
+rename tables.py_
+rename monthly_backup_snapshots.py
+shell touch .aerospace.toml
+open_with k
+shell q
+rename top_charts_google
+rename topcharts_google
+rename topcharts_itunes
+rename topcharts_apple
