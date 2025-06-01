@@ -1,6 +1,3 @@
-rename raw-parquet-stats
-shell touch comparison.py
-shell tou
 shell touch doc.py
 shell touch aggregation.py
 shell touch base_readme.md
@@ -48,3 +45,6 @@ rename top_charts_google
 rename topcharts_google
 rename topcharts_itunes
 rename topcharts_apple
+open_with 
+open_with nvim
+open_with h

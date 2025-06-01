@@ -37,15 +37,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     ctrl-shift-k = 'move up'
     ctrl-shift-l = 'move right'
 
-    alt-h = 'join-with left'
-    alt-v = 'join-with down'
-
+    cmd-shift-enter = 'join-with left'
     cmd-shift-f = 'fullscreen'
-
-    cmd-shift-s = 'layout v_accordion' # 'layout stacking' in i3
-    cmd-shift-w = 'layout h_accordion' # 'layout tabbed' in i3
     cmd-shift-e = 'layout tiles horizontal vertical' 
-
     cmd-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 
     alt-r = 'reload-config'

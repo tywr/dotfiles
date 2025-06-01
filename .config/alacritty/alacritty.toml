@@ -37,20 +37,20 @@ vi_mode_style.blinking = "Always"
 x = 0
 y = 0
 
-# KLARTEXT MONO FONT ----------------------------------------------------------
 [font]
 # size = 16.5
-size = 19.25
+size = 19.5
+# normal.family = "Wumpus Mono Pro"
+# normal.family = "Tekton"
+
+# normal.family = "BlexMono Nerd Font Propo"
 normal.family = "KlartextMono Nerd Font"
-italic.family = "KlartextMono Nerd Font"
-bold_italic.family = "KlartextMono Nerd Font"
 normal.style = "Regular"
-bold.family = "KlartextMono Nerd Font"
 italic.style = "Italic"
 bold.style = "Medium"
 bold_italic.style = "Medium"
-glyph_offset.x = 0
-glyph_offset.y = 0
+# glyph_offset.x = 0
+# glyph_offset.y = 0
 
 [[keyboard.bindings]]
 action = "IncreaseFontSize"
