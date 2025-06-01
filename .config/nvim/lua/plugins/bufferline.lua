@@ -41,19 +41,16 @@ return {
                     ctermbg = 0,
                 },
                 buffer_selected = {
-                    ctermbg = 5,
+                    ctermbg = 2,
                     ctermfg = 0,
-                    bold = true,
                 },
                 numbers_selected = {
-                    ctermbg = 5,
+                    ctermbg = 2,
                     ctermfg = 0,
-                    bold = true,
                 },
                 modified_selected = {
-                    ctermbg = 5,
+                    ctermbg = 2,
                     ctermfg = 0,
-                    bold = true,
                 },
                 indicator_selected = {
                     ctermfg = 0,
@@ -70,16 +67,13 @@ return {
                 buffer_visible = {
                     ctermfg = 15,
                     ctermbg = 0,
-                    bold = true,
                 },
                 numbers_visible = {
                     ctermfg = 15,
                     ctermbg = 0,
-                    bold = true,
                 },
                 modified_visible = {
                     ctermfg = 15,
-                    bold = true,
                     ctermbg = 0,
                 },
                 separator_visible = {
