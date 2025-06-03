@@ -5,13 +5,13 @@ return {
 
         bufferline.setup({
             options = {
+                style_present = bufferline.style_preset.default,
                 indicator = {
                     icon = "",
                     style = "icon"
                 },
-                style_present = bufferline.style_preset.minimal,
                 show_buffer_icons = false,
-                modified_icon = '● ',
+                modified_icon = '',
                 left_trunc_marker = ' ',
                 right_trunc_marker = ' ',
                 buffer_close_icon = '',
@@ -19,6 +19,15 @@ return {
                 show_close_icon = false,
                 auto_toggle_bufferline = true,
                 separator_style = { '', '' },
+                move_wraps_at_end = true,
+                offsets = {
+                    {
+                        filetype = "NvimTree",
+                        text = "File Explorer",
+                        text_align = "left",
+                        separator = true,
+                    }
+                },
             },
             highlights = {
                 fill = {
@@ -34,11 +43,11 @@ return {
                     ctermbg = 0,
                 },
                 modified = {
-                    ctermfg = 8,
+                    ctermfg = 0,
                     ctermbg = 0,
                 },
                 separator = {
-                    ctermfg = 0,
+                    ctermfg = 2,
                     ctermbg = 0,
                 },
                 close_button = {
@@ -50,8 +59,8 @@ return {
                     ctermfg = 0,
                 },
                 modified_selected = {
-                    ctermbg = 2,
-                    ctermfg = 0,
+                    ctermbg = 0,
+                    ctermfg = 2,
                 },
                 indicator_selected = {
                     ctermfg = 2,
@@ -59,7 +68,7 @@ return {
                 },
                 separator_selected = {
                     ctermbg = 0,
-                    ctermfg = 0,
+                    ctermfg = 2,
                 },
                 duplicate_selected = {
                     ctermbg = 2,
@@ -74,7 +83,7 @@ return {
                     ctermbg = 0,
                 },
                 modified_visible = {
-                    ctermfg = 7,
+                    ctermfg = 0,
                     ctermbg = 0,
                 },
                 separator_visible = {
