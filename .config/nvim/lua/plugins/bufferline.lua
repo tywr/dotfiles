@@ -5,30 +5,28 @@ return {
 
         bufferline.setup({
             options = {
-                numbers = "ordinal",
                 indicator = {
-                    style = "none"
+                    icon = " ",
+                    style = "icon"
                 },
                 style_present = bufferline.style_preset.minimal,
-                modified_icon = "+",
-                show_buffer_icons = false,
-                show_buffer_close_icons = false,
+                modified_icon = "*",
+                show_buffer_icons = false, show_buffer_close_icons = false,
+                show_tab_indicators = false,
+                show_close_icon = false,
                 auto_toggle_bufferline = true,
-                separator_style = { "", "" }
+                separator_style = { " ", " " },
             },
             highlights = {
+                fill = {
+                    ctermfg = 0,
+                    ctermbg = 0,
+                },
                 duplicate = {
                     ctermbg = 0,
                     ctermfg = 8,
                 },
-                fill = {
-                    ctermbg = 0,
-                },
                 background = {
-                    ctermfg = 8,
-                    ctermbg = 0,
-                },
-                numbers = {
                     ctermfg = 8,
                     ctermbg = 0,
                 },
@@ -44,40 +42,32 @@ return {
                     ctermbg = 2,
                     ctermfg = 0,
                 },
-                numbers_selected = {
-                    ctermbg = 2,
-                    ctermfg = 0,
-                },
                 modified_selected = {
                     ctermbg = 2,
                     ctermfg = 0,
                 },
                 indicator_selected = {
-                    ctermfg = 0,
-                    ctermbg = 0,
+                    ctermfg = 22,
+                    ctermbg = 2,
                 },
                 separator_selected = {
                     ctermbg = 0,
-                    ctermfg = 2,
+                    ctermfg = 0,
                 },
                 duplicate_selected = {
                     ctermbg = 2,
                     ctermfg = 0,
                 },
                 buffer_visible = {
-                    ctermfg = 15,
-                    ctermbg = 0,
-                },
-                numbers_visible = {
-                    ctermfg = 15,
+                    ctermfg = 7,
                     ctermbg = 0,
                 },
                 modified_visible = {
-                    ctermfg = 15,
+                    ctermfg = 7,
                     ctermbg = 0,
                 },
                 separator_visible = {
-                    ctermfg = 2,
+                    ctermfg = 0,
                     ctermbg = 0,
                 },
                 indicator_visible = {

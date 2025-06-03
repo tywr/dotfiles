@@ -3,8 +3,8 @@
 options=(
 	style=round
 	width=4
-	inactive_color=0x000a0b0e
-	active_color=0xff7192b7
+	active_color=0xff525458
+	inactive_color=0xff030405
     hidpi=on
 )
 

@@ -44,7 +44,7 @@ hl("Todo", { ctermfg = colors.accent })
 hl("Type", { ctermfg = colors.main2 })
 
 hl("WinSeparator", { ctermbg = colors.black, ctermfg = colors.black })
-hl("ColorColumn", { ctermbg = colors.black })
+hl("ColorColumn", { ctermbg = colors.black, ctermfg = colors.black })
 
 hl("NonText", { ctermfg = colors.black_comment })
 

@@ -9,7 +9,7 @@ cursor = "0xe5e9f0"
 text = "0x030405"
 
 [colors.normal]
-black = "0x101113"
+black = "0x191b1c"
 red = "0xa093c7"
 green = "0xA3E2F5"
 yellow = "0x81a1c1"
@@ -55,3 +55,7 @@ color = "0x75777b"
 [[colors.indexed_colors]]
 index = 21
 color = "0x8b8e93"
+
+[[colors.indexed_colors]]
+index = 22
+color = "0x030405"

@@ -20,6 +20,7 @@ set nocompatible
 set colorcolumn=80
 set signcolumn=yes
 set noswapfile
+set fillchars=vert:⠀
 packadd cfilter
 filetype plugin on
 
