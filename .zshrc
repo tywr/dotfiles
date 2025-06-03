@@ -34,7 +34,6 @@ zinit cdreplay -q
 
 # Import Conda
 # source $CONFIG/zsh/conda.zsh
-
 source $CONFIG/zsh/path.zsh
 source $CONFIG/zsh/aliases.zsh
 source $CONFIG/zsh/misc.zsh

@@ -1,7 +1,3 @@
-shell touch doc.py
-shell touch aggregation.py
-shell touch base_readme.md
-rename launch_manual_computation.md
 rename setup.md
 rename setup.md_
 rename Setup.md
@@ -48,3 +44,7 @@ rename topcharts_apple
 open_with 
 open_with nvim
 open_with h
+rename kitty.j2
+rename ice.conf
+rename current-theme.conf
+rename cokeline.lua

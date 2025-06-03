@@ -10,3 +10,6 @@ export FZF_DEFAULT_OPTS="-e \
     --color prompt:15,pointer:6,marker:6,spinner:5,info:2,header:2,border:8 \
     --bind 'tab:toggle-down,btab:toggle-up' \
     --border rounded"
+
+export ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BLOCK
+export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM

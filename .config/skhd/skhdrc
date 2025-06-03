@@ -1,5 +1,4 @@
-# cmd - return : /Applications/kitty.app/Contents/MacOS/kitty ~
-cmd - return: open -na /Applications/Alacritty.app
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty ~
 
 cmd - tab: skhd -k "ctrl - b" && skhd -k "n"
 cmd + shift - tab: skhd -k "ctrl - b" && skhd -k "p"

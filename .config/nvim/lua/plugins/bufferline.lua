@@ -6,16 +6,19 @@ return {
         bufferline.setup({
             options = {
                 indicator = {
-                    icon = " ",
+                    icon = "",
                     style = "icon"
                 },
                 style_present = bufferline.style_preset.minimal,
-                modified_icon = "*",
-                show_buffer_icons = false, show_buffer_close_icons = false,
+                show_buffer_icons = false,
+                modified_icon = '● ',
+                left_trunc_marker = ' ',
+                right_trunc_marker = ' ',
+                buffer_close_icon = '',
                 show_tab_indicators = false,
                 show_close_icon = false,
                 auto_toggle_bufferline = true,
-                separator_style = { " ", " " },
+                separator_style = { '', '' },
             },
             highlights = {
                 fill = {
@@ -38,6 +41,10 @@ return {
                     ctermfg = 0,
                     ctermbg = 0,
                 },
+                close_button = {
+                    ctermbg = 0,
+                    ctermfg = 0,
+                },
                 buffer_selected = {
                     ctermbg = 2,
                     ctermfg = 0,
@@ -47,8 +54,8 @@ return {
                     ctermfg = 0,
                 },
                 indicator_selected = {
-                    ctermfg = 22,
-                    ctermbg = 2,
+                    ctermfg = 2,
+                    ctermbg = 0,
                 },
                 separator_selected = {
                     ctermbg = 0,
@@ -57,6 +64,10 @@ return {
                 duplicate_selected = {
                     ctermbg = 2,
                     ctermfg = 0,
+                },
+                close_button_selected = {
+                    ctermbg = 0,
+                    ctermfg = 2,
                 },
                 buffer_visible = {
                     ctermfg = 7,
@@ -71,6 +82,10 @@ return {
                     ctermbg = 0,
                 },
                 indicator_visible = {
+                    ctermfg = 0,
+                    ctermbg = 0,
+                },
+                close_button_visible = {
                     ctermfg = 0,
                     ctermbg = 0,
                 }

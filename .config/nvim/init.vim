@@ -20,7 +20,6 @@ set nocompatible
 set colorcolumn=80
 set signcolumn=yes
 set noswapfile
-set fillchars=vert:⠀
 packadd cfilter
 filetype plugin on
 
@@ -31,6 +30,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
+set fillchars+=vert:█
 
 " Search settings
 set incsearch
@@ -57,10 +57,10 @@ lua require("colors")
 "  						             CURSOR
 " -----------------------------------------------------------------------------
 " Set cursor variable
-set guicursor+=i:ver50
-set guicursor+=v:hor50
-set guicursor+=n:block
-set guicursor+=r-cr:hor50
+set guicursor+=n:block-blinkon500-blinkoff500
+set guicursor+=v:hor50-blinkon500-blinkoff500
+set guicursor+=i:ver50-blinkon500-blinkoff500
+
 
 " -----------------------------------------------------------------------------
 "  						          GIT-GUTTER 

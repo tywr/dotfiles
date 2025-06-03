@@ -6,10 +6,6 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family      Klartext Mono
-bold_font        Klartext Mono Medium
-italic_font      Klartext Mono Italic
-bold_italic_font Klartext Mono Medium
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. The easiest way to select fonts is to run the `kitten
@@ -166,7 +162,7 @@ font_size 19.0
 #: decreasing it lowers them. Decreasing the cell size might cause
 #: rendering artifacts, so use with care.
 
-# box_drawing_scale 0.001, 1, 1.5, 2
+box_drawing_scale 0.001, 1, 1.5, 2
 
 #: The sizes of the lines used for the box drawing Unicode characters.
 #: These values are in pts. They will be scaled by the monitor DPI to
@@ -261,7 +257,7 @@ font_size 19.0
 #: so if you want to override it, place your value after the lines
 #: where the theme file is included.
 
-# cursor_shape block
+cursor_shape block
 
 #: The cursor shape can be one of block, beam, underline. Note that
 #: when reloading the config this will be changed only if the cursor
@@ -278,11 +274,11 @@ cursor_shape_unfocused hollow
 #: The unfocused cursor shape can be one of block, beam, underline,
 #: hollow and unchanged (leave the cursor shape as it is).
 
-cursor_beam_thickness 3
+# cursor_beam_thickness 3
 
 #: The thickness of the beam cursor (in pts).
 
-# cursor_underline_thickness 2.0
+cursor_underline_thickness 2.0
 
 #: The thickness of the underline cursor (in pts).
 
@@ -307,7 +303,7 @@ cursor_stop_blinking_after 15.0
 #: Stop blinking cursor after the specified number of seconds of
 #: keyboard inactivity. Set to zero to never stop blinking.
 
-cursor_trail 1
+# cursor_trail 1
 
 #: Set this to a value larger than zero to enable a "cursor trail"
 #: animation. This is an animation that shows a "trail" following the
@@ -335,7 +331,7 @@ cursor_trail 1
 #: trail. Adjust these values to control how quickly the cursor trail
 #: fades away.
 
-# cursor_trail_start_threshold 2
+cursor_trail_start_threshold 50
 
 #: Set the distance threshold for starting the cursor trail. This
 #: option accepts a positive integer value that represents the minimum
@@ -438,7 +434,6 @@ cursor_trail 1
 
 #: The color and style for highlighting URLs on mouse-over. url_style
 #: can be one of: none, straight, double, curly, dotted, dashed.
-
 # open_url_with default
 
 #: The program to open clicked URLs. The special value default will
@@ -740,7 +735,7 @@ cursor_trail 1
 
 #: Performance tuning {{{
 
-# repaint_delay 10
+repaint_delay 10
 
 #: Delay between screen updates (in milliseconds). Decreasing it,
 #: increases frames-per-second (FPS) at the cost of more CPU usage.
@@ -1027,7 +1022,7 @@ hide_window_decorations yes
 #: insensitive, from the set 0-9A-Z\-=[];',./\\`. Specify your
 #: preference as a string of characters.
 
-# confirm_os_window_close -1
+confirm_os_window_close 0
 
 #: Ask for confirmation when closing an OS window or a tab with at
 #: least this number of kitty windows in it by window manager (e.g.
@@ -1832,7 +1827,7 @@ background_blur 100
 #: Dock). Changing this option by reloading the config is not
 #: supported.
 
-# macos_quit_when_last_window_closed no
+macos_quit_when_last_window_closed yes
 
 #: Have kitty quit when all the top-level windows are closed on macOS.
 #: By default, kitty will stay running, even with no open windows, as
@@ -1926,6 +1921,7 @@ background_blur 100
 #: maps, see mapping <https://sw.kovidgoyal.net/kitty/mapping/>. Some
 #: quick examples to illustrate common tasks::
 
+map cmd+q close_window
 #:     # unmap a keyboard shortcut, passing it to the program running in kitty
 #:     map kitty_mod+space
 #:     # completely ignore a keyboard event
@@ -2633,7 +2629,7 @@ background_blur 100
 
 #: Quit kitty
 
-# map cmd+q quit
+map cmd+q quit
 
 #: }}}
 
@@ -2642,6 +2638,6 @@ background_blur 100
 
 
 # BEGIN_KITTY_THEME
-# 3024 Night
+# Orbital
 include current-theme.conf
 # END_KITTY_THEME

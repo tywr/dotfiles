@@ -280,7 +280,11 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     name = args.name
-    for system, filetype in [("alacritty", "toml"), ("borders", "rc")]:
+    for system, filetype in [
+        ("alacritty", "toml"),
+        ("borders", "rc"),
+        ("kitty", "conf"),
+    ]:
         template_file = f"templates/{system}.j2"
         output_file = f"{system}/{name}.{filetype}"
         config_data = render_jinja2_template(template_file, name, output_file)
