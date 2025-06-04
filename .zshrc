@@ -1,11 +1,11 @@
-ZINIT_HOME="$HOME/.local/share/zinit/zinit.git"
-if [ ! -d "$ZINIT_HOME" ]; then
-    mkdir -p "$(dirname $ZINIT_HOME)"
-    git clone https://github.com/zdharma-continuum/zinit "$ZINIT_HOME"
-fi
-
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 autoload -Uz compinit && compinit
 
 CONFIG="$HOME/.config"
@@ -19,10 +19,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 
-zinit snippet OMZP::git
-zinit snippet OMZP::aws
+# zinit snippet OMZP::git
+# zinit snippet OMZP::aws
 
-zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
+zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
 # zsh-fzf-history-search

@@ -20,6 +20,9 @@ class Default(ColorScheme):
         if context.reset:
             return default_colors
 
+        if context.border:
+            return black + BRIGHT, default, attr
+
         elif context.in_browser:
             if context.selected:
                 attr = reverse

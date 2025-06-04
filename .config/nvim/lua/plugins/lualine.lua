@@ -19,13 +19,13 @@ return {
 
         local bubbles_theme = {
             normal = {
-                a = { fg = colors.black, bg = colors.main2, cterm = { bold = true } },
+                a = { fg = colors.black, bg = colors.main2, gui = "bold" },
                 b = { fg = colors.white, bg = colors.black3 },
                 c = { fg = colors.white },
             },
-            insert = { a = { fg = colors.black, bg = colors.accent, cterm = { bold = true } } },
-            visual = { a = { fg = colors.black, bg = colors.accent2, cterm = { bold = true } } },
-            replace = { a = { fg = colors.black, bg = colors.main2, cterm = { bold = true } } },
+            insert = { a = { fg = colors.black, bg = colors.accent, gui = "bold" } },
+            visual = { a = { fg = colors.black, bg = colors.accent2, gui = "bold" } },
+            replace = { a = { fg = colors.black, bg = colors.main2, gui = "bold" } },
 
             inactive = {
                 a = { fg = colors.white, bg = colors.black },

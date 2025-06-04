@@ -47,12 +47,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-shift-r = 'mode resize'
 
 [gaps]
-    inner.horizontal = 5
-    inner.vertical =   5
-    outer.left =       5
-    outer.bottom =     5
-    outer.top =        5
-    outer.right =      5
+    inner.horizontal = 3
+    inner.vertical =   3
+    outer.left =       3
+    outer.bottom =     3
+    outer.top =        3
+    outer.right =      3
 
 [mode.resize.binding]
     h = 'resize width -50'
