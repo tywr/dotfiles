@@ -1,5 +1,5 @@
-" Add custom python endpoint dedicated to neovim experience
-let g:python3_host_prog = $HOME . '/.python/nvim/bin/python'
+" Add custom python endpoint dedicated to neovim experience                             
+let g:python3_host_prog = $HOME . '/.python/nvim/bin/python'                           
 let g:loaded_python3_provider = 1
 let g:loaded_python_provider = 1
 let g:gitgutter_git_executable = '/opt/homebrew/bin/git' 
@@ -17,7 +17,6 @@ set noshowmode
 set shell=zsh
 set background=dark
 set nocompatible
-set colorcolumn=80
 set signcolumn=yes
 set noswapfile
 packadd cfilter
@@ -42,6 +41,7 @@ filetype plugin indent on
 nnoremap <SPACE> <Nop>
 map <Space> <Leader>
 
+set colorcolumn=80
 autocmd filetype python setlocal colorcolumn=88
 autocmd filetype markdown setlocal conceallevel=2
 

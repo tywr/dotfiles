@@ -43,8 +43,8 @@ hl("Statement", { ctermfg = colors.main2 })
 hl("Todo", { ctermfg = colors.accent })
 hl("Type", { ctermfg = colors.main2 })
 
-hl("WinSeparator", { ctermbg = "NONE", ctermfg = colors.black })
-hl("ColorColumn", { ctermbg = "NONE", ctermfg = colors.black })
+hl("WinSeparator", { ctermbg = colors.black, ctermfg = colors.black })
+hl("ColorColumn", { ctermbg = colors.black })
 
 hl("NonText", { ctermfg = colors.black_comment })
 

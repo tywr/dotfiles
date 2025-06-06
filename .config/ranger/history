@@ -1,8 +1,3 @@
-shell touch ice.json
-shell touch convert.py
-open_with%space
-find coc
-rename orbitals.toml
 q
 shell touch makefile
 shell mkdir scripts
@@ -28,7 +23,6 @@ rename top_charts_google
 rename topcharts_google
 rename topcharts_itunes
 rename topcharts_apple
-open_with 
 open_with nvim
 open_with h
 rename kitty.j2
@@ -48,3 +42,9 @@ rename google_raw_developer_meta_monthly_snapshot.py
 rename google_raw_integration_meta_monthly_snapshot.py
 rename google_raw_lang_meta_monthly_snapshot.py
 find coun
+find copy
+find do
+find terraform
+find t
+find p
+open_with 
