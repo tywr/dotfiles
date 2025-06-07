@@ -1,61 +1,61 @@
 [colors.primary]
-background = "0x030405"
+background = "0x12151a"
 foreground = "0xe5e9f0"
-dim_foreground = "0x8b8e93"
+dim_foreground = "0x91959b"
 bright_foreground = "0xffffff"
 
 [colors.cursor]
 cursor = "0xe5e9f0"
-text = "0x030405"
+text = "0x12151a"
 
 [colors.normal]
-black = "0x191b1c"
+black = "0x1a1d22"
 red = "0xa093c7"
 green = "0xA3E2F5"
 yellow = "0x81a1c1"
 blue = "0x5e81ac"
-magenta = "0x88c0d0"
-cyan = "0xb2cad1"
+magenta = "0x96cfe0"
+cyan = "0x88c0d0"
 white = "0xe5e9f0"
 
 [colors.bright]
-black = "0x525458"
+black = "0x5c5f65"
 red = "0xb4a9d2"
 green = "0xc7edf9"
 yellow = "0x96b1cb"
 blue = "0x6f8eb5"
-magenta = "0xa0cdd9"
-cyan = "0xcadadf"
+magenta = "0xb2dce8"
+cyan = "0xa0cdd9"
 white = "0xffffff"
 
 [[colors.indexed_colors]]
 index = 16
-color = "0x252628"
+color = "0x2b2e33"
 
 [[colors.indexed_colors]]
 index = 17
-color = "0x2c2d2f"
+color = "0x383b40"
 
 [[colors.indexed_colors]]
 index = 18
-color = "0x393b3d"
+color = "0x45484d"
 
 [[colors.indexed_colors]]
 index = 19
-color = "0x47494c"
+color = "0x51555a"
 
 [[colors.indexed_colors]]
 index = 20
-color = "0x5e6063"
+color = "0x676a70"
 
 [[colors.indexed_colors]]
 index = 21
-color = "0x75777b"
+color = "0x7c8086"
 
 [[colors.indexed_colors]]
 index = 21
-color = "0x8b8e93"
+color = "0x91959b"
 
 [[colors.indexed_colors]]
 index = 22
-color = "0x030405"
+color = "0x12151a"

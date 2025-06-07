@@ -1,0 +1,6 @@
+options=(
+	style=round
+	width=2.0
+	active_color=0xff94e2d5
+	inactive_color=0xff11111b
+)

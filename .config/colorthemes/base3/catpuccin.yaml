@@ -1,0 +1,13 @@
+name: "catpuccin"
+author: "tywr"
+background: "11111b" 
+foreground: "cdd6f4"
+accent: "cba6f7"
+main: "94e2d5"
+main2: "74c7ec"
+main3: "89b4fa"
+secondary: "a6e3a1"
+secondary2: "94e2d5"
+bright_hue: 10
+comment_hue: 35
+black_hues: [10,15,18,24,30,40,50,60]

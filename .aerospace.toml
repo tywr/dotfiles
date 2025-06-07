@@ -3,6 +3,7 @@
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
+
 # Mouse follows focus when focused monitor changes
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [mode.main.binding]
@@ -47,12 +48,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-shift-r = 'mode resize'
 
 [gaps]
-    inner.horizontal = 3
-    inner.vertical =   3
-    outer.left =       3
-    outer.bottom =     3
-    outer.top =        3
-    outer.right =      3
+    inner.horizontal = 2
+    inner.vertical =   2
+    outer.left =       0
+    outer.bottom =     -1
+    outer.top =        0
+    outer.right =      0
 
 [mode.resize.binding]
     h = 'resize width -50'

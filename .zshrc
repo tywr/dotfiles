@@ -25,6 +25,8 @@ zinit light Aloxaf/fzf-tab
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
+# zinit light spaceship-prompt/spaceship-prompt
+
 # zsh-fzf-history-search
 zinit ice lucid wait'0'
 zinit light joshskidmore/zsh-fzf-history-search

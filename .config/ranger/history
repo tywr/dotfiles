@@ -1,4 +1,3 @@
-q
 shell touch makefile
 shell mkdir scripts
 shell touch 
@@ -48,3 +47,4 @@ find terraform
 find t
 find p
 open_with 
+rename catpuccin.yaml

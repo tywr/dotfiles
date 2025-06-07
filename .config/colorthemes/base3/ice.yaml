@@ -1,13 +1,13 @@
 name: "ice"
 author: "tywr"
-background: "030405" 
+background: "12151a" 
 foreground: "e5e9f0"
 accent: "a093c7"
 main: "A3E2F5"
-main2: "88c0d0"
-main3: "b2cad1"
+main2: "96cfe0"
+main3: "88c0d0"
 secondary: "81a1c1"
 secondary2: "5e81ac"
 bright_hue: 10
 comment_hue: 35
-black_hues: [10,15,18,24,30,40,50,60]
+black_hues: [4,12,18,24,30,40,50,60]
