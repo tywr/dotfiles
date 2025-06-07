@@ -17,6 +17,12 @@ return {
                     }
                 },
                 defaults = {
+                    mappings = {
+                        i = {
+                            ["<Tab>"] = "move_selection_next",
+                            ["<S-Tab>"] = "move_selection_previous",
+                        }
+                    },
                     file_ignore_patterns = { ".git/",
                         ".cache",
                         "%.o",
@@ -52,7 +58,20 @@ return {
             keymap.set("n", "<leader>ft", function() builtin.help_tags() end)
             keymap.set("n", "<leader>gg", function() builtin.grep_string() end)
             keymap.set("n", "<leader>fm", "<cmd>Telescope make<cr>")
-
+            keymap.set("n", "<tab>",
+                function()
+                    builtin.buffers(
+                        require("telescope.themes").get_dropdown({
+                            previewer = false,
+                            sort_lastused = true,
+                            bufnr_width = 3,
+                            ignore_current_buffer = true,
+                            disable_devicons = true,
+                            desc = "Buffers",
+                            path_display = { "tail" },
+                        }))
+                end
+            )
             require("telescope").load_extension("ui-select")
         end
     },

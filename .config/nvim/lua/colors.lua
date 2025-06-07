@@ -93,6 +93,14 @@ hl("Special", { ctermfg = colors.main3 })
 hl("Delimiter", { ctermfg = colors.main })
 hl("Function", { ctermfg = colors.main })
 
+-- Telescope
+hl("TelescopeBorder", { ctermfg = colors.black_comment })
+hl("TelescopePreviewBorder", { ctermfg = colors.black_comment })
+hl("TelescopePromptBorder", { ctermfg = colors.black_comment })
+hl("TelescopeResultsBorder", { ctermfg = colors.black_comment })
+hl("TelescopePreviewLine", { ctermbg = colors.black })
+hl("TelescopeSelection", { ctermbg = colors.black })
+
 -- Python syntax related
 hl("@boolean.python", { ctermfg = colors.secondary2 })
 hl("@string.documentation.python", {

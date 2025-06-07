@@ -2,5 +2,5 @@ options=(
 	style=round
 	width=2.0
 	active_color=0xffA3E2F5
-	inactive_color=0xff12151a
+	inactive_color=0xff0c0e12
 )

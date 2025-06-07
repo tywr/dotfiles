@@ -41,8 +41,6 @@ filetype plugin indent on
 nnoremap <SPACE> <Nop>
 map <Space> <Leader>
 
-set colorcolumn=80
-autocmd filetype python setlocal colorcolumn=88
 autocmd filetype markdown setlocal conceallevel=2
 
 " Shorter update time
