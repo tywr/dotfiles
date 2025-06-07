@@ -15,22 +15,23 @@ return {
             grey = 8,
             black2 = 16,
             black3 = 17,
+            background = 22,
         }
 
         local bubbles_theme = {
             normal = {
                 a = { fg = colors.black, bg = colors.main2, gui = "bold" },
                 b = { fg = colors.white, bg = colors.black3 },
-                c = { fg = colors.white },
+                c = { bg = colors.background },
             },
             insert = { a = { fg = colors.black, bg = colors.accent, gui = "bold" } },
             visual = { a = { fg = colors.black, bg = colors.accent2, gui = "bold" } },
             replace = { a = { fg = colors.black, bg = colors.main2, gui = "bold" } },
 
             inactive = {
-                a = { fg = colors.white, bg = colors.black },
-                b = { fg = colors.white, bg = colors.black },
-                c = { fg = colors.white },
+                a = { fg = colors.white, bg = colors.background },
+                b = { fg = colors.white, bg = colors.background },
+                c = { bg = colors.background },
             },
         }
 
@@ -47,7 +48,7 @@ return {
             },
             sections = {
                 lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
-                lualine_b = { 'filename', 'branch' },
+                lualine_b = { 'filename' },
                 lualine_c = {
                     '%=', --[[ add your center components here in place of this comment ]]
                 },

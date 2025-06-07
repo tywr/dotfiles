@@ -1,5 +1,4 @@
 return {
-    { "fcpg/vim-orbital",          lazy = false, priority = 1000 },
     { "psliwka/vim-smoothie",      lazy = false },
     { "svermeulen/vim-subversive", lazy = false },
     { "godlygeek/tabular",         lazy = false },

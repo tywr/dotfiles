@@ -14,6 +14,7 @@ local colors = {
     secondary_bright = 11,
     secondary2_bright = 12,
     white = 7,
+    white_bright = 15,
     black = 0,
     black_comment = 8,
     black2 = 16,
@@ -22,6 +23,7 @@ local colors = {
     black5 = 19,
     black6 = 20,
     black7 = 21,
+    background = 22,
 }
 
 local function hl(group_name, opts)
@@ -36,7 +38,7 @@ hl("Visual", { ctermbg = colors.white, ctermfg = colors.black })
 hl("ExtraWhitespace", { ctermbg = colors.black, ctermfg = colors.white })
 hl("MatchParen", { ctermbg = colors.main, ctermfg = colors.black })
 hl("Normal", { ctermfg = colors.white })
-hl("NonText", { ctermfg = colors.black })
+hl("NonText", { ctermfg = colors.black2 })
 hl("Error", { ctermfg = colors.accent })
 hl("Ignore", { ctermbg = colors.black, ctermfg = colors.white })
 hl("Statement", { ctermfg = colors.main2 })
@@ -45,8 +47,6 @@ hl("Type", { ctermfg = colors.main2 })
 
 hl("WinSeparator", { ctermbg = colors.black, ctermfg = colors.black })
 hl("ColorColumn", { ctermbg = colors.black })
-
-hl("NonText", { ctermfg = colors.black_comment })
 
 -- Search
 hl("IncSearch", { ctermbg = colors.white, ctermfg = colors.black, cterm = { bold = true } })
@@ -99,7 +99,8 @@ hl("TelescopePreviewBorder", { ctermfg = colors.black_comment })
 hl("TelescopePromptBorder", { ctermfg = colors.black_comment })
 hl("TelescopeResultsBorder", { ctermfg = colors.black_comment })
 hl("TelescopePreviewLine", { ctermbg = colors.black })
-hl("TelescopeSelection", { ctermbg = colors.black })
+hl("TelescopeSelection", { ctermbg = colors.black, ctermfg = colors.white_bright })
+hl("TelescopeMatching", { ctermfg = colors.main })
 
 -- Python syntax related
 hl("@boolean.python", { ctermfg = colors.secondary2 })

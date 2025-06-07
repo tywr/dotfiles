@@ -13,7 +13,14 @@ return {
             require("telescope").setup({
                 pickers = {
                     find_files = {
-                        hidden = true
+                        hidden = true,
+                        disable_devicons = true,
+                    },
+                    live_grep = {
+                        disable_devicons = true,
+                    },
+                    buffers = {
+                        disable_devicons = true,
                     }
                 },
                 defaults = {
@@ -21,6 +28,12 @@ return {
                         i = {
                             ["<Tab>"] = "move_selection_next",
                             ["<S-Tab>"] = "move_selection_previous",
+                        },
+                        n = {
+                            ["dd"] = "delete_buffer",
+                            ["<Tab>"] = "move_selection_next",
+                            ["<S-Tab>"] = "move_selection_previous",
+
                         }
                     },
                     file_ignore_patterns = { ".git/",
@@ -62,10 +75,15 @@ return {
                 function()
                     builtin.buffers(
                         require("telescope.themes").get_dropdown({
+                            initial_mode = "normal",
+                            layout_config = {
+                                width = 0.25,
+                                height = 0.4,
+                            },
                             previewer = false,
                             sort_lastused = true,
                             bufnr_width = 3,
-                            ignore_current_buffer = true,
+                            -- ignore_current_buffer = true,
                             disable_devicons = true,
                             desc = "Buffers",
                             path_display = { "tail" },
