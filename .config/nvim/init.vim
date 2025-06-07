@@ -44,7 +44,7 @@ map <Space> <Leader>
 autocmd filetype markdown setlocal conceallevel=2
 
 " Shorter update time
-set updatetime=50
+set updatetime=7
 
 lua require('init')
 lua require("lsp-conf")

@@ -13,17 +13,31 @@ return {
             require("telescope").setup({
                 pickers = {
                     find_files = {
+                        prompt_title = "files",
+                        results_title = "",
+                        preview_title = "",
                         hidden = true,
                         disable_devicons = true,
                     },
                     live_grep = {
+                        prompt_title = "grep",
+                        results_title = "",
+                        preview_title = "",
                         disable_devicons = true,
                     },
                     buffers = {
+                        prompt_title = "buffers",
+                        results_title = "",
+                        preview_title = "",
                         disable_devicons = true,
                     }
                 },
                 defaults = {
+                    borderchars = {
+                        prompt = { " ", " ", "─", "│", "│", " ", "─", "╰" },
+                        results = { "─", " ", " ", "│", "╭", "─", " ", "│" },
+                        preview = { "─", "│", "─", "│", "┬", "╮", "╯", "┴" },
+                    },
                     mappings = {
                         i = {
                             ["<Tab>"] = "move_selection_next",
@@ -75,6 +89,7 @@ return {
                 function()
                     builtin.buffers(
                         require("telescope.themes").get_dropdown({
+                            prompt_title = "",
                             initial_mode = "normal",
                             layout_config = {
                                 width = 0.25,
@@ -85,7 +100,6 @@ return {
                             bufnr_width = 3,
                             -- ignore_current_buffer = true,
                             disable_devicons = true,
-                            desc = "Buffers",
                             path_display = { "tail" },
                         }))
                 end
