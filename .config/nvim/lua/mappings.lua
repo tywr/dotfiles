@@ -24,8 +24,9 @@ vim.keymap.set("n", "<Right>", "$")
 vim.keymap.set("n", "<Left>", "^")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "<leader>no", "<cmd>:noh<cr>")
 vim.keymap.set("n", "<S-Tab>", ":bn<cr>", { silent = true })
--- vim.keymap.set("n", "<Tab>", ":bn<cr>", { silent = true })
+vim.keymap.set("n", "<Tab>", ":b#<cr>", { silent = true })
 
 vim.keymap.set("n", "gs", "<plug>(SubversiveSubstitute)")
 
@@ -41,9 +42,6 @@ vim.keymap.set("n", "ù", "%")
 
 -- Obsidian paste image
 vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
-
-
-vim.keymap.set("n", "<leader>no", "<cmd>:noh<cr>")
 
 -- Vim Doge
 vim.keymap.set("n", "<leader>dg", "<cmd>:DogeGenerate numpy<cr>")
