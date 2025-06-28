@@ -47,7 +47,7 @@ return {
                             ["dd"] = "delete_buffer",
                             ["<Tab>"] = "move_selection_next",
                             ["<S-Tab>"] = "move_selection_previous",
-
+                            ["<leader><Tab>"] = "close",
                         }
                     },
                     file_ignore_patterns = { ".git/",

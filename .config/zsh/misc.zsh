@@ -27,7 +27,7 @@ function topdf {
             --pdf-engine=xelatex
 }
 
-function gh() {
+function ghssh() {
     type_=$1
     echo "Switching to gh-${type_}"
     ssh-add -D

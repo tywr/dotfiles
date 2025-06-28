@@ -1,42 +1,3 @@
-shell mkdir base
-rename convert_base.py
-rename ice.yaml
-rename base3
-rename convert_base3.py
-shell touch src
-shell mkdir src
-shell bor
-search border
-search bordl
-rename dag_monthly_common.py
-rename tables.py_
-rename monthly_backup_snapshots.py
-shell touch .aerospace.toml
-open_with k
-shell q
-rename top_charts_google
-rename topcharts_google
-rename topcharts_itunes
-rename topcharts_apple
-open_with h
-rename kitty.j2
-rename ice.conf
-rename current-theme.conf
-rename cokeline.lua
-open_with%spacel
-find ex
-rename apple_raw_developer_meta_monthly_snapshot.py
-rename apple_raw_country_meta_monthly_snapshot.py
-rename apple_raw_lang_meta_monthly_snapshot.py
-rename apple_raw_integration_meta_monthly_snapshot.py
-find compini
-find revi
-rename google_raw_country_meta_monthly_snapshot.py
-rename google_raw_developer_meta_monthly_snapshot.py
-rename google_raw_integration_meta_monthly_snapshot.py
-rename google_raw_lang_meta_monthly_snapshot.py
-find coun
-find copy
 find do
 find terraform
 find t
@@ -48,3 +9,42 @@ shell touch harpoon.lua
 open_with l
 open_with 
 open_with nvim
+find changelo
+find it
+find changelog
+find sdks
+find user
+find user-
+search user-role
+search u
+find 
+search user-roles
+search update-db
+search sdk-stats
+find READ
+search lgtv
+search inf
+search r
+search 
+search user
+shell touch table.py
+shell touch raw_parquet_table_input.py
+rename raw_parquet_table_input.py
+rename raw_parquet_table.py
+shell mkdir test_tanguy
+rename joint_test
+shell touch tables.p
+rename changelog_import_sdks.py
+rename changelog_import_playstore.py
+rename changelog_import_.py
+rename changelog_import_playstore_sdks.py
+rename changelog_import_itunes.py
+rename changelog_import_itunes_sdks.py
+rename mongo_itunes.py
+rename mongo_playstore.py
+rename topcharts_apple.py
+rename topcharts_google.py
+shell mkdir projects
+open_with open
+shell 
+shell touch slack.py

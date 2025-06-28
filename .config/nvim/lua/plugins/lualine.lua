@@ -4,7 +4,6 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-        -- stylua: ignore
         local colors = {
             white = 7,
             accent = 2,
@@ -47,7 +46,7 @@ return {
                 section_separators = { left = '', right = '' },
             },
             sections = {
-                lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+                lualine_a = { { 'mode', separator = { right = '', left = '' }, right_padding = 2 } },
                 lualine_b = { 'filename' },
                 lualine_c = {
                     '%=', --[[ add your center components here in place of this comment ]]
@@ -55,7 +54,7 @@ return {
                 lualine_x = {},
                 lualine_y = { 'filetype', 'progress' },
                 lualine_z = {
-                    { 'location', separator = { right = '' }, left_padding = 2 },
+                    { 'location', separator = { right = '', left = '' }, left_padding = 2 },
                 },
             },
             inactive_sections = {
@@ -66,7 +65,6 @@ return {
                 lualine_y = {},
                 lualine_z = { 'location' },
             },
-            tabline = {},
             extensions = {},
         }
     end,
