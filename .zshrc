@@ -74,3 +74,11 @@ zstyle ':prompt:pure:git:dirty' color red
 
 eval "$(fzf --zsh)"
 export PATH=/opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tywr/Projects/connectors/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc'; fi
+
+. "$HOME/.local/bin/env"

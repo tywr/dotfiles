@@ -43,5 +43,6 @@ alias on="~/.config/bin/obsidian_new --no-name"
 alias onn="~/.config/bin/obsidian_new"
 alias ni="cd ~/Notes/inbox"
 alias nn="cd ~/Notes/notes"
+alias todo="nvim ~/Notes/todo.md"
 
 ctags=/usr/local/bin/ctags

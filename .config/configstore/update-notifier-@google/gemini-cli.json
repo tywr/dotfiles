@@ -1,10 +1,10 @@
 {
 	"optOut": false,
-	"lastUpdateCheck": 1751017822514,
+	"lastUpdateCheck": 1757595663723,
 	"update": {
-		"latest": "0.1.5",
+		"latest": "0.4.0",
 		"current": "0.1.4",
-		"type": "patch",
+		"type": "minor",
 		"name": "@google/gemini-cli"
 	}
 }

@@ -47,3 +47,15 @@ vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
 vim.keymap.set("n", "<leader>dg", "<cmd>:DogeGenerate numpy<cr>")
 vim.keymap.set({ 'n', 'x' }, '<leader>dn', '<Plug>(doge-comment-jump-forward)')
 vim.keymap.set({ 'n', 'x' }, '<leader>dp', '<Plug>(doge-comment-jump-backward)')
+
+-- Quick Path Copying
+vim.keymap.set("n", "<leader>cp",
+    function() vim.api.nvim_call_function("setreg", { "+", vim.fn.fnamemodify(vim.fn.expand("%:p"), ":.") }) end,
+    { desc = "Copy relative path" })
+
+vim.keymap.set("n", "<leader>cm", function()
+    local path = vim.fn.expand("%:p")
+    local module_path = vim.fn.fnamemodify(path, ":r"):gsub("/", "."):gsub("\\", ".")
+    vim.fn.setreg("+", module_path)
+    print("Copied: " .. module_path)
+end, { desc = "Copy relative path as python module" })

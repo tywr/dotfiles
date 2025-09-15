@@ -1,50 +1,50 @@
-find do
-find terraform
-find t
-find p
-rename catpuccin.yaml
-find tel
-
-shell touch harpoon.lua
-open_with l
+shell mkdir main.py
+shell touch names.txt
+shell touch divisors.py
+shell touch main.py
+shell touch benchmark.py
+rename klartext
+rename letter
+rename letter.tex
+open_with open
+find reviews
+find tran
+find bed
+search bed
+search reviews
+rename dag_mongo_daily_playstore_dev.py
+rename dag_mongo_daily_itunes_dev.py
+shell touch retrieve-glacier.py
+shell mkdir scripts
+rename fetch_reports.py
+rename Aiguille_de_la_Vanoise_E_W.gpx
+open_with Q
 open_with 
 open_with nvim
-find changelo
-find it
-find changelog
-find sdks
-find user
-find user-
-search user-role
-search u
-find 
-search user-roles
-search update-db
-search sdk-stats
-find READ
-search lgtv
-search inf
-search r
-search 
-search user
-shell touch table.py
-shell touch raw_parquet_table_input.py
-rename raw_parquet_table_input.py
-rename raw_parquet_table.py
-shell mkdir test_tanguy
-rename joint_test
-shell touch tables.p
-rename changelog_import_sdks.py
-rename changelog_import_playstore.py
-rename changelog_import_.py
-rename changelog_import_playstore_sdks.py
-rename changelog_import_itunes.py
-rename changelog_import_itunes_sdks.py
-rename mongo_itunes.py
-rename mongo_playstore.py
-rename topcharts_apple.py
-rename topcharts_google.py
-shell mkdir projects
-open_with open
+find ro
+find lg
+rename letter-floy.pdf
+shell touch makefile
+shell touch hellh
+rename Makefile
+rename makefile_
+shell touch hello.py
+rename main.py
+rename main .py
+shell touch pyproject.toml
+shell mkdir data
+shell mkdir io
+shell touch gpx
+shell touch gpx.py
+shell mkdir src
+rename makefile
+shell mkdir core
+shell touch gpx_data_frame.py
+shell touch viz
+shell mkdir sandbox
+shell touch analyze.py
+shell touch smooth.py
 shell 
-shell touch slack.py
+shell a
+shell mkdir utils
+shell touch get_elevation.py
