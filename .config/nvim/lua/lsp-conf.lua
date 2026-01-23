@@ -1,6 +1,13 @@
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = 'yes'
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
@@ -27,7 +34,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
         vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
         vim.keymap.set({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-        vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+        vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
     end,
 })
 
@@ -108,9 +115,16 @@ local on_attach = function(client, bufnr)
     end
 end
 
+require("lspconfig").clangd.setup {}
+
 require('lspconfig').ruff.setup {
     interpreter = "~/.python/nvim/bin/python",
     on_attach = on_attach,
+    init_options = {
+        settings = {
+            logLevel = "debug",
+        }
+    }
 }
 
 require('lspconfig').pyright.setup {
@@ -130,7 +144,7 @@ require('lspconfig').pyright.setup {
                 },
                 autoSearchPaths = true,
                 diagnosticMode = "workspace",
-                typeCheckingMode = "off",
+                typeCheckingMode = "true",
                 useLibraryCodeForTypes = true,
                 -- Ignore all files for analysis to exclusively use Ruff for linting
                 ignore = { '*' },

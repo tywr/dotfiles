@@ -40,6 +40,7 @@ vim.keymap.set("n", "<C-s>", "<cmd>LspZeroFormat<cr>")
 vim.keymap.set("n", "μ", "%")
 vim.keymap.set("n", "ù", "%")
 
+
 -- Obsidian paste image
 vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
 
@@ -47,6 +48,11 @@ vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
 vim.keymap.set("n", "<leader>dg", "<cmd>:DogeGenerate numpy<cr>")
 vim.keymap.set({ 'n', 'x' }, '<leader>dn', '<Plug>(doge-comment-jump-forward)')
 vim.keymap.set({ 'n', 'x' }, '<leader>dp', '<Plug>(doge-comment-jump-backward)')
+
+
+-- Claude Code
+vim.keymap.set("n", "<leader>cc", "<cmd>:ClaudeCode<cr>")
+vim.keymap.set("n", "<leader>co", "<cmd>:ClaudeCodeContinue<cr>")
 
 -- Quick Path Copying
 vim.keymap.set("n", "<leader>cp",
@@ -59,3 +65,25 @@ vim.keymap.set("n", "<leader>cm", function()
     vim.fn.setreg("+", module_path)
     print("Copied: " .. module_path)
 end, { desc = "Copy relative path as python module" })
+
+-- Custom stuff
+vim.keymap.set("n", "<leader>sn", function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    local word = vim.fn.expand('<cword>')
+    local word_start = vim.fn.matchstrpos(vim.fn.getline('.'), '\\k*\\%' .. (col + 1) .. 'c\\k*')[2]
+
+    -- Detect camelCase
+    if word:find('[a-z][A-Z]') then
+        -- Convert camelCase to snake_case
+        local snake_case_word = word:gsub('([a-z])([A-Z])', '%1_%2'):lower()
+        vim.api.nvim_buf_set_text(0, line - 1, word_start, line - 1, word_start + #word, { snake_case_word })
+        -- Detect snake_case
+    elseif word:find('_[a-z]') then
+        -- Convert snake_case to camelCase
+        local camel_case_word = word:gsub('(_)([a-z])', function(_, l) return l:upper() end)
+        vim.api.nvim_buf_set_text(0, line - 1, word_start, line - 1, word_start + #word, { camel_case_word })
+    else
+        print("Not a snake_case or camelCase word")
+    end
+end, { desc = "Switch case" }
+)

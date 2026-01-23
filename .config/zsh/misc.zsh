@@ -90,3 +90,16 @@ fuzzy_tmux_sessions() {
 function bo {
     bash ~/.config/colorthemes/borders/$1.sh
 }
+
+sso::login () {
+    local profile=${1}
+    echo "Logging into $profile"
+    aws sso login --profile $profile && export AWS_PROFILE=$profile
+}
+
+aws::export () {
+    export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id --profile default)
+export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key --profile default)
+export AWS_SESSION_TOKEN=$(aws configure get aws_session_token --profile default)
+export AWS_DEFAULT_REGION=$(aws configure get region --profile default)
+}

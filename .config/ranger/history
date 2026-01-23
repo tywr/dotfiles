@@ -1,50 +1,50 @@
-shell mkdir main.py
-shell touch names.txt
-shell touch divisors.py
-shell touch main.py
-shell touch benchmark.py
-rename klartext
-rename letter
-rename letter.tex
-open_with open
-find reviews
-find tran
-find bed
-search bed
-search reviews
-rename dag_mongo_daily_playstore_dev.py
-rename dag_mongo_daily_itunes_dev.py
-shell touch retrieve-glacier.py
-shell mkdir scripts
-rename fetch_reports.py
-rename Aiguille_de_la_Vanoise_E_W.gpx
-open_with Q
-open_with 
-open_with nvim
-find ro
-find lg
-rename letter-floy.pdf
-shell touch makefile
-shell touch hellh
-rename Makefile
-rename makefile_
-shell touch hello.py
+rename storage
+rename terragrunt.hcl
+shell mkdir databases
+shell mkdir storage
+shell touch s3.tf
+shell touch rds.tf
+shell touch
+rename server.py
 rename main.py
-rename main .py
+rename generate_changelog_diff_2.py
+rename DatabaseDockerfile
+rename DBDockerfile
+rename Dockerfile
+rename db-migration.txt
+rename db-migrations.txt
+shell mkdir db-migrations
+shell mkdir api-server
+shell touch requirments.txt
+rename api-server
+rename requirements.txt
 shell touch pyproject.toml
-shell mkdir data
-shell mkdir io
-shell touch gpx
-shell touch gpx.py
-shell mkdir src
-rename makefile
-shell mkdir core
-shell touch gpx_data_frame.py
-shell touch viz
-shell mkdir sandbox
-shell touch analyze.py
-shell touch smooth.py
+shell m
+shell mkdir mock
+shell touch app.env
+open_with nvim
+shell mkdir api-keys/
+shell touch staging.txt
 shell 
-shell a
-shell mkdir utils
-shell touch get_elevation.py
+shell mkdir load_balancers
+rename itunes_credentials.py
+rename Q_credentials.py
+rename data
+rename credentials_google.py
+rename application.py
+rename organization.py
+open_with 
+rename Makefilem
+rename test_credentials.py
+rename __init__.py
+rename test_credentials_google.py
+rename test_credentials_apple.py
+rename test_post_credentials_apple.py
+rename test_post_credentials_google.py
+rename test_create_credentials_google.py
+rename test_create_credentials_apple.py
+shell mkdir schemas
+rename get.py
+rename test_get_credentials_apple.py
+rename test_credentials_get_google.py
+shell touch publisher.py

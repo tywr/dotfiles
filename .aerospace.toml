@@ -18,31 +18,29 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-9 = 'workspace 9'
     cmd-0 = 'workspace T'
 
-    cmd-shift-1 = 'move-node-to-workspace 1'
-    cmd-shift-2 = 'move-node-to-workspace 2'
-    cmd-shift-3 = 'move-node-to-workspace 3'
-    cmd-shift-4 = 'move-node-to-workspace 4'
-    cmd-shift-5 = 'move-node-to-workspace 5'
-    cmd-shift-6 = 'move-node-to-workspace 6'
-    cmd-shift-7 = 'move-node-to-workspace 7'
-    cmd-shift-8 = 'move-node-to-workspace 8'
-    cmd-shift-9 = 'move-node-to-workspace 9'
+    ctrl-shift-1 = 'move-node-to-workspace 1'
+    ctrl-shift-2 = 'move-node-to-workspace 2'
+    ctrl-shift-3 = 'move-node-to-workspace 3'
+    ctrl-shift-4 = 'move-node-to-workspace 4'
+    ctrl-shift-5 = 'move-node-to-workspace 5'
+    ctrl-shift-6 = 'move-node-to-workspace 6'
+    ctrl-shift-7 = 'move-node-to-workspace 7'
+    ctrl-shift-8 = 'move-node-to-workspace 8'
+    ctrl-shift-9 = 'move-node-to-workspace 9'
 
     # i3 wraps focus by default
-    cmd-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
-    cmd-shift-k = 'focus --boundaries-action wrap-around-the-workspace down'
-    cmd-shift-j = 'focus --boundaries-action wrap-around-the-workspace up'
-    cmd-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
+    ctrl-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
+    ctrl-shift-k = 'focus --boundaries-action wrap-around-the-workspace down'
+    ctrl-shift-j = 'focus --boundaries-action wrap-around-the-workspace up'
+    ctrl-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
-    ctrl-shift-h = 'move left'
-    ctrl-shift-j = 'move down'
-    ctrl-shift-k = 'move up'
-    ctrl-shift-l = 'move right'
+    # ctrl-shift-h = 'move left'
+    # ctrl-shift-j = 'move down'
+    # ctrl-shift-k = 'move up'
+    # ctrl-shift-l = 'move right'
 
-    cmd-shift-enter = 'join-with left'
     cmd-shift-f = 'fullscreen'
     cmd-shift-e = 'layout tiles horizontal vertical' 
-    cmd-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 
     alt-r = 'reload-config'
 
