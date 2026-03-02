@@ -27,6 +27,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     ctrl-shift-7 = 'move-node-to-workspace 7'
     ctrl-shift-8 = 'move-node-to-workspace 8'
     ctrl-shift-9 = 'move-node-to-workspace 9'
+    ctrl-shift-0 = 'move-node-to-workspace T'
 
     # i3 wraps focus by default
     ctrl-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'

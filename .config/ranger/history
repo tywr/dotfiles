@@ -1,50 +1,50 @@
-rename storage
-rename terragrunt.hcl
-shell mkdir databases
-shell mkdir storage
-shell touch s3.tf
-shell touch rds.tf
-shell touch
-rename server.py
+shell touch test_repositories_user.py
+rename common_types.py
+shell mkdir gcloud_utils.py
+rename gcloud_utils.py
+shell touch gcloud_utils.py
+rename google_utils.py
+rename google.py
+rename aws.py
+shell touch docker-compose.yml
+shell mkdir release
+shell mkdir local-builds
+shell touch windows-clang.cmake
+rename test_clients.py
+shell touch test_token_google.py
+shell mkdir utils
+rename s3.py
+rename gcloud.py
+rename endpoints.py
+shell touch main.py
+shell touch crawling_functions
+shell crawl.py
+shell touch discovery.py
+rename app.envmeq
+shell touch crawl.py
+
 rename main.py
-rename generate_changelog_diff_2.py
-rename DatabaseDockerfile
-rename DBDockerfile
-rename Dockerfile
-rename db-migration.txt
-rename db-migrations.txt
-shell mkdir db-migrations
-shell mkdir api-server
-shell touch requirments.txt
-rename api-server
-rename requirements.txt
-shell touch pyproject.toml
-shell m
-shell mkdir mock
-shell touch app.env
-open_with nvim
-shell mkdir api-keys/
-shell touch staging.txt
+rename google-crawler-discovery
+rename top_in_apps.py
+rename letter_data_steward.pdf
+open_with open
+shell touch .obsidian.vimrc
+shell mkdir 
+shell touch templates
 shell 
-shell mkdir load_balancers
-rename itunes_credentials.py
-rename Q_credentials.py
-rename data
-rename credentials_google.py
-rename application.py
-rename organization.py
-open_with 
-rename Makefilem
-rename test_credentials.py
-rename __init__.py
-rename test_credentials_google.py
-rename test_credentials_apple.py
-rename test_post_credentials_apple.py
-rename test_post_credentials_google.py
-rename test_create_credentials_google.py
-rename test_create_credentials_apple.py
-shell mkdir schemas
-rename get.py
-rename test_get_credentials_apple.py
-rename test_credentials_get_google.py
-shell touch publisher.py
+shell mkdir templates
+shell touch daily.md
+shell touch latex.css
+rename raw_apple.py
+rename aso_suggestions_playstore.py
+rename aso_suggestions_appstore.py
+rename aso_searchresults_playstore.py
+rename aso_searchresults_appstore.py
+rename definitions
+shell touch raw_apple_top_in_apps.py
+rename makefile
+rename qc_sensor.py
+shell touch obsidian.lua
+rename markdown.lua
+shell touch markdown.lua
+open_with nvim

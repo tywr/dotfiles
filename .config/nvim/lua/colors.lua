@@ -1,6 +1,6 @@
 vim.o.termguicolors = false
 
-local colors = {
+vim.g.colors = {
     accent = 1,
     main = 2,
     main2 = 5,
@@ -25,6 +25,7 @@ local colors = {
     black7 = 21,
     background = 22,
 }
+local colors = vim.g.colors
 
 local function hl(group_name, opts)
     vim.api.nvim_set_hl(0, group_name, opts)

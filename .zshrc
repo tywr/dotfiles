@@ -82,3 +82,13 @@ if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/path.zsh.inc' ]; then 
 if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc'; fi
 
 . "$HOME/.local/bin/env"
+
+# bun completions
+[ -s "/Users/tywr/.bun/_bun" ] && source "/Users/tywr/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH=/Users/tywr/.opencode/bin:$PATH

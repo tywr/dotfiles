@@ -1,3 +1,7 @@
+-- Line movement shortcuts
+vim.keymap.set({ "n" }, "j", "gj")
+vim.keymap.set({ "n" }, "k", "gk")
+
 -- Remove tmux shortcut
 vim.keymap.set({ "n", "i", "v" }, "<C-B>", "<nop>")
 vim.keymap.set({ "n", "i", "v" }, "<C-N>", "<nop>")
