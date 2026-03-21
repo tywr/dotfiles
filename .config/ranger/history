@@ -1,50 +1,50 @@
-shell touch test_repositories_user.py
-rename common_types.py
-shell mkdir gcloud_utils.py
-rename gcloud_utils.py
-shell touch gcloud_utils.py
-rename google_utils.py
-rename google.py
-rename aws.py
-shell touch docker-compose.yml
-shell mkdir release
-shell mkdir local-builds
-shell touch windows-clang.cmake
-rename test_clients.py
-shell touch test_token_google.py
-shell mkdir utils
-rename s3.py
-rename gcloud.py
-rename endpoints.py
-shell touch main.py
-shell touch crawling_functions
-shell crawl.py
+shell mkdir 
 shell touch discovery.py
 rename app.envmeq
 shell touch crawl.py
 
-rename main.py
 rename google-crawler-discovery
 rename top_in_apps.py
-rename letter_data_steward.pdf
-open_with open
-shell touch .obsidian.vimrc
-shell mkdir 
-shell touch templates
-shell 
-shell mkdir templates
-shell touch daily.md
-shell touch latex.css
 rename raw_apple.py
-rename aso_suggestions_playstore.py
-rename aso_suggestions_appstore.py
-rename aso_searchresults_playstore.py
-rename aso_searchresults_appstore.py
-rename definitions
-shell touch raw_apple_top_in_apps.py
-rename makefile
-rename qc_sensor.py
-shell touch obsidian.lua
-rename markdown.lua
-shell touch markdown.lua
+rename fr
+rename lettre.pdf
+shell touch status.css
+shell touch scripts
+shell mkdir scripts
+rename deploy_package.py
+find raw-
+find confi
+shell mkdir google
+find qc
+rename main.py
+rename connectors_google_processing.py
+find ra
+find df
+shell mkdir connectors
+rename hello.png
+rename screenshot.png
+open_with 
+search orbital
+rename config.yml
+shell touch _base.scss
 open_with nvim
+search 
+open
+neovim
+vim
+v
+bash neovim
+rename 2026-03-17.md
+rename 2025-09-28
+rename 2025-09-28.md
+rename wip
+shell mkdir overdrive_model
+rename index.md
+rename Figure_1.svg
+rename cmos_transfer.svg
+open_with open
+rename overdrive_model.md
+shell 
+rename ui.css
+rename gravity
+rename gravity.yaml

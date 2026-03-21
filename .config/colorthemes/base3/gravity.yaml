@@ -1,0 +1,14 @@
+name: "ice"
+author: "tywr"
+background: "121212" 
+foreground: "e5e9f0"
+accent: "AF875F"
+accent_bright: "D7AF87"
+main: "A3E2F5"
+main2: "96CDE0"
+main3: "88B6D1"
+secondary: "3498D1"
+secondary2: "308DC2"
+bright_hue: 10
+comment_hue: 35
+black_hues: [4,12,18,24,30,40,50,60]

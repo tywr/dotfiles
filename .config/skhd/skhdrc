@@ -76,3 +76,6 @@ cmd - 0x1E: skhd -t "$"
 
 # Custom shortcuts for german and norwegian
 cmd - b: skhd -k "alt - 0x0B"
+
+0x0A: skhd -t "–"
+shift - 0x0A: skhd -t "—"

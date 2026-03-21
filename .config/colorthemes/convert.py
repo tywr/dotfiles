@@ -200,6 +200,10 @@ def generate_theme(
         secondary2 = base3["secondary2"]
     else:
         secondary2 = secondary_colors[secondary_hues[0]]
+    if "accent_bright" in base3:
+        accent_bright = base3["accent_bright"]
+    else:
+        accent_bright = increase_brightness(base3["accent"], n_points=bright_hue)
 
     # Create a dictionary to hold the generated colors
     generated_colors = {
@@ -218,7 +222,7 @@ def generate_theme(
             base3["secondary"], n_points=bright_hue
         ),
         "secondary2_bright": increase_brightness(secondary2, n_points=bright_hue),
-        "accent_bright": increase_brightness(base3["accent"], n_points=bright_hue),
+        "accent_bright": accent_bright,
         "black_comment": base_colors[comment_hue],
         "black": base_colors[black_hues[0]],
         "black2": base_colors[black_hues[1]],

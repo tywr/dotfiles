@@ -5,3 +5,6 @@ ice:
 
 catpuccin:
 	$(PYTHON) convert.py --name catpuccin
+
+gravity:
+	$(PYTHON) convert.py --name gravity
