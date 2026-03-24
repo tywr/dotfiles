@@ -1,6 +1,6 @@
 options=(
 	style=round
 	width=2.0
-	active_color=0xffa3e2f5
+	active_color=0xffabeaff
 	inactive_color=0xff121212
 )

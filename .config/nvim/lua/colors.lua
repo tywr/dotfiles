@@ -112,7 +112,7 @@ hl("@string.documentation.python", {
 })
 hl("@variable.python", { ctermfg = colors.white })
 hl("@variable.parameter.python", { ctermfg = colors.white })
-hl("@type.python", { ctermfg = colors.main3 })
+hl("@type.python", { ctermfg = colors.main2 })
 hl("@type.builtin.python", { ctermfg = colors.main3 })
 hl("@constant.builtin.python", { ctermfg = colors.accent })
 hl("@module.builtin.python", { ctermfg = colors.main3 })

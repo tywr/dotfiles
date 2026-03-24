@@ -4,11 +4,11 @@ background: "121212"
 foreground: "dcdfe4"
 accent: "af875f"
 accent_bright: "d7af87"
-main: "a3e2f5"
-main2: "7bc8e8"
-main3: "6499b8"
-secondary: "4e84ba"
-secondary2: "3d6fa3"
+main: "abeaff"
+main2: "a7c6d9"
+main3: "7cacd9"
+secondary: "5CA5E6"
+secondary2: "3D80CC"
 bright_hue: 15
 comment_hue: 40
 black_hues: [4,12,18,24,30,40,50,60]
