@@ -7,4 +7,4 @@ catpuccin:
 	$(PYTHON) convert.py --name catpuccin
 
 gravity:
-	$(PYTHON) convert.py --name gravity
+	$(PYTHON) convert_monochrome.py --name gravity

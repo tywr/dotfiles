@@ -32,76 +32,76 @@ return {
             },
             highlights = {
                 fill = {
-                    ctermfg = 22,
-                    ctermbg = 22,
+                    ctermfg = vim.g.colors.bg,
+                    ctermbg = vim.g.colors.bg,
                 },
                 numbers = {
                     ctermfg = 8,
-                    ctermbg = 22,
+                    ctermbg = vim.g.colors.bg,
                 },
                 duplicate = {
-                    ctermbg = 22,
+                    ctermbg = vim.g.colors.bg,
                     ctermfg = 8,
                 },
                 background = {
                     ctermfg = 8,
-                    ctermbg = 22,
+                    ctermbg = vim.g.colors.bg,
                 },
                 modified = {
                     ctermfg = 0,
-                    ctermbg = 22,
+                    ctermbg = vim.g.colors.bg,
                 },
                 separator = {
-                    ctermfg = 22,
-                    ctermbg = 22,
+                    ctermfg = vim.g.colors.bg,
+                    ctermbg = vim.g.colors.bg,
                 },
                 close_button = {
-                    ctermbg = 22,
-                    ctermfg = 22,
+                    ctermbg = vim.g.colors.bg,
+                    ctermfg = vim.g.colors.bg,
                 },
                 buffer_selected = {
-                    ctermbg = 2,
-                    ctermfg = 22,
+                    ctermbg = vim.g.colors.fg,
+                    ctermfg = vim.g.colors.bg,
                 },
                 modified_selected = {
-                    ctermbg = 22,
-                    ctermfg = 2,
+                    ctermbg = vim.g.colors.bg,
+                    ctermfg = vim.g.colors.fg,
                 },
                 indicator_selected = {
-                    ctermfg = 2,
-                    ctermbg = 22,
+                    ctermfg = vim.g.colors.fg,
+                    ctermbg = vim.g.colors.bg,
                 },
                 separator_selected = {
-                    ctermbg = 22,
-                    ctermfg = 2,
+                    ctermbg = vim.g.colors.bg,
+                    ctermfg = vim.g.colors.fg,
                 },
                 duplicate_selected = {
-                    ctermbg = 2,
+                    ctermbg = vim.g.colors.fg,
                     ctermfg = 0,
                 },
                 close_button_selected = {
-                    ctermbg = 22,
-                    ctermfg = 2,
+                    ctermbg = vim.g.colors.bg,
+                    ctermfg = vim.g.colors.fg,
                 },
                 numbers_selected = {
-                    ctermbg = 2,
-                    ctermfg = 22,
+                    ctermbg = vim.g.colors.fg,
+                    ctermfg = vim.g.colors.bg,
                 },
                 buffer_visible = {
                     ctermfg = 7,
-                    ctermbg = 22,
+                    ctermbg = vim.g.colors.bg,
                 },
                 numbers_visible = {
                     ctermfg = 7,
-                    ctermbg = 22,
+                    ctermbg = vim.g.colors.bg,
                 },
                 modified_visible = {
-                    ctermfg = 22,
-                    ctermbg = 22,
+                    ctermfg = vim.g.colors.bg,
+                    ctermbg = vim.g.colors.bg,
                 },
                 separator_visible = {
-                    ctermfg = 22,
-                    ctermbg = 22,
+                    ctermfg = vim.g.colors.bg,
+                    ctermbg = vim.g.colors.bg,
                 },
                 indicator_visible = {
                     ctermfg = 0,
@@ -116,7 +116,7 @@ return {
 
         local keymap = vim.keymap
         keymap.set("n", "<leader>&", function() require("bufferline").go_to(1, true) end)
-        keymap.set("n", "<leader>é", function() require("bufferline").go_to(2, true) end)
+        keymap.set("n", "<leader>é", function() require("bufferline").go_to(vim.g.colors.fg, true) end)
         keymap.set("n", '<leader>"', function() require("bufferline").go_to(3, true) end)
         keymap.set("n", "<leader>'", function() require("bufferline").go_to(4, true) end)
         keymap.set("n", "<leader>(", function() require("bufferline").go_to(5, true) end)

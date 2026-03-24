@@ -8,7 +8,7 @@ from ranger.gui.color import green, red, blue, magenta, black, default, BRIGHT
 
 
 class Scheme(Default):
-    progress_bar_color = magenta
+    progress_bar_color = blue
 
     def use(self, context):
         fg, bg, attr = Default.use(self, context)
@@ -21,9 +21,9 @@ class Scheme(Default):
             fg = self.progress_bar_color
 
         if context.in_titlebar and context.hostname:
-            fg = blue if context.bad else green
+            fg = red if context.bad else green
 
         if context.selected:
-            fg = magenta
+            fg = green
 
         return fg, bg, attr

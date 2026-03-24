@@ -46,7 +46,7 @@ autocmd filetype markdown setlocal conceallevel=2
 " Shorter update time
 set updatetime=7
 
-lua require("colors")
+lua require("colors-monochrome")
 lua require('init')
 lua require("lsp-conf")
 lua require("mappings")

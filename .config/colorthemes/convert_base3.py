@@ -289,7 +289,7 @@ if __name__ == "__main__":
         ("borders", "rc"),
         ("kitty", "conf"),
     ]:
-        template_file = f"templates/{system}.j2"
+        template_file = f"templates/base3/{system}.j2"
         output_file = f"{system}/{name}.{filetype}"
         config_data = render_jinja2_template(template_file, name, output_file)
     display_colors(config_data)
