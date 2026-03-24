@@ -14,7 +14,7 @@ vim.g.colors = {
 
     muted = 118,
     comment = 125,
-    subtle = 145,
+    subtle = 150,
     gray = 160,
     prominent = 199,
 }
@@ -34,10 +34,10 @@ hl("Normal", { ctermfg = colors.fg })
 hl("NonText", { ctermfg = colors.comment })
 hl("Error", { ctermfg = colors.accent_bright })
 hl("Ignore", { ctermbg = colors.alt, ctermfg = colors.fg })
-hl("Statement", { ctermfg = colors.main })
+hl("Statement", { ctermfg = colors.gray })
 hl("Todo", { ctermfg = colors.accent })
 hl("Type", { ctermfg = colors.fg })
-hl("Special", { ctermfg = colors.main })
+hl("Special", { ctermfg = colors.gray })
 
 hl("WinSeparator", { ctermbg = colors.alt, ctermfg = colors.alt })
 hl("ColorColumn", { ctermbg = colors.alt })
@@ -74,9 +74,9 @@ hl("DiagnosticHint", { ctermfg = colors.subtle })
 hl("DiagnosticWarn", { ctermfg = colors.accent })
 
 -- Code syntax
-hl("Keyword", { ctermfg = colors.gray })
+hl("Keyword", { ctermfg = colors.subtle })
 hl("Comment", { ctermfg = colors.comment, cterm = { italic = true } })
-hl("Constant", { ctermfg = colors.muted })
+hl("Constant", { ctermfg = colors.main })
 hl("Float", { ctermfg = colors.main })
 hl("Number", { ctermfg = colors.main })
 hl("Boolean", { ctermfg = colors.main })
@@ -113,4 +113,4 @@ hl("@function.method.call.python", { ctermfg = colors.prominent })
 hl("@function.method.python", { ctermfg = colors.prominent })
 hl("@function.call.python", { ctermfg = colors.prominent })
 hl("@function.python", { ctermfg = colors.prominent })
-hl("@function.builtin.python", { ctermfg = colors.main })
+hl("@function.builtin.python", { ctermfg = colors.gray })
