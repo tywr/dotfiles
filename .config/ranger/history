@@ -1,8 +1,3 @@
-shell mkdir 
-shell touch discovery.py
-rename app.envmeq
-shell touch crawl.py
-
 rename google-crawler-discovery
 rename top_in_apps.py
 rename raw_apple.py
@@ -19,6 +14,7 @@ find qc
 rename main.py
 rename connectors_google_processing.py
 find ra
+shell 
 find df
 shell mkdir connectors
 rename hello.png
@@ -28,10 +24,7 @@ search orbital
 rename config.yml
 shell touch _base.scss
 open_with nvim
-search 
 open
-neovim
-vim
 v
 bash neovim
 rename 2026-03-17.md
@@ -44,7 +37,14 @@ rename Figure_1.svg
 rename cmos_transfer.svg
 open_with open
 rename overdrive_model.md
-shell 
-rename ui.css
+open neovim
+neovim
+vim
+rename background_sun.py
+rename helios_sun.svg
 rename gravity
 rename gravity.yaml
+rename ice.confm
+search 
+rename connectors_schedule.py
+rename connectors_google_processing_daily.py

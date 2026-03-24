@@ -43,8 +43,9 @@ hl("NonText", { ctermfg = colors.black2 })
 hl("Error", { ctermfg = colors.accent_bright })
 hl("Ignore", { ctermbg = colors.black, ctermfg = colors.white })
 hl("Statement", { ctermfg = colors.main2 })
-hl("Todo", { ctermfg = colors.accent_bright })
+hl("Todo", { ctermfg = colors.accent })
 hl("Type", { ctermfg = colors.main2 })
+hl("Special", { ctermfg = colors.main })
 
 hl("WinSeparator", { ctermbg = colors.black, ctermfg = colors.black })
 hl("ColorColumn", { ctermbg = colors.black })
@@ -54,7 +55,7 @@ hl("IncSearch", { ctermbg = colors.white, ctermfg = colors.black, cterm = { bold
 hl("CurSearch", { ctermbg = colors.main, ctermfg = colors.black, cterm = { bold = true } })
 hl("Search", { ctermbg = colors.black2, ctermfg = "NONE", cterm = { bold = true } })
 
--- StatutsLine
+-- StatusLine
 hl("StatusLine", { cterm = { bold = true }, ctermbg = colors.black })
 hl("StatusLineNC", { ctermbg = colors.black, ctermfg = colors.white })
 
@@ -69,7 +70,7 @@ hl("NormalFloat", { cterm = { bold = true }, ctermbg = colors.black, ctermfg = c
 hl("PmenuSel", { cterm = { bold = true }, ctermbg = colors.main, ctermfg = colors.black })
 
 -- Copilot
-hl("CopilotSuggestion", { ctermfg = colors.black_comment, })
+hl("CopilotSuggestion", { ctermfg = colors.black_comment })
 
 -- Hop
 hl("HopNextKey", { cterm = { bold = true }, ctermfg = colors.main })
@@ -77,22 +78,21 @@ hl("HopNextKey1", { cterm = { bold = true }, ctermfg = colors.secondary })
 hl("HopNextKey2", { cterm = { bold = true }, ctermfg = colors.white })
 
 -- Diagnostic
-hl("DiagnosticHint", { ctermfg = colors.accent_bright })
-hl("DiagnosticWarn", { ctermfg = colors.accent_bright })
+hl("DiagnosticHint", { ctermfg = colors.main3 })
+hl("DiagnosticWarn", { ctermfg = colors.accent })
 
 -- Code syntax related
-hl("Identifier", { ctermfg = colors.secondary })
-hl("Keyword", { ctermfg = colors.secondary })
+hl("Keyword", { ctermfg = colors.main3 })
 hl("Comment", { ctermfg = colors.black_comment, cterm = { italic = true } })
 hl("Constant", { ctermfg = colors.main3 })
-hl("Float", { ctermfg = colors.accent_bright })
-hl("Number", { ctermfg = colors.accent_bright })
+hl("Float", { ctermfg = colors.accent })
+hl("Number", { ctermfg = colors.accent })
 hl("Boolean", { ctermfg = colors.secondary2 })
 hl("String", { ctermfg = colors.secondary2 })
+hl("Identifier", { ctermfg = colors.white })
 hl("Operator", { ctermfg = colors.accent })
 hl("Special", { ctermfg = colors.accent })
 hl("Delimiter", { ctermfg = colors.accent })
-hl("Function", { ctermfg = colors.main })
 
 -- Telescope
 hl("TelescopeBorder", { ctermfg = colors.black_comment })
@@ -104,16 +104,21 @@ hl("TelescopeSelection", { ctermbg = colors.black, ctermfg = colors.white_bright
 hl("TelescopeMatching", { ctermfg = colors.main })
 
 -- Python syntax related
-hl("@boolean.python", { ctermfg = colors.secondary2 })
+hl("@boolean.python", { ctermfg = colors.accent })
 hl("@string.documentation.python", {
-    ctermfg = colors.black7,
+    ctermfg = colors.black_comment,
     ctermbg = "NONE",
-    italic = true,
     cterm = { italic = true },
 })
 hl("@variable.python", { ctermfg = colors.white })
-hl("@variable.parameter.python", { ctermfg = colors.main3 })
+hl("@variable.parameter.python", { ctermfg = colors.white })
 hl("@type.python", { ctermfg = colors.main3 })
-hl("@constructor.python", { ctermfg = colors.main2 })
+hl("@type.builtin.python", { ctermfg = colors.main3 })
+hl("@constant.builtin.python", { ctermfg = colors.accent })
+hl("@module.builtin.python", { ctermfg = colors.main3 })
+hl("@constant.python", { ctermfg = colors.accent })
+hl("@constructor.python", { ctermfg = colors.main3 })
 hl("@function.method.call.python", { ctermfg = colors.main2 })
 hl("@function.call.python", { ctermfg = colors.main2 })
+hl("@function.python", { ctermfg = colors.main2_bright })
+hl("@function.builtin.python", { ctermfg = colors.main3 })

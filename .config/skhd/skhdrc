@@ -79,3 +79,4 @@ cmd - b: skhd -k "alt - 0x0B"
 
 0x0A: skhd -t "–"
 shift - 0x0A: skhd -t "—"
+cmd - 0x0A: skhd -t "→"
