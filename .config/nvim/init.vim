@@ -12,8 +12,6 @@ set splitright
 set tags=tags
 set cursorline
 set backspace=indent,eol,start
-set showmatch
-set noshowmode
 set shell=zsh
 set background=dark
 set nocompatible
@@ -47,6 +45,8 @@ autocmd filetype markdown setlocal conceallevel=2
 set updatetime=7
 
 lua require("colors-monochrome")
+"lua require("base16")
+lua require("noir")
 lua require('init')
 lua require("lsp-conf")
 lua require("mappings")

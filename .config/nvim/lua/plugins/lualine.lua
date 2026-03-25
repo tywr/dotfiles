@@ -4,29 +4,20 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-        local colors = {
-            white = 7,
-            accent = 1,
-            main = 2,
-            black = 0,
-            alt = 8,
-            background = 16,
-        }
-
         local bubbles_theme = {
             normal = {
-                a = { fg = vim.g.colors.bg, bg = vim.g.colors.subtle, gui = "bold" },
-                b = { fg = vim.g.colors.fg, bg = vim.g.colors.bg },
-                c = { bg = vim.g.colors.bg },
+                a = { fg = vim.g.colors.background, bg = vim.g.colors.foreground, gui = "bold" },
+                b = { fg = vim.g.colors.foreground, bg = vim.g.colors.background },
+                c = { bg = vim.g.colors.background },
             },
-            insert = { a = { fg = colors.black, bg = colors.main, gui = "bold" } },
-            visual = { a = { fg = colors.black, bg = colors.main, gui = "bold" } },
-            replace = { a = { fg = colors.black, bg = colors.accent, gui = "bold" } },
+            insert = { a = { fg = vim.g.colors.background, bg = vim.g.colors.primary, gui = "bold" } },
+            visual = { a = { fg = vim.g.colors.background, bg = vim.g.colors.primary, gui = "bold" } },
+            replace = { a = { fg = vim.g.colors.background, bg = vim.g.colors.error, gui = "bold" } },
 
             inactive = {
-                a = { fg = vim.g.colors.fg, bg = vim.g.colors.bg },
-                b = { fg = vim.g.colors.fg, bg = vim.g.colors.bg },
-                c = { bg = vim.g.colors.bg },
+                a = { fg = vim.g.colors.fg, bg = vim.g.colors.background },
+                b = { fg = vim.g.colors.fg, bg = vim.g.colors.background },
+                c = { bg = vim.g.colors.background },
             },
         }
 
