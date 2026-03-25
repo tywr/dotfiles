@@ -60,31 +60,31 @@ return {
                     ctermfg = vim.g.colors.background,
                 },
                 buffer_selected = {
-                    ctermbg = vim.g.colors.foreground,
+                    ctermbg = vim.g.colors.selected,
                     ctermfg = vim.g.colors.background,
                 },
                 modified_selected = {
-                    ctermbg = vim.g.colors.background,
+                    ctermbg = vim.g.colors.selected,
                     ctermfg = vim.g.colors.foreground,
                 },
                 indicator_selected = {
-                    ctermfg = vim.g.colors.foreground,
+                    ctermfg = vim.g.colors.selected,
                     ctermbg = vim.g.colors.background,
                 },
                 separator_selected = {
                     ctermbg = vim.g.colors.background,
-                    ctermfg = vim.g.colors.foreground,
+                    ctermfg = vim.g.colors.selected,
                 },
                 duplicate_selected = {
-                    ctermbg = vim.g.colors.foreground,
+                    ctermbg = vim.g.colors.selected,
                     ctermfg = 0,
                 },
                 close_button_selected = {
                     ctermbg = vim.g.colors.background,
-                    ctermfg = vim.g.colors.foreground,
+                    ctermfg = vim.g.colors.selected,
                 },
                 numbers_selected = {
-                    ctermbg = vim.g.colors.foreground,
+                    ctermbg = vim.g.colors.selected,
                     ctermfg = vim.g.colors.background,
                 },
                 buffer_visible = {
@@ -104,12 +104,12 @@ return {
                     ctermbg = vim.g.colors.background,
                 },
                 indicator_visible = {
-                    ctermfg = 0,
-                    ctermbg = 0,
+                    ctermfg = vim.g.colors.background,
+                    ctermbg = vim.g.colors.background,
                 },
                 close_button_visible = {
-                    ctermfg = 0,
-                    ctermbg = 0,
+                    ctermfg = vim.g.colors.background,
+                    ctermbg = vim.g.colors.background,
                 }
             }
         })

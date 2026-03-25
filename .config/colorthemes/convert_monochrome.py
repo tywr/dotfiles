@@ -174,18 +174,7 @@ def generate_theme(
     base_folder="monochrome",
 ):
     base3 = load_base3(name, base_folder=base_folder)
-    bright_hue = base3["bright_hue"]
-    background_alt_hue = base3.get("background_alt_hue")
-    black_hues = base3["black_hues"]
-    base_colors = generate_color_palette(
-        base3["background"], base3["foreground"], n=100
-    )
-    main_colors = generate_color_palette(base3["main"], base3["foreground"], n=6)
-
-    if "accent_bright" in base3:
-        accent_bright = base3["accent_bright"]
-    else:
-        accent_bright = increase_brightness(base3["accent"], n_points=bright_hue)
+    primary_colors = generate_color_palette(base3["primary"], base3["foreground"], n=6)
 
     black_gradient = {
         f"b{i:02d}": f"{round(255 * (i / 99)):02x}" * 3 for i in range(100)
@@ -194,28 +183,18 @@ def generate_theme(
     # Create a dictionary to hold the generated colors
     generated_colors = {
         "background": base3["background"],
-        "background_alt": base_colors[background_alt_hue]
-        if background_alt_hue is not None
-        else base3["background"],
         "foreground": base3["foreground"],
-        "main": base3["main"],
-        "main1": main_colors[1],
-        "main2": main_colors[2],
-        "main3": main_colors[3],
-        "main4": main_colors[4],
-        "accent": base3["accent"],
-        "main_bright": increase_brightness(base3["main"], n_points=bright_hue),
-        "main1_bright": increase_brightness(main_colors[1], n_points=bright_hue),
-        "main2_bright": increase_brightness(main_colors[2], n_points=bright_hue),
-        "main3_bright": increase_brightness(main_colors[3], n_points=bright_hue),
-        "main4_bright": increase_brightness(main_colors[4], n_points=bright_hue),
-        "accent_bright": accent_bright,
-        "muted": base3["muted"],
-        "subtle": base3["subtle"],
-        "prominent": base3["prominent"],
-        "black_comment": base3["comment"],
+        "primary": base3["primary"],
+        "primary_bright": base3["primary_bright"],
+        "primary1": primary_colors[1],
+        "primary2": primary_colors[2],
+        "primary3": primary_colors[3],
+        "primary4": primary_colors[4],
+        "contrast": base3["contrast"],
+        "contrast_bright": base3["contrast_bright"],
         "white": base3["foreground"],
-        "white_bright": increase_brightness(base3["foreground"], n_points=bright_hue),
+        "background_alt": base3.get("background_alt"),
+        "foreground_alt": base3.get("foreground_alt"),
         **black_gradient,
     }
     return generated_colors

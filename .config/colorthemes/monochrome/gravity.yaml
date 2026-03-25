@@ -1,10 +1,10 @@
 name: "gravity"
 author: "tywr"
-background: "121212" 
+background: "101010" 
 foreground: "D1D1D1"
-accent: "af875f"
-accent_bright: "d7af87"
-main: "abeaff"
-bright_hue: 10
-background_alt_hue: 4
-black_hues: [4,12,18,24,30,40,50,60]
+contrast: "af875f"
+contrast_bright: "d7af87"
+primary: "91c7d9"
+primary_bright: "abeaff"
+background_alt: "222222"
+foreground_alt: "505050"

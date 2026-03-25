@@ -1,27 +1,18 @@
 vim.g.colors = {
-    base00 = 16,
-    base01 = 0,
-    base02 = 115,
-    base03 = 130,
-    base04 = 150,
-    base05 = 7,
-    base06 = 192,
-    base07 = 199,
-    base08 = 7,
-    base09 = 2,
-    base0A = 190,
-    base0B = 2,
-    base0C = 150,
-    base0D = 190,
-    base0E = 155,
-    base0F = 145,
-
     -- Noir semantics
     background = 16,
-    primary = 2,
-    secondary = 190,
     foreground = 7,
+    alt = 109,
 
+    -- Main accent color
+    primary = 2,
+    primary_bright = 10,
+
+    -- Contrast accent color
+    contrast = 1,
+    contrast_bright = 9,
+
+    -- Black gradient
     noir_0 = 199,
     noir_1 = 193,
     noir_2 = 7,
@@ -31,9 +22,11 @@ vim.g.colors = {
     noir_6 = 145,
     noir_7 = 135,
     noir_8 = 125,
-    noir_9 = 115,
+    noir_9 = 119,
 
+    -- Semantic colors
     error = 1,
     warning = 199,
-    hint = 7,
+    hint = 190,
+    selected = 135,
 }
