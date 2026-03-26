@@ -1,6 +1,7 @@
 term = xterm-256color
 background-opacity = 0.95
 background-blur = true
+background-opacity-cells = true
 
 # The syntax is "key = value". The whitespace around the
 # equals doesn't matter.
@@ -16,8 +17,27 @@ keybind = ctrl+d=new_split:right
 font-family = "Klartext Mono Code"
 font-size = 20
 
+adjust-cursor-thickness = 4
+cursor-style-blink = true
+
 # window-decoration = auto
 macos-titlebar-style = hidden
 
-window-padding-x = 8
-window-padding-y = 1
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+palette-generate = true
+
+mouse-hide-while-typing = true
+
+window-vsync = true
+
+copy-on-select = true
+confirm-close-surface = false
+
+shell-integration = zsh
+macos-icon = custom-style
+macos-icon-ghost-color = #88c0d0
+
+scrollback-limit = 10000

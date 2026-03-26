@@ -1,5 +1,3 @@
-shell mkdir scripts
-rename deploy_package.py
 find raw-
 find confi
 shell mkdir google
@@ -48,3 +46,5 @@ search jan
 find 
 open
 rename init.lua
+rename Tiempos.ttf
+rename Vollkorn.ttf
