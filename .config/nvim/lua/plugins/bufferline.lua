@@ -5,10 +5,10 @@ return {
 
         bufferline.setup({
             options = {
-                style_present = bufferline.style_preset.default,
+                style_present = bufferline.style_preset.minimal,
                 indicator = {
                     icon = "",
-                    style = "icon"
+                    -- style = "icon"
                 },
                 numbers = "ordinal",
                 show_buffer_icons = false,
@@ -32,10 +32,10 @@ return {
             },
             highlights = {
                 background = {
-                    ctermbg = vim.g.colors.background,
+                    ctermbg=vim.g.colors.background_solid,
                 },
                 fill = {
-                    ctermbg = vim.g.colors.background_solid,
+                    ctermbg=vim.g.colors.background_solid,
                 },
                 numbers = {
                     ctermfg = 8,

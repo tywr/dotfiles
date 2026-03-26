@@ -1,6 +1,7 @@
 vim.g.colors = {
     -- Noir semantics
     background = "none",
+    background_solid = 0,
     foreground = 7,
     alt = 234,
 

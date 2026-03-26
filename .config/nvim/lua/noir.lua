@@ -7,7 +7,7 @@ end
 local colors = vim.g.colors
 
 -- Generic
-hl("Normal", { ctermfg = colors.noir_4, ctermbg = colors.background })
+hl("Normal", { ctermfg = colors.foreground, ctermbg = colors.background })
 hl("Search", { ctermfg = colors.contrast_bright, cterm = { bold = true } })
 hl("IncSearch", { ctermfg = colors.contrast_bright, cterm = { bold = true } })
 hl("Substitute", { ctermbg = colors.noir_9 })
