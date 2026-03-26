@@ -1,4 +1,3 @@
-shell touch scripts
 shell mkdir scripts
 rename deploy_package.py
 find raw-
@@ -18,7 +17,6 @@ search orbital
 rename config.yml
 shell touch _base.scss
 open_with nvim
-open
 v
 bash neovim
 rename 2026-03-17.md
@@ -48,3 +46,5 @@ search aero
 search borders
 search jan
 find 
+open
+rename init.lua

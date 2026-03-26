@@ -1,4 +1,4 @@
-# term = xterm-256color
+term = xterm-256color
 background-opacity = 0.95
 background-blur = true
 

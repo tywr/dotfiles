@@ -13,10 +13,10 @@ palette = 11=#D1D1D1
 palette = 12=#D1D1D1
 palette = 13=#D1D1D1
 palette = 14=#D1D1D1
-palette = 15=#101010
-background = #101010
+palette = 15=#D1D1D1
+background = #121212
 foreground = #D1D1D1
 cursor-color = #D1D1D1
-cursor-text = #101010
+cursor-text = #121212
 selection-background = #D1D1D1
-selection-foreground = #101010
+selection-foreground = #121212
