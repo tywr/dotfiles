@@ -82,14 +82,6 @@ cmp.setup({
             end,
         },
     }),
-    window = {
-        completion = {
-            winhighlight = "Normal:NormalFloat,FloatBorder:NormalFloat,CursorLine:PmenuSel,Search:None"
-        },
-        documentation = {
-            winhighlight = "Normal:NormalFloat"
-        }
-    }
 })
 
 cmp.config.sources({

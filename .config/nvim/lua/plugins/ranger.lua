@@ -6,8 +6,8 @@ return {
                 replace_netrw = true,
                 enable_cmds = true,
                 ui = {
-                    height = 0.6,
-                    width = 0.6,
+                    height = 0.75,
+                    width = 0.75,
                     border = "single",
                 }
             })

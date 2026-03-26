@@ -6,12 +6,12 @@ return {
     config = function()
         local bubbles_theme = {
             normal = {
-                a = { fg = vim.g.colors.background, bg = vim.g.colors.selected, gui = "bold" },
-                b = { fg = vim.g.colors.foreground, bg = vim.g.colors.background },
+                a = { fg = vim.g.colors.background_solid, bg = vim.g.colors.selected, gui = "bold" },
+                b = { fg = vim.g.colors.foreground_solid, bg = vim.g.colors.background },
                 c = { bg = vim.g.colors.background },
             },
-            insert = { a = { fg = vim.g.colors.background, bg = vim.g.colors.primary, gui = "bold" } },
-            visual = { a = { fg = vim.g.colors.background, bg = vim.g.colors.primary, gui = "bold" } },
+            insert = { a = { fg = vim.g.colors.background_solid, bg = vim.g.colors.primary, gui = "bold" } },
+            visual = { a = { fg = vim.g.colors.background_solid, bg = vim.g.colors.primary, gui = "bold" } },
             replace = { a = { fg = vim.g.colors.background, bg = vim.g.colors.error, gui = "bold" } },
 
             inactive = {

@@ -248,8 +248,9 @@ if __name__ == "__main__":
     name = args.name
     for system, filetype in [
         ("kitty", "conf"),
+        ("ghostty", None),
     ]:
         template_file = f"templates/monochrome/{system}.j2"
-        output_file = f"{system}/{name}.{filetype}"
+        output_file = f"{system}/{name}.{filetype}" if filetype else f"{system}/{name}"
         config_data = render_jinja2_template(template_file, name, output_file)
     # display_colors(config_data)

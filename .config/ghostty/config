@@ -1,0 +1,23 @@
+# term = xterm-256color
+background-opacity = 0.95
+background-blur = true
+
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+theme = /Users/tywr/.config/colorthemes/ghostty/gravity
+
+# Comments start with a `#` and are only valid on their own line.
+# Blank lines are ignored!
+
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+
+# Empty values reset the configuration to the default value
+font-family = "Klartext Mono Code"
+font-size = 20
+
+# window-decoration = auto
+macos-titlebar-style = hidden
+
+window-padding-x = 8
+window-padding-y = 1

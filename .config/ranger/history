@@ -1,7 +1,3 @@
-rename raw_apple.py
-rename fr
-rename lettre.pdf
-shell touch status.css
 shell touch scripts
 shell mkdir scripts
 rename deploy_package.py
@@ -48,3 +44,7 @@ rename connectors_schedule.py
 rename connectors_google_processing_daily.py
 rename icon.svg
 rename base16.lua
+search aero
+search borders
+search jan
+find 
