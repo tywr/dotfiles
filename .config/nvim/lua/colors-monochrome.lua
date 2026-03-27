@@ -29,5 +29,5 @@ vim.g.colors = {
     error = 1,
     warning = 255,
     hint = 254,
-    selected = 240,
+    selected = 242,
 }

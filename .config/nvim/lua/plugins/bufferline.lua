@@ -46,7 +46,7 @@ return {
                     ctermfg = 8,
                 },
                 modified = {
-                    ctermfg = 0,
+                    ctermfg = vim.g.colors.selected,
                     ctermbg = vim.g.colors.background_solid,
                 },
                 separator = {
@@ -62,8 +62,8 @@ return {
                     ctermfg = vim.g.colors.background_solid,
                 },
                 modified_selected = {
-                    ctermbg = vim.g.colors.selected,
-                    ctermfg = vim.g.colors.foreground,
+                    ctermfg = vim.g.colors.selected,
+                    ctermbg = vim.g.colors.background_solid,
                 },
                 indicator_selected = {
                     ctermfg = vim.g.colors.selected,

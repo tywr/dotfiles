@@ -1,4 +1,5 @@
 term = xterm-256color
+working-directory = /Users/tywr
 background-opacity = 0.95
 background-blur = true
 background-opacity-cells = true
@@ -13,9 +14,11 @@ theme = /Users/tywr/.config/colorthemes/ghostty/gravity
 keybind = ctrl+z=close_surface
 keybind = ctrl+d=new_split:right
 
-# Empty values reset the configuration to the default value
-font-family = "Klartext Mono Code"
-font-size = 20
+font-family = "JetBrains Mono"
+font-size = 18
+font-feature = cv01, cv06, cv11, cv18, cv12, cv14, cv07
+adjust-cell-width = -4%
+adjust-cell-height = -8%
 
 adjust-cursor-thickness = 4
 cursor-style-blink = true

@@ -1,7 +1,7 @@
 name: "gravity"
 author: "tywr"
 background: "121212" 
-foreground: "D1D1D1"
+foreground: "cccccc"
 contrast: "af875f"
 contrast_bright: "d7af87"
 primary: "91c7d9"
