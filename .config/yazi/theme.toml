@@ -184,12 +184,6 @@ inactive = {}
 
 # : Input {{{
 
-[input]
-border   = { fg = "blue" }
-title    = {}
-value    = {}
-selected = { reversed = true }
-
 # : }}}
 
 
@@ -267,3 +261,6 @@ exts  = []
 conds = []
 
 # : }}}
+
+[input]
+border = { fg = "240" }
