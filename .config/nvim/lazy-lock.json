@@ -35,5 +35,6 @@
   "vim-smoothie": { "branch": "master", "commit": "df1e324e9f3395c630c1c523d0555a01d2eb1b7e" },
   "vim-subversive": { "branch": "master", "commit": "cea98a62ded4028118ad71c3e81b26eff2e0b8a0" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
-  "xeno.nvim": { "branch": "master", "commit": "f70c22447c7d954973f35c10dd9e9942cd7fb2eb" }
+  "xeno.nvim": { "branch": "master", "commit": "f70c22447c7d954973f35c10dd9e9942cd7fb2eb" },
+  "yazi.nvim": { "branch": "main", "commit": "2306d251d1c5c3f33701fe59fe4c65a1b80fc31a" }
 }
