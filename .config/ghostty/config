@@ -1,5 +1,5 @@
 term = xterm-256color
-working-directory = home
+working-directory = /Users/tywr
 window-inherit-working-directory = false
 background-opacity = 0.95
 background-blur = 10
