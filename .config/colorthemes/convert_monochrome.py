@@ -184,6 +184,7 @@ def generate_theme(
     generated_colors = {
         "background": base3["background"],
         "foreground": base3["foreground"],
+        "foreground_bright": base3["foreground_bright"],
         "primary": base3["primary"],
         "primary_bright": base3["primary_bright"],
         "primary1": primary_colors[1],
@@ -192,7 +193,6 @@ def generate_theme(
         "primary4": primary_colors[4],
         "contrast": base3["contrast"],
         "contrast_bright": base3["contrast_bright"],
-        "white": base3["foreground"],
         "background_alt": base3.get("background_alt"),
         "foreground_alt": base3.get("foreground_alt"),
         **black_gradient,

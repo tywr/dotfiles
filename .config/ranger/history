@@ -1,4 +1,3 @@
-rename main.py
 rename connectors_google_processing.py
 find ra
 shell 
@@ -10,7 +9,6 @@ open_with
 search orbital
 rename config.yml
 shell touch _base.scss
-open_with nvim
 v
 bash neovim
 rename 2026-03-17.md
@@ -48,3 +46,5 @@ find ligra
 find Li
 shell mkdir JetBrains
 rename jetbrains
+shell touch iosevka.toml
+open_with nvim

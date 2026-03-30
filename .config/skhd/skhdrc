@@ -1,5 +1,5 @@
 # cmd - return : /Applications/kitty.app/Contents/MacOS/kitty ~
-cmd - return : open -na ghostty --args --title=ghostty-from-vscode --working-directory="$HOME"
+cmd - return : open -na ghostty --args --working-directory="/Users/tywr/"
 
 cmd - tab: skhd -k "ctrl - b" && skhd -k "n"
 cmd + shift - tab: skhd -k "ctrl - b" && skhd -k "p"

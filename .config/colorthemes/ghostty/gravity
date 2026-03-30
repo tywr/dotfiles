@@ -9,11 +9,11 @@ palette = 7=#cccccc
 palette = 8=#505050
 palette = 9=#d7af87
 palette = 10=#abeaff
-palette = 11=#cccccc
-palette = 12=#cccccc
-palette = 13=#cccccc
-palette = 14=#cccccc
-palette = 15=#cccccc
+palette = 11=#eeeeee
+palette = 12=#eeeeee
+palette = 13=#eeeeee
+palette = 14=#eeeeee
+palette = 15=#eeeeee
 background = #121212
 foreground = #cccccc
 cursor-color = #cccccc
