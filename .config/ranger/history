@@ -1,40 +1,3 @@
-rename connectors_google_processing.py
-find ra
-shell 
-find df
-shell mkdir connectors
-rename hello.png
-rename screenshot.png
-open_with 
-search orbital
-rename config.yml
-shell touch _base.scss
-v
-bash neovim
-rename 2026-03-17.md
-rename 2025-09-28
-rename 2025-09-28.md
-rename wip
-shell mkdir overdrive_model
-rename index.md
-rename Figure_1.svg
-rename cmos_transfer.svg
-open_with open
-rename overdrive_model.md
-open neovim
-neovim
-vim
-rename background_sun.py
-rename helios_sun.svg
-rename gravity
-rename gravity.yaml
-rename ice.confm
-search 
-rename connectors_schedule.py
-rename connectors_google_processing_daily.py
-rename icon.svg
-rename base16.lua
-search aero
 search borders
 search jan
 find 
@@ -47,4 +10,41 @@ find Li
 shell mkdir JetBrains
 rename jetbrains
 shell touch iosevka.toml
+shell mkdir src
+shell touch pyproject.toml
 open_with nvim
+shell mkdir characters
+shell touch o.py
+rename m.py
+rename i.py
+shell mkdir shapes
+rename flat_hook.py
+shell mkdir rounded_rect
+shell touch rounded_rect.py
+shell touch __init__.py
+shell touch patches
+shell mkdir patches
+rename rounded_loop_tapered.py
+shell 
+shell touch generate_font2.py
+rename rounded_ear.py
+rename round_rec.py
+rename superellipse.py
+shell mkdir glyphs
+shell touch
+shell touch 
+rename 
+rename glyphs
+rename superellipse_hear.py
+rename d.py
+rename superellipse_ear.py
+rename a.py_
+rename c.py
+rename e.py
+rename f.py
+rename .py_
+rename g.py
+rename h
+rename h.py
+rename n.py
+rename Gravity Mono
