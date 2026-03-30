@@ -8,8 +8,8 @@ local colors = vim.g.colors
 
 -- Generic
 hl("Normal", { ctermfg = colors.foreground, ctermbg = colors.background })
-hl("Search", { ctermfg = colors.contrast_bright, cterm = { bold = true } })
-hl("IncSearch", { ctermfg = colors.contrast_bright, cterm = { bold = true } })
+hl("Search", { ctermfg = colors.contrast_bright, cterm = { bold = true, underline = true } })
+hl("IncSearch", { ctermfg = colors.contrast_bright, cterm = { bold = true, underline = true } })
 hl("Substitute", { ctermbg = colors.noir_9 })
 hl("CurSearch", { ctermfg = colors.contrast_bright, cterm = { bold = true } })
 hl("Visual", { ctermbg = colors.noir_8 })
