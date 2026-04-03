@@ -156,9 +156,9 @@ hl("StatusLine", { ctermbg = colors.background })
 -- Flash
 hl("FlashMatch", { ctermfg = colors.primary })
 hl("FlashCurrent", { ctermfg = colors.contrast_bright, cterm = { bold = true, underline = true } })
-hl("FlashLabel", { ctermfg = colors.primary_bright, cterm = {} })
-hl("FlashPrompt", { ctermfg = colors.primary_bright, cterm = {} })
-hl("FlashPromptIcon", { ctermfg = colors.primary_bright, cterm = {} })
+hl("FlashLabel", { ctermbg = colors.primary_bright, ctermfg= colors.background_solid, cterm = {} })
+hl("FlashPrompt", { ctermfg = colors.primary, cterm = {} })
+hl("FlashPromptIcon", { ctermfg = colors.primary, cterm = {} })
 hl("FlashCursor", { ctermfg = colors.primary_bright, cterm = {} })
 
 -- IndentBlankline
