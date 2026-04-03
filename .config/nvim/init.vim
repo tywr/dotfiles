@@ -46,7 +46,7 @@ set updatetime=7
 
 lua require("colors-monochrome")
 lua require("noir")
-lua require('init')
+lua require("init")
 lua require("lsp-conf")
 lua require("mappings")
 

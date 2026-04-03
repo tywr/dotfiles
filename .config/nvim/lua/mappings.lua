@@ -42,7 +42,6 @@ vim.keymap.set("n", "<Down>", ":call smoothie#downwards()<cr>", { silent = true 
 vim.keymap.set("n", "<Up>", ":call smoothie#upwards()<cr>", { silent = true })
 
 vim.keymap.set("n", "<leader>zz", function() require('zen-mode').toggle({}) end)
-vim.keymap.set("n", "<leader>ss", "<cmd>LspZeroFormat<cr>")
 vim.keymap.set("n", "<C-s>", "<cmd>LspZeroFormat<cr>")
 vim.keymap.set("n", "μ", "%")
 vim.keymap.set("n", "ù", "%")
@@ -59,6 +58,11 @@ vim.keymap.set({ 'n', 'x' }, '<leader>dp', '<Plug>(doge-comment-jump-backward)')
 -- Claude Code
 vim.keymap.set("n", "<leader>cc", "<cmd>:ClaudeCode<cr>")
 vim.keymap.set("n", "<leader>co", "<cmd>:ClaudeCodeContinue<cr>")
+
+-- LSP shortcuts
+vim.keymap.set('n', 'K',  vim.lsp.buf.hover)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', '<leader>ss', function() vim.lsp.buf.format({ async = true }) end)
 
 -- Quick Path Copying
 vim.keymap.set("n", "<leader>cp",
