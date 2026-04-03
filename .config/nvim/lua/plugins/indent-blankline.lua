@@ -3,12 +3,12 @@ return {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         opts = {
-            indent = { highlight = {"NonText", "Comment"}, char = "┃" },
+            indent = { highlight = { "IndentBlankline1", "IndentBlankline2" }, char = "┃" },
             scope = {
                 show_start = false,
                 show_end = false,
                 char = "┃",
-                highlight = "NvimIdentifierKey",
+                highlight = "IndentBlanklineSelector",
             }
         },
     }
