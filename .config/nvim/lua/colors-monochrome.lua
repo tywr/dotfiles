@@ -3,7 +3,7 @@ vim.g.colors = {
     background = "none",
     background_solid = 0,
     foreground = 7,
-    alt = 234,
+    alt = 233,
 
     -- Main accent color
     primary = 2,

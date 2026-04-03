@@ -1,5 +1,6 @@
 # cmd - return : /Applications/kitty.app/Contents/MacOS/kitty ~
 cmd - return : open -na ghostty
+shift - return : skhd -k "alt - return"
 
 cmd - tab: skhd -k "ctrl - b" && skhd -k "n"
 cmd + shift - tab: skhd -k "ctrl - b" && skhd -k "p"

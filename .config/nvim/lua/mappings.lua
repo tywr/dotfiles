@@ -1,3 +1,6 @@
+-- Map Shift+Enter (ESC+LF from Ghostty) to Enter in terminal mode
+vim.keymap.set("t", "\x1c", "<cr>")
+
 -- Line movement shortcuts
 vim.keymap.set({ "n" }, "j", "gj")
 vim.keymap.set({ "n" }, "k", "gk")
@@ -52,7 +55,6 @@ vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
 vim.keymap.set("n", "<leader>dg", "<cmd>:DogeGenerate numpy<cr>")
 vim.keymap.set({ 'n', 'x' }, '<leader>dn', '<Plug>(doge-comment-jump-forward)')
 vim.keymap.set({ 'n', 'x' }, '<leader>dp', '<Plug>(doge-comment-jump-backward)')
-
 
 -- Claude Code
 vim.keymap.set("n", "<leader>cc", "<cmd>:ClaudeCode<cr>")
