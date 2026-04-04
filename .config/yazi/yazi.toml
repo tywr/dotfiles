@@ -3,7 +3,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-ratio          = [ 1, 4, 3 ]
+ratio          = [ 2, 6, 4 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse 	 = false
@@ -15,6 +15,11 @@ show_symlink   = true
 scrolloff      = 5
 mouse_events   = [ "click", "scroll" ]
 title_format   = "Yazi: {cwd}"
+prepend_rules = [
+    { name = ".DS_Store", hidden = true },
+    { name = "*.pyc",     hidden = true },
+]
+
 
 [preview]
 wrap            = "no"

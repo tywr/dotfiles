@@ -20,6 +20,7 @@
   "toggleterm.nvim": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
   "vim-doge": { "branch": "master", "commit": "4c0b771be8b7c5ad9859cc8705a727935ab63e1d" },
   "vim-gitgutter": { "branch": "main", "commit": "55b368d4c68541775b4b253d3c98d3145b695c24" },
+  "vim-python-pep8-indent": { "branch": "master", "commit": "60ba5e11a61618c0344e2db190210145083c91f8" },
   "vim-sensible": { "branch": "master", "commit": "0ce2d843d6f588bb0c8c7eec6449171615dc56d9" },
   "vim-smoothie": { "branch": "master", "commit": "df1e324e9f3395c630c1c523d0555a01d2eb1b7e" },
   "vim-subversive": { "branch": "master", "commit": "cea98a62ded4028118ad71c3e81b26eff2e0b8a0" },

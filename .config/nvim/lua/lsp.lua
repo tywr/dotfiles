@@ -1,6 +1,13 @@
 vim.opt.signcolumn = 'yes'
 vim.env.PATH = vim.fn.stdpath('data') .. '/mason/bin:' .. vim.env.PATH
 
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
+    callback = function(ev)
+        vim.lsp.completion.enable(true, ev.data.client_id, ev.buf)
+    end,
+})
+
 vim.diagnostic.config({
     virtual_text = true,
     signs = true,
@@ -72,4 +79,3 @@ vim.lsp.config('lua_ls', {
 
 vim.lsp.enable({ 'clangd', 'ruff', 'pyright', 'texlab', 'lua_ls' })
 vim.api.nvim_exec_autocmds('FileType', { buffer = 0 })
-
