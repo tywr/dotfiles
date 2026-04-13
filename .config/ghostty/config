@@ -9,14 +9,16 @@ background-opacity-cells = true
 # equals doesn't matter.
 theme = /Users/tywr/.config/colorthemes/ghostty/gravity
 
-font-family = "JetBrains Mono"
 font-size = 18
-font-feature = cv01, cv06, cv07, cv11, cv18, cv12, cv14, +zero
 
-# font-family = "Kassiopea"
+# font-family = "JetBrains Mono"
+# font-feature = cv01, cv06, cv07, cv18, cv12, cv14, +zero
+
+font-family = "Kassiopea"
+# font-feature = ss01 1
 # font-size = 18
 
-#-----------------------------------------------------------------------------
+
 adjust-cursor-thickness = 4
 cursor-style-blink = true
 

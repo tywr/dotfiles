@@ -17,8 +17,6 @@ alias P="cd ~/Projects/"
 alias p="cd ~/Projects/"
 alias S="cd ~/Sandbox/"
 alias s="cd ~/Sandbox/"
-alias python=python3.11
-alias pip=pip3.11
 alias drun="docker-compose run --remove-orphans --rm"
 alias dbuild="docker-compose build"
 alias ghconfig="v ~/.ssh/config"
@@ -44,5 +42,6 @@ alias onn="~/.config/bin/obsidian_new"
 alias ni="cd ~/Notes/inbox"
 alias nn="cd ~/Notes/notes"
 alias todo="nvim ~/Notes/todo.md"
+alias machine-report="~/.config/zsh/scripts/machine_report.sh"
 
 ctags=/usr/local/bin/ctags

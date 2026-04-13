@@ -4,7 +4,6 @@ return {
     },
     {
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.8",
         dependencies = {
             "sopa0/telescope-makefile",
             "akinsho/toggleterm.nvim",
