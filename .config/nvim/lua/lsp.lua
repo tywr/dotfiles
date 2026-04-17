@@ -37,7 +37,7 @@ vim.lsp.config('pyright', {
             disableOrganizeImports = true,
         },
         python = {
-            pythonPath = vim.fn.expand('~/.python/nvim/bin/python'),
+            pythonPath = vim.fn.expand('/opt/homebrew/bin/python'),
             analysis = {
                 diagnosticSeverityOverrides = {
                     reportUnusedVariable = 'warning',

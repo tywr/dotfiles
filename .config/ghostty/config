@@ -5,8 +5,6 @@ background-opacity = 0.95
 background-blur = 10
 background-opacity-cells = true
 
-# The syntax is "key = value". The whitespace around the
-# equals doesn't matter.
 theme = /Users/tywr/.config/colorthemes/ghostty/gravity
 
 font-size = 18
@@ -14,10 +12,13 @@ font-size = 18
 # font-family = "JetBrains Mono"
 # font-feature = cv01, cv06, cv07, cv18, cv12, cv14, +zero
 
+# font-family = "IBM Plex Mono"
 font-family = "Kassiopea"
-# font-feature = ss01 1
+# font-feature = ss01 2
 # font-size = 18
 
+font-style-italic = "Light"
+font-style-bold-italic = false
 
 adjust-cursor-thickness = 4
 cursor-style-blink = true
