@@ -77,5 +77,22 @@ vim.lsp.config('lua_ls', {
     },
 })
 
-vim.lsp.enable({ 'clangd', 'ruff', 'pyright', 'texlab', 'lua_ls' })
+vim.lsp.config('prettier', {
+    cmd = { 'efm-langserver' },
+    filetypes = { 'yaml', 'markdown', 'css', 'json', 'plaintex', 'tex' },
+    root_markers = { '.git' },
+    init_options = { documentFormatting = true },
+    settings = {
+        languages = {
+            yaml = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
+            markdown = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
+            css = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
+            json = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
+            tex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
+            plaintex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
+        }
+    }
+})
+
+vim.lsp.enable({ 'clangd', 'ruff', 'pyright', 'texlab', 'lua_ls', 'prettier' })
 vim.api.nvim_exec_autocmds('FileType', { buffer = 0 })

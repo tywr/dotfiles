@@ -2,22 +2,14 @@ term = xterm-256color
 working-directory = /Users/tywr
 window-inherit-working-directory = false
 background-opacity = 0.95
-background-blur = 10
-background-opacity-cells = true
+background-blur = 100
 
 theme = /Users/tywr/.config/colorthemes/ghostty/gravity
-
 font-size = 18
 
-# font-family = "JetBrains Mono"
-# font-feature = cv01, cv06, cv07, cv18, cv12, cv14, +zero
-
-# font-family = "IBM Plex Mono"
-font-family = "Kassiopea"
-# font-feature = ss01 2
-# font-size = 18
-
-font-style-italic = "Light"
+font-family = "Nordwand Mono"
+font-style-italic = "ExtraLight"
+font-style-bold = "Bold"
 font-style-bold-italic = false
 
 adjust-cursor-thickness = 4

@@ -60,9 +60,10 @@ vim.keymap.set("n", "<leader>cc", "<cmd>:ClaudeCode<cr>")
 vim.keymap.set("n", "<leader>co", "<cmd>:ClaudeCodeContinue<cr>")
 
 -- LSP shortcuts
-vim.keymap.set('n', 'K',  vim.lsp.buf.hover)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', '<leader>ss', function() vim.lsp.buf.format({ async = true }) end)
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'LSP rename' })
 
 -- Quick Path Copying
 vim.keymap.set("n", "<leader>cp",

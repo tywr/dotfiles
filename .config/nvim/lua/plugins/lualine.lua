@@ -30,7 +30,7 @@ return {
                 extensions = {},
                 theme = bubbles_theme,
                 component_separators = '',
-                section_separators = { left = '', right = '' },
+                section_separators = { left = '', right = '' },
             },
             sections = {
                 lualine_a = { { 'mode', separator = { right = '', left = '' }, right_padding = 2 } },
