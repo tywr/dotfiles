@@ -41,7 +41,6 @@ vim.keymap.set("n", "gs", "<plug>(SubversiveSubstitute)")
 vim.keymap.set("n", "<Down>", ":call smoothie#downwards()<cr>", { silent = true })
 vim.keymap.set("n", "<Up>", ":call smoothie#upwards()<cr>", { silent = true })
 
-vim.keymap.set("n", "<leader>zz", function() require('zen-mode').toggle({}) end)
 vim.keymap.set("n", "<C-s>", "<cmd>LspZeroFormat<cr>")
 vim.keymap.set("n", "μ", "%")
 vim.keymap.set("n", "ù", "%")

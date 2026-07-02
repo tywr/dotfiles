@@ -10,7 +10,7 @@ return {
                     icon = "",
                     -- style = "icon"
                 },
-                numbers = "ordinal",
+                numbers = "none",
                 show_buffer_icons = false,
                 modified_icon = '',
                 left_trunc_marker = ' ',
@@ -18,6 +18,8 @@ return {
                 buffer_close_icon = '',
                 show_tab_indicators = false,
                 show_close_icon = false,
+                -- show_buffer_close_icons = false,
+                always_show_bufferline=false,
                 auto_toggle_bufferline = true,
                 separator_style = { '', '' },
                 move_wraps_at_end = true,
@@ -40,7 +42,7 @@ return {
                     italic=false,
                 },
                 numbers = {
-                    ctermfg = 8,
+                    -- ctermfg = 8,
                     ctermbg = vim.g.colors.background_solid,
                     italic=false,
                 },

@@ -40,7 +40,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     # ctrl-shift-k = 'move up'
     # ctrl-shift-l = 'move right'
 
-    cmd-shift-f = 'fullscreen'
+    cmd-shift-f = ['layout floating tiling', 'mode main']
     cmd-shift-e = 'layout tiles horizontal vertical' 
 
     alt-r = 'reload-config'

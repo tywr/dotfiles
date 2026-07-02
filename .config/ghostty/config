@@ -7,10 +7,18 @@ background-blur = 100
 theme = /Users/tywr/.config/colorthemes/ghostty/gravity
 font-size = 18
 
+# font-family = "SF Mono"
+# font-family = "Berkeley Mono Trial"
+# font-family = "Klartext Mono Code"
+# font-size = 20
+# font-family = "Lilex"
+# font-feature = cv02
 font-family = "Nordwand Mono"
-font-style-italic = "ExtraLight"
+# font-style-italic = "ExtraLight"
 font-style-bold = "Bold"
 font-style-bold-italic = false
+
+# font-feature = cv03
 
 adjust-cursor-thickness = 4
 cursor-style-blink = true

@@ -84,25 +84,7 @@ return {
             keymap.set("n", "<leader>ft", function() builtin.help_tags() end)
             keymap.set("n", "<leader>gg", function() builtin.grep_string() end)
             keymap.set("n", "<leader>fm", "<cmd>Telescope make<cr>")
-            keymap.set("n", "<leader><tab>",
-                function()
-                    builtin.buffers(
-                        require("telescope.themes").get_dropdown({
-                            prompt_title = "",
-                            initial_mode = "normal",
-                            layout_config = {
-                                width = 0.25,
-                                height = 0.4,
-                            },
-                            previewer = false,
-                            sort_lastused = true,
-                            bufnr_width = 3,
-                            -- ignore_current_buffer = true,
-                            disable_devicons = true,
-                            path_display = { "tail" },
-                        }))
-                end
-            )
+            keymap.set("n", "<leader><tab>", function() builtin.buffers() end)
             require("telescope").load_extension("ui-select")
         end
     },
