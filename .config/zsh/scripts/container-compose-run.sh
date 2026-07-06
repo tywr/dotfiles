@@ -12,8 +12,8 @@ service="${1:?usage: container-compose-run [-f file] SERVICE [CMD...]}"; shift
 
 base="$(cd "$(dirname "$file")" && pwd)"
 
-image="$(yq -r ".services.\"$service\".image // \"\"" "$file")"
-[[ -n "$image" ]] || { echo "no image for service '$service' (build-only not supported)" >&2; exit 1; }
+yq -e ".services.\"$service\"" "$file" >/dev/null 2>&1 || { echo "no service '$service' in $file" >&2; exit 1; }
+image="$service"
 
 # Translate compose short-syntax volumes to -v flags.
 # Relative host paths resolve against the compose file dir (docker-compose behaviour).
@@ -29,5 +29,5 @@ while IFS= read -r vol; do
   args+=(-v "$vol")
 done < <(yq -r ".services.\"$service\".volumes[]? " "$file")
 
-# set -x
+set -x
 container run --rm -it "${args[@]}" "$image" "$@"
