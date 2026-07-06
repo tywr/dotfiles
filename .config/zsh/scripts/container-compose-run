@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+"""docker-compose run, but with Apple's native `container`.
+
+Runs the image named after the service and translates short-syntax volume
+mounts to -v flags (relative host paths resolve against the compose file dir).
+
+Usage: container-compose-run [-f compose.yml] SERVICE [CMD...]
+"""
+import sys
+
+from container_compose import load_service, publish_specs, resolve, run
+
+USAGE = "usage: container-compose-run [-f file] SERVICE [CMD...]"
+
+
+def main(argv):
+    base, name, service, cmd_args = load_service(argv, USAGE)
+
+    cmd = ["container", "run", "--rm", "-it"]
+    for vol in service.get("volumes") or []:
+        # ponytail: short syntax only ("host:container[:mode]" / "named:container");
+        #           add long-syntax dict support when a compose file needs it.
+        host, sep, rest = str(vol).partition(":")
+        if sep and host[:1] in "./~":  # bind mount -> resolve host path
+            vol = f"{resolve(base, host)}:{rest}"
+        cmd += ["-v", vol]
+    for spec in publish_specs(service.get("ports")):
+        cmd += ["-p", spec]
+    env_file = service.get("env_file")
+    for f in [env_file] if isinstance(env_file, (str, dict)) else (env_file or []):
+        path = f["path"] if isinstance(f, dict) else f  # long syntax: {path, required}
+        cmd += ["--env-file", resolve(base, path)]
+    cmd.append(name)  # image == service name
+    cmd += cmd_args
+
+    run(cmd)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+"""docker-compose build, but with Apple's native `container`.
+
+Tags the image as the service name, resolves build context/dockerfile, and
+forwards compose build.args plus any extra flags (e.g. --build-arg K=V).
+
+Usage: container-compose-build [-f compose.yml] SERVICE [--build-arg K=V ...]
+"""
+import sys
+
+from container_compose import build_args, load_service, resolve, run
+
+USAGE = "usage: container-compose-build [-f file] SERVICE [--build-arg K=V ...]"
+
+
+def main(argv):
+    base, name, service, rest = load_service(argv, USAGE)
+
+    build = service.get("build", ".")
+    if isinstance(build, dict):
+        context = build.get("context", ".")
+        dockerfile = build.get("dockerfile")
+        args_spec = build.get("args")
+    else:  # short syntax: build is the context path
+        context, dockerfile, args_spec = build, None, None
+
+    cmd = ["container", "build", "-t", name]
+    if dockerfile:
+        cmd += ["-f", dockerfile]  # compose passes this relative to cwd
+    for a in build_args(args_spec):
+        cmd += ["--build-arg", a]
+    cmd += rest
+    cmd.append(resolve(base, context))
+
+    run(cmd)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
