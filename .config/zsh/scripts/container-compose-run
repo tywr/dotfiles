@@ -16,7 +16,7 @@ USAGE = "usage: container-compose-run [-f file] SERVICE [CMD...]"
 def main(argv):
     base, name, service, cmd_args = load_service(argv, USAGE)
 
-    cmd = ["container", "run", "--rm", "-it"]
+    cmd = ["container", "run"]
     for vol in service.get("volumes") or []:
         # ponytail: short syntax only ("host:container[:mode]" / "named:container");
         #           add long-syntax dict support when a compose file needs it.
@@ -30,6 +30,14 @@ def main(argv):
     for f in [env_file] if isinstance(env_file, (str, dict)) else (env_file or []):
         path = f["path"] if isinstance(f, dict) else f  # long syntax: {path, required}
         cmd += ["--env-file", resolve(base, path)]
+    # resource limits: prefer v3 deploy.resources.limits, fall back to v2 keys
+    limits = (((service.get("deploy") or {}).get("resources") or {}).get("limits")) or {}
+    memory = limits.get("memory", service.get("mem_limit"))
+    cpus = limits.get("cpus", service.get("cpus"))
+    if memory:
+        cmd += ["-m", str(memory)]
+    if cpus:
+        cmd += ["-c", str(cpus)]
     cmd.append(name)  # image == service name
     cmd += cmd_args
 
