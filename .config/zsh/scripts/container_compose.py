@@ -5,6 +5,7 @@ Parsing is delegated to `yq -o=json` so we don't need a YAML lib.
 """
 import json
 import os
+import shlex
 import subprocess
 import sys
 
@@ -14,22 +15,11 @@ def die(msg):
     sys.exit(1)
 
 
-def load_service(argv, usage):
-    """Parse `[-f file] SERVICE [rest...]` and return (base, service_name, service, rest).
+def open_service(file, service_name):
+    """Load one service from a compose file. Returns (base, service_dict).
 
-    base    = absolute dir of the compose file (compose paths resolve against it)
-    service = the service dict from compose
-    rest    = trailing args to forward to `container`
+    base = absolute dir of the compose file (compose paths resolve against it).
     """
-    file = "docker-compose.yml"
-    if argv and argv[0] == "-f":
-        if len(argv) < 2:
-            die(usage)
-        file, argv = argv[1], argv[2:]
-    if not argv:
-        die(usage)
-    service_name, rest = argv[0], argv[1:]
-
     if not os.path.isfile(file):
         die(f"compose file not found: {file}")
 
@@ -42,7 +32,20 @@ def load_service(argv, usage):
     if service is None:
         die(f"no service '{service_name}' in {file}")
 
-    base = os.path.dirname(os.path.abspath(file))
+    return os.path.dirname(os.path.abspath(file)), service
+
+
+def load_service(argv, usage):
+    """Parse `[-f file] SERVICE [rest...]` -> (base, service_name, service, rest)."""
+    file = "docker-compose.yml"
+    if argv and argv[0] == "-f":
+        if len(argv) < 2:
+            die(usage)
+        file, argv = argv[1], argv[2:]
+    if not argv:
+        die(usage)
+    service_name, rest = argv[0], argv[1:]
+    base, service = open_service(file, service_name)
     return base, service_name, service, rest
 
 
@@ -91,5 +94,5 @@ def _val(v):
 
 def run(cmd):
     """Echo (like `set -x`) then exec, replacing this process."""
-    print("+ " + " ".join(cmd), file=sys.stderr)
+    print("+ " + " ".join(shlex.quote(c) for c in cmd), file=sys.stderr)
     os.execvp(cmd[0], cmd)

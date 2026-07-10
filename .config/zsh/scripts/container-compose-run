@@ -6,17 +6,26 @@ mounts to -v flags (relative host paths resolve against the compose file dir).
 
 Usage: container-compose-run [-f compose.yml] SERVICE [CMD...]
 """
+import argparse
 import sys
 
-from container_compose import load_service, publish_specs, resolve, run
-
-USAGE = "usage: container-compose-run [-f file] SERVICE [CMD...]"
+from container_compose import open_service, publish_specs, resolve, run
 
 
 def main(argv):
-    base, name, service, cmd_args = load_service(argv, USAGE)
+    p = argparse.ArgumentParser(prog="container-compose-run")
+    p.add_argument("-f", "--file", default="docker-compose.yml", help="compose file")
+    p.add_argument("-m", "--memory", help="override memory limit")
+    p.add_argument("-c", "--cpus", help="override CPU limit")
+    p.add_argument("--entrypoint", help="override the image entrypoint")
+    p.add_argument("service")
+    p.add_argument("cmd", nargs=argparse.REMAINDER, help="command to run in the container")
+    args = p.parse_args(argv)
 
-    cmd = ["container", "run"]
+    base, service = open_service(args.file, args.service)
+    name, cmd_args = args.service, args.cmd
+
+    cmd = ["container", "run", "--rm"]
     for vol in service.get("volumes") or []:
         # ponytail: short syntax only ("host:container[:mode]" / "named:container");
         #           add long-syntax dict support when a compose file needs it.
@@ -30,14 +39,22 @@ def main(argv):
     for f in [env_file] if isinstance(env_file, (str, dict)) else (env_file or []):
         path = f["path"] if isinstance(f, dict) else f  # long syntax: {path, required}
         cmd += ["--env-file", resolve(base, path)]
-    # resource limits: prefer v3 deploy.resources.limits, fall back to v2 keys
+    # resource limits: CLI flag wins, else v3 deploy.resources.limits, else v2 keys
     limits = (((service.get("deploy") or {}).get("resources") or {}).get("limits")) or {}
-    memory = limits.get("memory", service.get("mem_limit"))
-    cpus = limits.get("cpus", service.get("cpus"))
+    memory = args.memory or limits.get("memory", service.get("mem_limit"))
+    cpus = args.cpus or limits.get("cpus", service.get("cpus"))
     if memory:
         cmd += ["-m", str(memory)]
     if cpus:
         cmd += ["-c", str(cpus)]
+    # entrypoint: CLI flag wins over compose. container --entrypoint takes one cmd;
+    # extra tokens from a compose list become leading command args.
+    entrypoint = args.entrypoint or service.get("entrypoint")
+    if isinstance(entrypoint, list):
+        entrypoint, extra = (entrypoint[0], entrypoint[1:]) if entrypoint else (None, [])
+        cmd_args = extra + cmd_args
+    if entrypoint:
+        cmd += ["--entrypoint", entrypoint]
     cmd.append(name)  # image == service name
     cmd += cmd_args
 
