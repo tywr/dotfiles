@@ -1,5 +1,6 @@
 vim.opt.signcolumn = 'yes'
-vim.env.PATH = vim.fn.stdpath('data') .. '/mason/bin:' .. vim.env.PATH
+vim.env.PATH = vim.fn.stdpath('data') .. '/mason/bin:'
+    .. '/opt/homebrew/bin:' .. vim.fn.expand('~/.cargo/bin') .. ':' .. vim.env.PATH
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
@@ -79,7 +80,7 @@ vim.lsp.config('lua_ls', {
 
 vim.lsp.config('prettier', {
     cmd = { 'efm-langserver' },
-    filetypes = { 'yaml', 'markdown', 'css', 'json', 'plaintex', 'tex' },
+    filetypes = { 'yaml', 'markdown', 'css', 'json', 'plaintex', 'tex', 'rust' },
     root_markers = { '.git' },
     init_options = { documentFormatting = true },
     settings = {
@@ -90,9 +91,21 @@ vim.lsp.config('prettier', {
             json = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
             tex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
             plaintex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
+            rust = { { formatCommand = 'rustfmt --emit=stdout', formatStdin = true } },
         }
     }
 })
 
-vim.lsp.enable({ 'clangd', 'ruff', 'pyright', 'texlab', 'lua_ls', 'prettier' })
+vim.lsp.config('rust-analyzer', {
+    cmd = { 'rust-analyzer' },
+    filetypes = { 'rust' },
+    root_markers = { 'Cargo.toml', 'rust-project.json', '.git' },
+    settings = {
+        ['rust-analyzer'] = {
+            checkOnSave = false,
+        },
+    },
+})
+
+vim.lsp.enable({ 'clangd', 'ruff', 'pyright', 'texlab', 'lua_ls', 'prettier', 'rust-analyzer' })
 vim.api.nvim_exec_autocmds('FileType', { buffer = 0 })
