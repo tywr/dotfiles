@@ -4,9 +4,11 @@
 Runs the image named after the service and translates short-syntax volume
 mounts to -v flags (relative host paths resolve against the compose file dir).
 
-Usage: container-compose-run [-f compose.yml] SERVICE [CMD...]
+Usage: container-compose-run [-f compose.yml] [-b|--build] SERVICE [CMD...]
 """
 import argparse
+import os
+import subprocess
 import sys
 
 from container_compose import open_service, publish_specs, resolve, run
@@ -17,6 +19,7 @@ def main(argv):
     p.add_argument("-f", "--file", default="docker-compose.yml", help="compose file")
     p.add_argument("-m", "--memory", help="override memory limit")
     p.add_argument("-c", "--cpus", help="override CPU limit")
+    p.add_argument("-b", "--build", action="store_true", help="build the image before running")
     p.add_argument("--entrypoint", help="override the image entrypoint")
     p.add_argument("service")
     p.add_argument("cmd", nargs=argparse.REMAINDER, help="command to run in the container")
@@ -24,6 +27,12 @@ def main(argv):
 
     base, service = open_service(args.file, args.service)
     name, cmd_args = args.service, args.cmd
+
+    if args.build:
+        builder = os.path.join(os.path.dirname(__file__), "container-compose-build")
+        result = subprocess.run([builder, "-f", args.file, name])
+        if result.returncode:
+            sys.exit(result.returncode)
 
     cmd = ["container", "run", "--rm"]
     for vol in service.get("volumes") or []:
