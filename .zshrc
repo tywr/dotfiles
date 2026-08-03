@@ -36,9 +36,6 @@ zinit light joshskidmore/zsh-fzf-history-search
 zinit cdreplay -q
 
 
-# Import Conda
-# source $CONFIG/zsh/conda.zsh
-source $CONFIG/zsh/path.zsh
 source $CONFIG/zsh/aliases.zsh
 source $CONFIG/zsh/misc.zsh
 source $CONFIG/zsh/env.zsh
@@ -90,5 +87,5 @@ if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc' ];
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# opencode
-export PATH=/Users/tywr/.opencode/bin:$PATH
+# python
+export PATH="$(brew --prefix python@3.14)/libexec/bin:$PATH"
