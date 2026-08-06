@@ -21,6 +21,14 @@ alias s="cd ~/Sandbox/"
 # alias dbuild="docker-compose build"
 alias drun="~/.config/zsh/scripts/container-compose-run"
 alias dbuild="~/.config/zsh/scripts/container-compose-build"
+container-compose() {
+    if [[ $1 == run ]]; then
+        shift
+        "$HOME/.config/zsh/scripts/container-compose-run" "$@"
+    else
+        command container-compose "$@"
+    fi
+}
 alias ghconfig="v ~/.ssh/config"
 alias tmux="tmux -2"
 alias ts="fuzzy_tmux_sessions"

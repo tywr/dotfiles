@@ -5,6 +5,8 @@ background-opacity = 0.95
 background-blur = 100
 
 theme = /Users/tywr/.config/colorthemes/ghostty/gravity
+palette-generate = true
+palette-harmonious = true
 font-size = 18
 
 # font-family = "SF Mono"
@@ -29,8 +31,6 @@ macos-titlebar-style = hidden
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
-
-palette-generate = true
 
 mouse-hide-while-typing = true
 

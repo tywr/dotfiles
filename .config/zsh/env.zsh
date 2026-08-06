@@ -16,3 +16,6 @@ export ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BLOCK
 export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
 
 export INTRA_LDAP_NAME=tanguy.vivier
+
+export CONTAINER_BUILD_COMMAND="~/.config/zsh/scripts/container-compose-build"
+export CONTAINER_RUN_COMMAND="~/.config/zsh/scripts/container-compose-run"

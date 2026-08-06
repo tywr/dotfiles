@@ -64,7 +64,9 @@ def main(argv):
         cmd_args = extra + cmd_args
     if entrypoint:
         cmd += ["--entrypoint", entrypoint]
-    cmd.append(name)  # image == service name
+    # Stop `container run` option parsing so command flags such as Python's
+    # `-m` are passed through to the process inside the container.
+    cmd += ["--", name]  # image == service name
     cmd += cmd_args
 
     run(cmd)
