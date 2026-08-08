@@ -1,20 +1,3 @@
-function sync-config {
-    dotfiles=~/Projects/dotfiles
-    echo "Dotfiles repo location ${dotfiles}"
-    names=(alacritty nvim ranger skhd yabai zsh)
-    for name in $names; do
-        echo "Copying $name..."
-        cp -R ~/.config/$name $dotfiles/.config/$name
-    done
-    echo "Copying .zshrc"
-    cp ~/.zshrc ${dotfiles}/.zshrc
-    echo "Copying .tmux.conf"
-    cp ~/.tmux.conf ${dotfiles}/.tmux.conf
-    echo "Copying lazygit.conf"
-    cp ~/Library/Application\ Support/lazygit/config.yml "${dotfiles}/lazygit.config.yml"
-}
-
-
 function topdf {
     pandoc \
             $1 \
@@ -34,37 +17,11 @@ function ghssh() {
     ssh-add ~/.ssh/gh-${type_}
 }
 
-function docker-clean {
-    docker container rm $(docker container ls -aq)
-}
-
-function git_branch_name()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-      if [ -z "$(git status --porcelain)" ];
-      then
-        echo '['$branch']'
-      else
-        echo '['$branch']*'
-      fi
-  fi
-}
-
-function emr-ssh {
-    ssh -o StrictHostKeyChecking=no -i ~/.ssh/Hadoop42matters.pem -ND 8157 hadoop@$1
-}
-
 __tmux_fzf_get_session__() {
     session=$(tmux list-sessions -F "#{session_name}" | fzf --exit-0 --reverse --bind 'tab:toggle-down,btab:toggle-up' --border='rounded' --margin='20%' --tmux )
     echo "$session"
 }
 
-# Tmux session switcher (`tms foo` attaches to `foo` if exists, else creates
-# it)
 fuzzy_tmux_sessions() {
     [[ -n "$TMUX" ]] && change="switch-client" || change="attach-session"
     if [[ -n "$1" ]]; then

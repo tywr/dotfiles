@@ -91,7 +91,7 @@ vim.lsp.config('prettier', {
             json = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
             tex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
             plaintex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
-            rust = { { formatCommand = 'rustfmt --emit=stdout', formatStdin = true } },
+            -- rust = { { formatCommand = 'rustfmt --emit=stdout --config max_width=88', formatStdin = true } },
         }
     }
 })
@@ -103,6 +103,9 @@ vim.lsp.config('rust-analyzer', {
     settings = {
         ['rust-analyzer'] = {
             checkOnSave = false,
+            rustfmt = {
+                extraArgs = {"--config", "max_width=88"}
+            }
         },
     },
 })

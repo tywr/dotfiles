@@ -4,8 +4,7 @@
 alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
-alias ff="nvim '+Telescope find_files'"
-alias vs="nvim '+Telescope tmux sessions'"
+alias cat="bat --theme ansi --style plain"
 alias ls="eza"
 alias oldvim="vim"
 export EDITOR=nvim
@@ -15,20 +14,8 @@ alias ra="yazi"
 alias ecr42="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 041667147252.dkr.ecr.us-east-1.amazonaws.com"
 alias P="cd ~/Projects/"
 alias p="cd ~/Projects/"
-alias S="cd ~/Sandbox/"
-alias s="cd ~/Sandbox/"
-# alias drun="docker-compose run --remove-orphans --rm"
-# alias dbuild="docker-compose build"
 alias drun="~/.config/zsh/scripts/container-compose-run"
 alias dbuild="~/.config/zsh/scripts/container-compose-build"
-container-compose() {
-    if [[ $1 == run ]]; then
-        shift
-        "$HOME/.config/zsh/scripts/container-compose-run" "$@"
-    else
-        command container-compose "$@"
-    fi
-}
 alias ghconfig="v ~/.ssh/config"
 alias tmux="tmux -2"
 alias ts="fuzzy_tmux_sessions"
@@ -38,20 +25,6 @@ alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
 alias ta="tmux attach-session -t"
 tn() { tmux new -s "${1:-${PWD:t}}"; }
-alias pcat="parquet-tools cat"
-alias av="aws-vault exec tanguy42"
 alias nvimpython="~/.python/nvim/bin/python"
-alias bat="bat --theme ansi --style plain"
-alias ala="v .config/alacritty/alacritty.toml"
 alias ..="cd .."
-alias og="~/.config/bin/obsidian_organize"
-alias note="~/.config/bin/obsidian_new --no-name default"
-alias notes="nvim ~/Notes/inbox"
-alias on="~/.config/bin/obsidian_new --no-name"
-alias onn="~/.config/bin/obsidian_new"
-alias ni="cd ~/Notes/inbox"
-alias nn="cd ~/Notes/notes"
-alias todo="nvim ~/Notes/todo.md"
-alias machine-report="~/.config/zsh/scripts/machine_report.sh"
-
 ctags=/usr/local/bin/ctags

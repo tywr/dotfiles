@@ -1,47 +1,48 @@
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
-
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-autoload -Uz compinit && compinit
-
-
 CONFIG="$HOME/.config"
 PURE_PROMPT_SYMBOL=">"
 PURE_PROMPT_VICMD_SYMBOL="<"
 
+if [[ -r "$ZINIT_HOME/zinit.zsh" ]]; then
+    source "$ZINIT_HOME/zinit.zsh"
 
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
-zinit light Aloxaf/fzf-tab
+    autoload -Uz _zinit
+    (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# zinit snippet OMZP::git
-# zinit snippet OMZP::aws
+    # Add third-party completions before initializing the completion system.
+    zinit light zsh-users/zsh-completions
+    autoload -Uz compinit
+    if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+        compinit
+    else
+        compinit -C
+    fi
 
-zinit ice pick"async.zsh" src"pure.zsh"
-zinit light sindresorhus/pure
+    zinit ice depth=1
+    zinit light jeffreytse/zsh-vi-mode
+    zinit light Aloxaf/fzf-tab
+    zinit light zsh-users/zsh-autosuggestions
 
-# zinit light spaceship-prompt/spaceship-prompt
+    zinit ice pick"async.zsh" src"pure.zsh"
+    zinit light sindresorhus/pure
 
-# zsh-fzf-history-search
-zinit ice lucid wait'0'
-zinit light joshskidmore/zsh-fzf-history-search
+    # Load nonessential interactive helpers after the first prompt.
+    zinit ice lucid wait'0'
+    zinit light joshskidmore/zsh-fzf-history-search
 
-zinit cdreplay -q
+    # Syntax highlighting must be loaded after other widget-modifying plugins.
+    zinit light zsh-users/zsh-syntax-highlighting
+
+    zinit cdreplay -q
+else
+    print -u2 "zinit is not installed at $ZINIT_HOME"
+fi
 
 
 source $CONFIG/zsh/aliases.zsh
 source $CONFIG/zsh/misc.zsh
 source $CONFIG/zsh/env.zsh
 source ~/.secrets.zsh
-
-autoload -Uz promptinit && promptinit
 
 bindkey "^[[B" history-search-forward               # down arrow
 bindkey "^[[A" history-search-backward              # up arrow
@@ -72,12 +73,6 @@ zstyle ':prompt:pure:git:dirty' color red
 eval "$(fzf --zsh)"
 export PATH=/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tywr/Projects/connectors/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tywr/Projects/connectors/google-cloud-sdk/completion.zsh.inc'; fi
-
 . "$HOME/.local/bin/env"
 
 # bun completions
@@ -88,4 +83,4 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # python
-export PATH="$(brew --prefix python@3.14)/libexec/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"

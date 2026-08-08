@@ -7,6 +7,7 @@ cmd + shift - tab: skhd -k "ctrl - b" && skhd -k "p"
 cmd - x: skhd -k "ctrl - b" && skhd -k "x"
 cmd - d: skhd -k "ctrl - b" && skhd -k "d"
 cmd - t: skhd -k "ctrl - b" && skhd -k "t"
+cmd + shift - t: skhd -k "ctrl - b" && skhd -k "d" && skhd -k "ts<CR>"
 
 cmd + shift - 0x12 : skhd -k "ctrl -b " ; skhd -k "shift - 0x12"
 cmd + shift - 0x13 : skhd -k "ctrl -b " ; skhd -k "shift - 0x13"
