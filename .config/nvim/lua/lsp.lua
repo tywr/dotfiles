@@ -80,13 +80,14 @@ vim.lsp.config('lua_ls', {
 
 vim.lsp.config('prettier', {
     cmd = { 'efm-langserver' },
-    filetypes = { 'yaml', 'markdown', 'css', 'json', 'plaintex', 'tex', 'rust' },
+    filetypes = { 'yaml', 'markdown', 'html', 'css', 'json', 'plaintex', 'tex' },
     root_markers = { '.git' },
     init_options = { documentFormatting = true },
     settings = {
         languages = {
             yaml = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
             markdown = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
+            html = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
             css = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
             json = { { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true } },
             tex = { { formatCommand = 'latexindent ${INPUT}', formatStdin = true } },
@@ -104,7 +105,7 @@ vim.lsp.config('rust-analyzer', {
         ['rust-analyzer'] = {
             checkOnSave = false,
             rustfmt = {
-                extraArgs = {"--config", "max_width=88"}
+                extraArgs = { "--config", "max_width=88" }
             }
         },
     },
