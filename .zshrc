@@ -68,11 +68,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':prompt:pure:prompt:*' color green
 zstyle ':prompt:pure:git:branch' color cyan
 zstyle ':prompt:pure:git:dirty' color red
-
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 eval "$(fzf --zsh)"
-export PATH=/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin
-
 . "$HOME/.local/bin/env"
 
 # bun completions
@@ -82,5 +80,6 @@ export PATH=/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# python
+# path
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/trash-cli/bin:/Users/tywr/.local/share/zinit/polaris/bin:/Users/tywr/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin
 export PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"
