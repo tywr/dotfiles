@@ -46,3 +46,5 @@ macos-icon-ghost-color = #88c0d0
 scrollback-limit = 1000000
 link-previews = false
 adjust-underline-position = 7%
+
+keybind = cmd+shift+space=text:fzf\x0d

@@ -167,3 +167,13 @@ hl("FlashCursor", { ctermfg = colors.primary_bright, cterm = {} })
 hl("IndentBlankline1", { ctermfg = colors.alt })
 hl("IndentBlankline2", { ctermfg = colors.alt })
 hl("IndentBlanklineSelector", { ctermfg = colors.noir_3 })
+
+-- Telescope
+hl("TelescopeNormal", { ctermfg = colors.foreground, ctermbg = "none" })
+hl("TelescopeBorder", { ctermfg = colors.noir_7, ctermbg = "none" })
+hl("TelescopeSelection", { ctermbg = colors.alt })
+hl("TelescopeSelectionCaret", { ctermfg = colors.primary, ctermbg = colors.alt })
+hl("TelescopeMatching", { ctermfg=colors.primary, cterm = { bold = true } })
+hl("TelescopePromptPrefix", { ctermfg = colors.primary })
+hl("TelescopePromptCounter", { ctermfg = colors.primary })
+hl("TelescopeTitle", { ctermfg = colors.noir_7 })

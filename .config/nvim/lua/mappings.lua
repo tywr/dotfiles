@@ -46,18 +46,6 @@ vim.keymap.set("n", "μ", "%")
 vim.keymap.set("n", "ù", "%")
 
 
--- Obsidian paste image
-vim.keymap.set("n", "<leader>pi", "<cmd>:ObsidianPasteImg<cr>")
-
--- Vim Doge
-vim.keymap.set("n", "<leader>dg", "<cmd>:DogeGenerate numpy<cr>")
-vim.keymap.set({ 'n', 'x' }, '<leader>dn', '<Plug>(doge-comment-jump-forward)')
-vim.keymap.set({ 'n', 'x' }, '<leader>dp', '<Plug>(doge-comment-jump-backward)')
-
--- Claude Code
-vim.keymap.set("n", "<leader>cc", "<cmd>:ClaudeCode<cr>")
-vim.keymap.set("n", "<leader>co", "<cmd>:ClaudeCodeContinue<cr>")
-
 -- LSP shortcuts
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
