@@ -1,4 +1,5 @@
-"""Shared helpers for the container-compose-* scripts.
+#!/usr/bin/env python
+"""Shared helpers and command dispatcher for the container-compose-* scripts.
 
 Translate a docker-compose.yml service into an Apple `container` CLI invocation.
 Parsing is delegated to `yq -o=json` so we don't need a YAML lib.
@@ -49,6 +50,11 @@ def load_service(argv, usage):
     return base, service_name, service, rest
 
 
+def image_tag(service_name):
+    """Use the Compose service name as the image tag for every command."""
+    return service_name
+
+
 def resolve(base, path):
     """Resolve a compose-relative path against base. '.' -> base; absolute kept as-is."""
     p = os.path.expanduser(path)
@@ -96,3 +102,16 @@ def run(cmd):
     """Echo (like `set -x`) then exec, replacing this process."""
     print("+ " + " ".join(shlex.quote(c) for c in cmd), file=sys.stderr)
     os.execvp(cmd[0], cmd)
+
+
+def main(argv):
+    commands = {"build", "run", "up", "down"}
+    if not argv or argv[0] not in commands:
+        die("usage: container_compose.py {build|run|up|down} [options]")
+
+    script = os.path.join(os.path.dirname(__file__), f"container-compose-{argv[0]}")
+    os.execv(script, [script, *argv[1:]])
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

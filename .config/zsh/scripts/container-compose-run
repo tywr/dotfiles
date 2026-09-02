@@ -11,7 +11,7 @@ import os
 import subprocess
 import sys
 
-from container_compose import open_service, publish_specs, resolve, run
+from container_compose import image_tag, open_service, publish_specs, resolve, run
 
 
 def main(argv):
@@ -20,6 +20,7 @@ def main(argv):
     p.add_argument("-m", "--memory", help="override memory limit")
     p.add_argument("-c", "--cpus", help="override CPU limit")
     p.add_argument("-b", "--build", action="store_true", help="build the image before running")
+    p.add_argument("--name", help=argparse.SUPPRESS)
     p.add_argument("--entrypoint", help="override the image entrypoint")
     p.add_argument("service")
     p.add_argument("cmd", nargs=argparse.REMAINDER, help="command to run in the container")
@@ -35,6 +36,8 @@ def main(argv):
             sys.exit(result.returncode)
 
     cmd = ["container", "run", "--rm"]
+    if args.name:
+        cmd += ["--name", args.name]
     for vol in service.get("volumes") or []:
         # ponytail: short syntax only ("host:container[:mode]" / "named:container");
         #           add long-syntax dict support when a compose file needs it.
@@ -66,7 +69,7 @@ def main(argv):
         cmd += ["--entrypoint", entrypoint]
     # Stop `container run` option parsing so command flags such as Python's
     # `-m` are passed through to the process inside the container.
-    cmd += ["--", name]  # image == service name
+    cmd += ["--", image_tag(name)]
     cmd += cmd_args
 
     run(cmd)

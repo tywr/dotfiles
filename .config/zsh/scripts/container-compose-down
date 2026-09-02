@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+"""docker-compose down for one service, using Apple's native `container`."""
+import argparse
+import subprocess
+import sys
+
+from container_compose import open_service
+
+
+def main():
+    p = argparse.ArgumentParser(prog="container-compose-down")
+    p.add_argument("-f", "--file", default="docker-compose.yml", help="compose file")
+    p.add_argument("service")
+    args = p.parse_args()
+
+    open_service(args.file, args.service)
+    stopped = subprocess.run(["container", "stop", args.service])
+    if stopped.returncode:
+        sys.exit(stopped.returncode)
+    sys.exit(subprocess.run(["container", "delete", args.service]).returncode)
+
+
+if __name__ == "__main__":
+    main()

@@ -8,7 +8,7 @@ Usage: container-compose-build [-f compose.yml] SERVICE [--build-arg K=V ...]
 """
 import sys
 
-from container_compose import build_args, load_service, resolve, run
+from container_compose import build_args, image_tag, load_service, resolve, run
 
 USAGE = "usage: container-compose-build [-f file] SERVICE [--build-arg K=V ...]"
 
@@ -24,7 +24,7 @@ def main(argv):
     else:  # short syntax: build is the context path
         context, dockerfile, args_spec = build, None, None
 
-    cmd = ["container", "build", "-t", name]
+    cmd = ["container", "build", "-t", image_tag(name)]
     if dockerfile:
         cmd += ["-f", dockerfile]  # compose passes this relative to cwd
     for a in build_args(args_spec):
