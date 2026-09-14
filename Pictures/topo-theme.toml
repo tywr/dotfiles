@@ -1,0 +1,27 @@
+name = "Mont-Blanc"
+background = "#121212"
+
+[[lines]]
+every = 100
+width = 0.7
+opacity = 0.75
+color = [
+  { at = 0,   color = "#121212" },
+  { at = 1000,   color = "#404040" },     # > 2000m
+  { at = 2000,   color = "#707070" },     # > 2000m
+  { at = 3000,   color = "#eeeeee" },     # > 3000m
+  { at = 4000, color = "#91c7d9" },       # > 4000m
+  { at = 4500, color = "#abeaff" },
+]
+
+[[lines]]
+every = 500
+width = 1.0
+color = [
+  { at = 0,   color = "#121212" },
+  { at = 1000,   color = "#404040" },     # > 2000m
+  { at = 2000,   color = "#707070" },     # > 2000m
+  { at = 3000,   color = "#eeeeee" },     # > 3000m
+  { at = 4000, color = "#91c7d9" },       # > 4000m
+  { at = 4500, color = "#abeaff" },
+]

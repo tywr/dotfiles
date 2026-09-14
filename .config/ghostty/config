@@ -10,11 +10,10 @@ palette-harmonious = true
 font-size = 18
 
 font-family = "Nordwand Mono"
-font-feature = ss02
+font-feature = ss02,cv11=2
+# font-family = "Klartext Mono Code"
 
 # font-feature = cv06,cv12,cv14,cv20,ss20
-
-# font-family = "IBM Plex Mono"
 
 
 adjust-cursor-thickness = 4
