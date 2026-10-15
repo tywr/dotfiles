@@ -63,3 +63,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     l = 'resize width +50'
     enter = 'mode main'
     esc = 'mode main'
+
+[[on-window-detected]]
+  if.app-id = 'org.python.python'
+  run = 'layout tiling'

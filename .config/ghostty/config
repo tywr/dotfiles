@@ -7,7 +7,7 @@ background-blur = 100
 theme = /Users/tywr/.config/colorthemes/ghostty/gravity
 palette-generate = true
 palette-harmonious = true
-font-size = 18
+font-size = 17.5
 
 font-family = "Nordwand Mono"
 font-feature = ss02,cv11=2
