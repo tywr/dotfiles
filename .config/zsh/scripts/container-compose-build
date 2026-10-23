@@ -6,9 +6,11 @@ forwards compose build.args plus any extra flags (e.g. --build-arg K=V).
 
 Usage: container-compose-build [-f compose.yml] SERVICE [--build-arg K=V ...]
 """
+import shlex
+import subprocess
 import sys
 
-from container_compose import build_args, image_tag, load_service, resolve, run
+from container_compose import build_args, image_tag, load_service, resolve
 
 USAGE = "usage: container-compose-build [-f file] SERVICE [--build-arg K=V ...]"
 
@@ -32,7 +34,20 @@ def main(argv):
     cmd += rest
     cmd.append(resolve(base, context))
 
-    run(cmd)
+    # Keep the previous build under a temp tag, then delete only that tag so its
+    # orphaned blobs get freed. `image prune` would also drop the BuildKit image.
+    previous = f"{image_tag(name)}:previous"
+    had_previous = subprocess.run(
+        ["container", "image", "tag", image_tag(name), previous],
+        capture_output=True,
+    ).returncode == 0
+
+    print("+ " + shlex.join(cmd), file=sys.stderr)
+    status = subprocess.run(cmd).returncode
+    if had_previous:
+        subprocess.run(["container", "image", "delete", previous], check=False)
+    if status != 0:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

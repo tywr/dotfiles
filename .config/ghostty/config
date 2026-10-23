@@ -10,8 +10,7 @@ palette-harmonious = true
 font-size = 17.5
 
 font-family = "Nordwand Mono"
-font-feature = ss02,cv11=2
-# font-family = "Klartext Mono Code"
+font-feature = ss02,cv11=2,dlig,ss03,cv20,cv01=2
 
 # font-feature = cv06,cv12,cv14,cv20,ss20
 
