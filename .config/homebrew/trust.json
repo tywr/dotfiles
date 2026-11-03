@@ -2,5 +2,8 @@
   "trustedformulae": [
     "derailed/k9s/k9s",
     "felixkratz/formulae/sketchybar"
+  ],
+  "trustedcasks": [
+    "nikitabobko/tap/aerospace"
   ]
 }

@@ -18,3 +18,4 @@ export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
 export INTRA_LDAP_NAME=tanguy.vivier
 
 export DOCKER_COMPOSE="~/.config/zsh/scripts/container_compose.py"
+export ANTHROPIC_MODEL="claude-opus-5-5"

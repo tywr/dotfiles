@@ -26,7 +26,7 @@ alias tks="tmux kill-session -t"
 alias tas="tmux attach-session -t"
 alias ta="tmux attach-session -t"
 alias ff="fastfetch"
-tn() { tmux new -s "${1:-${PWD:t}}"; }
+tn() { tmux new -s "${${1:-${PWD:t}}//./_}"; }
 alias nvimpython="~/.python/nvim/bin/python"
 alias ..="cd .."
 ctags=/usr/local/bin/ctags

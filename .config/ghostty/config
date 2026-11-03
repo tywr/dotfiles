@@ -1,4 +1,4 @@
-term = xterm-256color
+term = xterm-ghostty
 working-directory = /Users/tywr
 window-inherit-working-directory = false
 background-opacity = 0.95
@@ -8,26 +8,28 @@ theme = /Users/tywr/.config/colorthemes/ghostty/gravity
 palette-generate = true
 palette-harmonious = true
 font-size = 17.5
+# font-size = 10
 
 font-family = "Nordwand Mono"
-font-feature = ss02,cv11=2,dlig,ss03,cv20,cv01=2
+font-style = "Retina"
+font-style-italic = "Retina Italic"
+font-feature = ss02,cv11=2,dlig,ss03,cv01=2
 
 # font-feature = cv06,cv12,cv14,cv20,ss20
 
 
 adjust-cursor-thickness = 4
-cursor-style-blink = true
+cursor-style-blink = false
 
-# window-decoration = auto
+macos-non-native-fullscreen = true
 macos-titlebar-style = hidden
+window-vsync = true
 
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
 
 mouse-hide-while-typing = true
-
-window-vsync = true
 
 copy-on-select = true
 confirm-close-surface = false
