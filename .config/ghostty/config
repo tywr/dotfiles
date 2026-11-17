@@ -13,7 +13,7 @@ font-size = 17.5
 font-family = "Nordwand Mono"
 font-style = "Retina"
 font-style-italic = "Retina Italic"
-font-feature = ss02,cv11=2,dlig,ss03,cv01=2
+font-feature = ss02,dlig,ss03,cv01=2,cv05=1,ss20
 
 # font-feature = cv06,cv12,cv14,cv20,ss20
 

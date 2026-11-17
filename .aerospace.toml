@@ -67,3 +67,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [[on-window-detected]]
   if.app-id = 'org.python.python'
   run = 'layout tiling'
+
+[[on-window-detected]]
+if.app-id = 'com.blizzard.worldofwarcraft'
+run = 'layout floating'
